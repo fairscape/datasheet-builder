@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genomics Data Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .summary-section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .summary-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .summary-label {
+            width: 200px;
+            font-weight: bold;
+        }
+        .summary-value {
+            flex: 1;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+        .tab.active {
+            border-bottom: 3px solid #1976d2;
+            font-weight: bold;
+        }
+        .tab .badge {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="project-title">ROCrate: Genomics Data Collection</h1>
+        </header>
+
+        <div class="summary-section">
+            <div class="summary-row">
+                <div class="summary-label">ROCrate ID</div>
+                <div class="summary-value" id="accession">ark:59852/2438d117</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Release date</div>
+                <div class="summary-value" id="release-date">2025-03-25</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Title</div>
+                <div class="summary-value" id="project-title-detail">Genomics Data Collection</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Description</div>
+                <div class="summary-value" id="description">Collection of genomics datasets from CRISPR-perturbed hiPSCs</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">License</div>
+                <div class="summary-value" id="license">https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en</div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="datasets">Datasets <span class="badge">2</span></div>
+            <div class="tab" data-tab="software">Software <span class="badge">0</span></div>
+            <div class="tab" data-tab="computations">Computations <span class="badge">0</span></div>
+        </div>
+
+        <div id="datasets-content" class="tab-content">
+            <table id="datasets-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody id="datasets-body">
+                    
+        <tr>
+            <td>Single-cell RNA Seq Data</td>
+            <td>RNA sequencing data from KOLF2.1J human iPSCs</td>
+            <td>Embargoed</td>
+            <td>2025-03-25</td>
+        </tr>
+        
+        <tr>
+            <td>Cell Barcodes</td>
+            <td>Barcodes for individual cells in the experiment</td>
+            <td>Embargoed</td>
+            <td>2025-03-25</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+
+        <div id="software-content" class="tab-content" style="display: none;">
+            <table id="software-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody id="software-body">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div id="computations-content" class="tab-content" style="display: none;">
+            <table id="computations-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                        <th>Date Created</th>
+                    </tr>
+                </thead>
+                <tbody id="computations-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Minimal JavaScript for tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                
+                // Show corresponding tab content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(`${tabId}-content`).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

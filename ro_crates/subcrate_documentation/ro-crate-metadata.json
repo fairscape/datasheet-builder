@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "EVI": "https://w3id.org/EVI#"
+  },
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+      },
+      "about": {
+        "@id": "ark:59852/e932612f"
+      }
+    },
+    {
+      "@id": "ark:59852/e932612f",
+      "@type": [
+        "Dataset",
+        "https://w3id.org/EVI#ROCrate"
+      ],
+      "name": "Documentation Collection",
+      "description": "Documentation and reference materials for the project",
+      "keywords": [
+        "AI",
+        "Artificial intelligence",
+        "Cell maps",
+        "CM4AI"
+      ],
+      "version": "1.0",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+      "author": "Doctor Y; Smith A; Johnson B",
+      "hasPart": [
+        {
+          "@id": "ark:59852/a026b786"
+        },
+        {
+          "@id": "ark:59852/6529fdb8"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/a026b786",
+      "name": "Analysis Pipeline Documentation",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Doctor Y; Smith A; Johnson B",
+      "datePublished": "2025-03-25",
+      "version": "1.0",
+      "description": "Documentation for using the analysis pipeline",
+      "format": "md",
+      "contentUrl": "Embargoed"
+    },
+    {
+      "@id": "ark:59852/6529fdb8",
+      "name": "Data Dictionary",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Doctor Y; Smith A; Johnson B",
+      "datePublished": "2025-03-25",
+      "version": "1.0",
+      "description": "Definitions of terms and variables used in the datasets",
+      "format": "csv",
+      "contentUrl": "Embargoed"
+    }
+  ]
+}
