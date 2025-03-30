@@ -45,10 +45,8 @@ def rocrate_datasheet_view(json_data, base_dir):
     citation = root.get("citation", "")
     version = root.get("version", "")
     
-    # Extract additionalProperty array if it exists
     additional_properties = root.get("additionalProperty", [])
     
-    # Get related publications
     related_publications = root.get("relatedPublications", [])
     if related_publications and isinstance(related_publications, list):
         related_publications_html = "<ul class='publications-list'>"
@@ -62,22 +60,18 @@ def rocrate_datasheet_view(json_data, base_dir):
     if isinstance(keywords, list):
         keywords = ", ".join(keywords)
     
-    # Added fields
     content_size = root.get("contentSize", "")
     human_subject = get_property_value(root, "Human Subject", additional_properties)
     completeness = get_property_value(root, "Completeness", additional_properties)
     funding = root.get("funder", "")
     
-    # Generate the composition summary
     files, software, computations, schemas, other = categorize_items(graph, root)
     
-    # Calculate values in advance instead of using format()
     files_count = len(files)
     software_count = len(software)
     computations_count = len(computations)
     schemas_count = len(schemas)
     
-    # Generate section summaries
     file_section = generate_file_section_summary(files)
     software_section = generate_software_section_summary(software)
     schema_section = generate_schema_section_summary(schemas)
@@ -200,20 +194,16 @@ def process_subcrates(subcrates, base_dir):
         if not metadata_path:
             continue
             
-        # Get the absolute path to the metadata file
         full_path = os.path.join(base_dir, metadata_path)
         if not os.path.exists(full_path):
             continue
             
         try:
-            # Load and process the sub-crate
             with open(full_path, 'r', encoding='utf-8') as f:
                 subcrate_json = json.load(f)
                 
-            # Generate HTML for this sub-crate
             subcrate_html = rocrate_to_html(subcrate_json)
             
-            # Save the HTML in the same directory as the metadata file
             subcrate_dir = os.path.dirname(full_path)
             output_file = os.path.join(subcrate_dir, "ro-crate-preview.html")
             with open(output_file, 'w', encoding='utf-8') as f:

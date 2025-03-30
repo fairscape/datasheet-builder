@@ -15,22 +15,17 @@ def main():
     args = parser.parse_args()
     
     try:
-        # Load the RO-Crate metadata
         with open(args.input, 'r', encoding='utf-8') as f:
             json_data = json.load(f)
         
-        # Get the base directory
         base_dir = os.path.dirname(args.input)
         
-        # Find sub-crates
         graph = json_data.get("@graph", [])
         root = find_root_node(graph)
         subcrates = find_subcrates(graph, root)
         
-        # Process subcrates
         process_subcrates(subcrates, base_dir)
         
-        # Generate the datasheet HTML
         datasheet_html = rocrate_datasheet_view(json_data, base_dir)
         datasheet_output = os.path.join(base_dir, "ro-crate-datasheet.html")
         with open(datasheet_output, 'w', encoding='utf-8') as f:

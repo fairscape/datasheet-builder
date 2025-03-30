@@ -12,12 +12,10 @@ def find_root_node(graph):
             elif item["@type"] == "Dataset" or "ROCrate" in item["@type"]:
                 return item
     
-    # If no clear root found, use the first non-metadata item
     for item in graph:
         if "@id" in item and not item["@id"].endswith("metadata.json"):
             return item
     
-    # Fallback
     return graph[0]
 
 def find_subcrates(graph, root_node):
@@ -27,14 +25,11 @@ def find_subcrates(graph, root_node):
     """
     subcrates = []
     
-    # Extract sub-crate references from the graph
     for item in graph:
         if "@type" in item and item != root_node:
             item_types = item["@type"] if isinstance(item["@type"], list) else [item["@type"]]
             
-            # Check if this is a sub-crate (Dataset + ROCrate type)
             if ("Dataset" in item_types and "https://w3id.org/EVI#ROCrate" in item_types) or "ROCrate" in item_types:
-                # If it has a ro-crate-metadata path, it's a sub-crate
                 if "ro-crate-metadata" in item:
                     subcrates.append({
                         "id": item.get("@id", ""),
@@ -62,11 +57,9 @@ def categorize_items(graph, root):
         if item == root or (item.get("@id", "").endswith("metadata.json")):
             continue
             
-        # Skip items that are identified as subcrates
         if "ro-crate-metadata" in item:
             continue
         
-        # Categorize by type
         if "Dataset" in item_types or "EVI:Dataset" in item_types or "https://w3id.org/EVI#Dataset" in item_types or item.get("metadataType") == "https://w3id.org/EVI#Dataset" or item.get("additionalType") == "Dataset":
             files.append(item)
         elif "SoftwareSourceCode" in item_types or "EVI:Software" in item_types or "Software" in item_types or "https://w3id.org/EVI#Software" in item_types or item.get("metadataType") == "https://w3id.org/EVI#Software" or item.get("additionalType") == "Software":
@@ -159,11 +152,9 @@ def get_generated_by_summary(items):
 
 def get_property_value(root, property_name, additional_properties=None):
     """Get a property value from root or from additionalProperty if present"""
-    # First, check if the property exists directly in the root object
     if property_name in root:
         return root[property_name]
     
-    # If additionalProperty is provided, check in there
     if additional_properties:
         for prop in additional_properties:
             if prop.get("name") == property_name:
