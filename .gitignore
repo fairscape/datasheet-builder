@@ -19,3 +19,4 @@ sdist/
 var/
 wheels/
 .DS_Store
+example-ro-crates/

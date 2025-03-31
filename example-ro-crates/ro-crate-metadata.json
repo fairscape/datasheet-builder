@@ -53,7 +53,7 @@
       "version": "1.4",
       "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "author": "Clark T; Parker J; Al Manir S; Axelsson U; Ballllosero Navarro F; Chinn B; Churas CP; Dailamy A; Doctor Y; Fall J; Forget A; Gao J; Hansen JN; Hu M; Johannesson A; Khaliq H; Lee YH; Lenkiewicz J; Levinson MA; Marquez C; Metallo C; Muralidharan M; Nourreddine S; Niestroy J; Obernier K; Pan E; Polacco B; Pratt D; Qian G; Schaffer L; Sigaeva A; Thaker S; Zhang Y; Bélisle-Pipon JC; Brandt C; Chen JY; Ding Y; Fodeh S; Krogan N; Lundberg E; Mali P; Payne-Foster P; Ratcliffe S; Ravitsky V; Sali A; Schulz W; Ideker T",
-      "doi": "https://doi.org/10.18130/V3/B35XWX",
+      "identifier": "https://doi.org/10.18130/V3/B35XWX",
       "publisher": "University of Virginia Dataverse",
       "principalInvestigator": "Trey Ideker",
       "contactEmail": "tideker@health.ucsd.edu",
@@ -111,7 +111,7 @@
         {
           "@type": "PropertyValue",
           "name": "Human Subject",
-          "value": "Y"
+          "value": "Yes"
         }
       ]
     },
