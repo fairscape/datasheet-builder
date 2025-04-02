@@ -7,7 +7,7 @@ from .section_generators import (
     DistributionSectionGenerator,
     SubcratesSectionGenerator
 )
-from .preview_generator import ROCratePreviewGenerator
+from .preview_generator import PreviewGenerator
 
 
 class DatasheetGenerator:
@@ -97,28 +97,41 @@ class DatasheetGenerator:
         return output_path
     
     def process_subcrates(self):
-        """Process all subcrates and generate HTML files for each"""
+        """Process all subcrates and generate HTML preview files for each."""
         subcrates = self.processor.find_subcrates()
-        
+        print(f"Found {len(subcrates)} potential subcrates to process.")
+
+        processed_count = 0
         for subcrate_info in subcrates:
             metadata_path = subcrate_info.get("metadata_path", "")
             if not metadata_path:
+                print(f"Skipping subcrate '{subcrate_info.get('name', subcrate_info.get('id'))}' due to missing 'ro-crate-metadata' path.")
                 continue
-                
-            full_path = os.path.join(self.base_dir, metadata_path)
+
+            full_path = os.path.normpath(os.path.join(self.base_dir, metadata_path))
+            print(f"Attempting to process subcrate metadata: {full_path}")
+
             if not os.path.exists(full_path):
+                print(f"Warning: Subcrate metadata file not found at {full_path}. Skipping.")
                 continue
-                
+
             try:
-                # Use the ROCratePreviewGenerator for subcrates
                 subcrate_dir = os.path.dirname(full_path)
                 output_path = os.path.join(subcrate_dir, "ro-crate-preview.html")
-                
-                # Create and use the preview generator
-                preview_generator = ROCratePreviewGenerator(json_path=full_path)
-                preview_generator.save_preview_html(output_path)
-                
-                print(f"Generated preview for subcrate: {subcrate_info.get('name', '')}")
-                    
+
+                subcrate_processor = ROCrateProcessor(json_path=full_path)
+                preview_gen = PreviewGenerator(
+                    processor=subcrate_processor,
+                    template_engine=self.template_engine,
+                    base_dir=subcrate_dir
+                )
+                saved_path = preview_gen.save_preview_html(output_path)
+
+                print(f"Generated preview for subcrate '{subcrate_info.get('name', '')}' at: {saved_path}")
+                processed_count += 1
             except Exception as e:
-                print(f"Error processing subcrate {subcrate_info.get('name', '')}: {str(e)}")
+                import traceback
+                print(f"Error processing subcrate {subcrate_info.get('name', '')} at {full_path}: {str(e)}")
+                #traceback.print_exc() # Uncomment for detailed debugging
+
+        print(f"Finished processing subcrates. Generated {processed_count} preview files.")
