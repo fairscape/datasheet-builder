@@ -1,0 +1,1106 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "EVI": "https://w3id.org/EVI#"
+  },
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+      },
+      "about": {
+        "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-dat0XaF46D9/"
+      }
+    },
+    {
+      "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-dat0XaF46D9/",
+      "@type": [
+        "Dataset",
+        "https://w3id.org/EVI#ROCrate"
+      ],
+      "name": "PBAT-mediated targeted methylome sequencing",
+      "description": "To enhance the sensitivity of DNA methylome analysis of DNA enriched with hybridization capture technology, a strategy termed post-bisulfite adaptor tagging (PBAT) was applied. This enabled targeted methylome analysis from as little as 30 ng of starting DNA extracted from human and mouse.",
+      "keywords": [
+        "bioproject",
+        "bioinformatics",
+        "Homo sapiens",
+        "RawSquncRads",
+        "EpignticMarkrs",
+        "Targeted Locus (Loci)"
+      ],
+      "isPartOf": [],
+      "version": "1.0",
+      "hasPart": [
+        {
+          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-N2Ylr2MzjT"
+        },
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        },
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-DcuxtcbP0A"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULhPUO9zi0"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxotTx8IOob"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gKf6o8Rt"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-cEhDSEquQDe"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ioly1oRvSH7"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-8gH59glR7OT"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-xDPS4DgoBZ"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-Oyr1ZypJNGN"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXcw"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-6XbsUXPggX"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4tyTbtLOap"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-zYEiCYnc3kN"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXFpn"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-eVXAGVD6Ec"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6kwexsz4W"
+        }
+      ],
+      "author": "Justin, Max",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "associatedPublication": "",
+      "conditionsOfAccess": "",
+      "copyrightNotice": "",
+      "datePublished": "2025-04-02T14:50:21.212763",
+      "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJDB2884"
+    },
+    {
+      "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-N2Ylr2MzjT",
+      "name": "Genomic DNA isolated from IMR-90",
+      "@type": "https://w3id.org/EVI#Sample",
+      "author": "Justin, Max",
+      "description": "Genomic DNA isolated from IMR-90",
+      "keywords": [
+        "biosample",
+        "Homo sapiens",
+        "IMR-90"
+      ],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/biosample/DRS016642",
+      "cellLineReference": {
+        "@id": "ark:59852/cell-line-IMR-90"
+      },
+      "accession": "DRS016642",
+      "taxon_id": "9606",
+      "version": "1.0",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRS016642"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "scientific_name",
+          "value": "Homo sapiens"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "taxon_id",
+          "value": "9606"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/sample-qT1b8TB3pZ",
+      "name": "",
+      "@type": "https://w3id.org/EVI#Sample",
+      "author": "Justin, Max",
+      "description": "Sampple DRS016636",
+      "keywords": [
+        "biosample",
+        "Homo sapiens"
+      ],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/biosample/DRS016636",
+      "accession": "DRS016636",
+      "taxon_id": "9606",
+      "version": "1.0",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRS016636"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "scientific_name",
+          "value": "Homo sapiens"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "taxon_id",
+          "value": "9606"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "breed",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "sex",
+          "value": "Female"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "isolation-source",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "strain",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "teleomorph",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "culture-collection",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "genotype",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "disease",
+          "value": "Free"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "authority",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "sample title",
+          "value": "Human Genomic DNA, Female"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "specimen-voucher",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "description",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "specific_host",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "age",
+          "value": "Unknown"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "sample name",
+          "value": "Human Genomic DNA, Female"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "serotype",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "subspecf_gen_lin",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "collection_date",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "tissue-type",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "subgroup",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "cell-type",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "isolate",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "disease-stage",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "haplotype",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "biome",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "pathovar",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "label",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "phenotype",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "sample-type",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "anamorph",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "geo_loc_name",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "health-state",
+          "value": "Good"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "cell-line",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "dev-stage",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "subtype",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "serovar",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "cultivar",
+          "value": "N. A."
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "body_site",
+          "value": "Blood"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs",
+      "name": "Illumina HiSeq 2500",
+      "@type": "https://w3id.org/EVI#Instrument",
+      "manufacturer": "ILLUMINA",
+      "model": "Illumina HiSeq 2500",
+      "description": "Illumina HiSeq 2500 used for sequencing",
+      "usedByExperiment": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-DcuxtcbP0A",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017270",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:18:50",
+      "version": "1.0",
+      "description": "Sequencing run DRR019432 from experiment DRX017585",
+      "keywords": [
+        "sequencing",
+        "run",
+        "70847537"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-Oyr1ZypJNGN"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019432",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULhPUO9zi0",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:18:38",
+      "version": "1.0",
+      "description": "Sequencing run DRR019431 from experiment DRX017584",
+      "keywords": [
+        "sequencing",
+        "run",
+        "110343566"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXcw"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019431",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxotTx8IOob",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:18:30",
+      "version": "1.0",
+      "description": "Sequencing run DRR019430 from experiment DRX017583",
+      "keywords": [
+        "sequencing",
+        "run",
+        "67034633"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-6XbsUXPggX"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019430",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gKf6o8Rt",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:18:23",
+      "version": "1.0",
+      "description": "Sequencing run DRR019429 from experiment DRX017582",
+      "keywords": [
+        "sequencing",
+        "run",
+        "77326253"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4tyTbtLOap"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019429",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-cEhDSEquQDe",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:18:14",
+      "version": "1.0",
+      "description": "Sequencing run DRR019428 from experiment DRX017581",
+      "keywords": [
+        "sequencing",
+        "run",
+        "79401911"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-zYEiCYnc3kN"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019428",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ioly1oRvSH7",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:18:06",
+      "version": "1.0",
+      "description": "Sequencing run DRR019427 from experiment DRX017580",
+      "keywords": [
+        "sequencing",
+        "run",
+        "68552980"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXFpn"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019427",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-8gH59glR7OT",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:17:58",
+      "version": "1.0",
+      "description": "Sequencing run DRR019426 from experiment DRX017579",
+      "keywords": [
+        "sequencing",
+        "run",
+        "73092204"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-eVXAGVD6Ec"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019426",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-xDPS4DgoBZ",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "metadataType": "https://w3id.org/EVI#Dataset",
+      "additionalType": "Dataset",
+      "author": "Justin, Max",
+      "datePublished": "2014-10-17 12:17:50",
+      "version": "1.0",
+      "description": "Sequencing run DRR019425 from experiment DRX017578",
+      "keywords": [
+        "sequencing",
+        "run",
+        "73124172"
+      ],
+      "format": "sra",
+      "generatedBy": [
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6kwexsz4W"
+        }
+      ],
+      "derivedFrom": [],
+      "usedByComputation": [],
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/sra/DRR019425",
+      "@type": "https://w3id.org/EVI#Dataset",
+      "schema": "",
+      "usedBy": []
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-Oyr1ZypJNGN",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017270",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017270 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.944328",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-N2Ylr2MzjT"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-DcuxtcbP0A"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017585"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_IMR90"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXcw",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.945417",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULhPUO9zi0"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017584"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_3000ng"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-6XbsUXPggX",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.945846",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxotTx8IOob"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017583"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_10ng"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4tyTbtLOap",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.946266",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gKf6o8Rt"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017582"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_30ng"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-zYEiCYnc3kN",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.946683",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-cEhDSEquQDe"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017581"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_300ng"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXFpn",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.947111",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ioly1oRvSH7"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017580"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_300ng"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-eVXAGVD6Ec",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.947529",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-8gH59glR7OT"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017579"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_1000ng"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6kwexsz4W",
+      "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
+      "@type": "https://w3id.org/EVI#Experiment",
+      "experimentType": "Bisulfite-Seq",
+      "runBy": "Justin, Max",
+      "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
+      "datePerformed": "2025-04-02T14:50:23.947946",
+      "usedInstrument": [
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+        }
+      ],
+      "usedSample": [
+        {
+          "@id": "ark:59852/sample-qT1b8TB3pZ"
+        }
+      ],
+      "generated": [
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-xDPS4DgoBZ"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "accession",
+          "value": "DRX017578"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_name",
+          "value": "Target_Methylome_3000ng"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_strategy",
+          "value": "Bisulfite-Seq"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_source",
+          "value": "GENOMIC"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_selection",
+          "value": "Hybrid Selection"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "library_layout",
+          "value": "PAIRED"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "nominal_length",
+          "value": "300"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/cell-line-IMR-90",
+      "@type": "BioChemEntity",
+      "name": "IMR-90 Cell Line",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "@value": "RRID:CVCL_0347",
+          "name": "RRID"
+        }
+      ],
+      "url": "https://www.cellosaurus.org/CVCL_0347",
+      "alternateName": [
+        "IMR 90",
+        "IMR90",
+        "Institute for Medical Research-90",
+        "I90"
+      ],
+      "organism": {
+        "@id": "ark:59852/organism-homo-sapiens",
+        "name": "Homo sapiens",
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "name": "NCBI Taxonomy Browser",
+            "value": "NCBI:txid9606",
+            "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9606"
+          }
+        ]
+      },
+      "EVI:usedBy": []
+    }
+  ]
+}

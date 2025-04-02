@@ -59,9 +59,12 @@ class ROCrateProcessor:
         return subcrates
     
     def categorize_items(self):
-        """Categorize items in a graph into files, software, and computations"""
+        """Categorize items in a graph into files, software, instruments, samples, experiments, and other"""
         files = []
         software = []
+        instruments = []
+        samples = []
+        experiments = []
         computations = []
         schemas = []
         other = []
@@ -84,6 +87,12 @@ class ROCrateProcessor:
                 files.append(item)
             elif "SoftwareSourceCode" in item_types or "EVI:Software" in item_types or "Software" in item_types or "https://w3id.org/EVI#Software" in item_types or item.get("metadataType") == "https://w3id.org/EVI#Software" or item.get("additionalType") == "Software":
                 software.append(item)
+            elif "Instrument" in item_types or "https://w3id.org/EVI#Instrument" in item_types or item.get("metadataType") == "https://w3id.org/EVI#Instrument":
+                instruments.append(item)
+            elif "Sample" in item_types or "https://w3id.org/EVI#Sample" in item_types or item.get("metadataType") == "https://w3id.org/EVI#Sample":
+                samples.append(item)
+            elif "Experiment" in item_types or "https://w3id.org/EVI#Experiment" in item_types or item.get("metadataType") == "https://w3id.org/EVI#Experiment":
+                experiments.append(item)
             elif "Computation" in item_types or "https://w3id.org/EVI#Computation" in item_types or item.get("metadataType") == "https://w3id.org/EVI#Computation" or item.get("additionalType") == "Computation":
                 computations.append(item)
             elif "Schema" in item_types or "EVI:Schema" in item_types or "https://w3id.org/EVI#Schema" in item_types:
@@ -91,7 +100,7 @@ class ROCrateProcessor:
             else:
                 other.append(item)
         
-        return files, software, computations, schemas, other
+        return files, software, instruments, samples, experiments, computations, schemas, other
     
     def get_formats_summary(self, items):
         """Get a summary of formats in a list of items"""
@@ -143,7 +152,92 @@ class ROCrateProcessor:
             additional_properties = self.root.get("additionalProperty", [])
             
         for prop in additional_properties:
-            if prop.get("name") == property_name:
+            if prop.get("name") == property_name or prop.get("propertyID") == property_name:
                 return prop.get("value", "")
         
         return ""
+        
+    def extract_cell_line_info(self, samples):
+        """Extract cell line information from samples"""
+        cell_lines = {}
+        
+        for sample in samples:
+            # Check if sample has a direct cell line reference
+            cell_line_ref = sample.get("cellLineReference", {})
+            if cell_line_ref and isinstance(cell_line_ref, dict) and "@id" in cell_line_ref:
+                cell_line_id = cell_line_ref.get("@id", "")
+                if cell_line_id:
+                    # Find the cell line object in the graph
+                    for item in self.graph:
+                        if item.get("@id") == cell_line_id:
+                            cell_line_name = item.get("name", "Unknown")
+                            if cell_line_name not in cell_lines:
+                                cell_lines[cell_line_name] = 1
+                            else:
+                                cell_lines[cell_line_name] += 1
+                            break
+            
+            # Check additionalProperty for cell-line information
+            additional_properties = sample.get("additionalProperty", [])
+            for prop in additional_properties:
+                if prop.get("propertyID") == "cell-line" and prop.get("value") != "N. A.":
+                    cell_line_name = prop.get("value", "Unknown")
+                    if cell_line_name not in cell_lines:
+                        cell_lines[cell_line_name] = 1
+                    else:
+                        cell_lines[cell_line_name] += 1
+        
+        return cell_lines
+        
+    def extract_sample_species(self, samples):
+        """Extract species information from samples by checking cell line references"""
+        species = {}
+        
+        for sample in samples:
+            scientific_name = "Unknown"
+            
+            # Check if sample has a cell line reference
+            cell_line_ref = sample.get("cellLineReference", {})
+            if cell_line_ref and isinstance(cell_line_ref, dict) and "@id" in cell_line_ref:
+                cell_line_id = cell_line_ref.get("@id", "")
+                
+                # Find the cell line in the graph
+                for item in self.graph:
+                    if item.get("@id") == cell_line_id:
+                        # Get organism information from the cell line
+                        organism = item.get("organism", {})
+                        if organism and isinstance(organism, dict):
+                            org_name = organism.get("name")
+                            if org_name:
+                                scientific_name = org_name
+                                break
+            
+            # Fallback to additionalProperty if no cell line reference found
+            if scientific_name == "Unknown":
+                additional_properties = sample.get("additionalProperty", [])
+                for prop in additional_properties:
+                    if prop.get("propertyID") == "scientific_name" and prop.get("value") != "N. A.":
+                        scientific_name = prop.get("value", "")
+                        break
+            
+            # Count the species
+            if scientific_name not in species:
+                species[scientific_name] = 1
+            else:
+                species[scientific_name] += 1
+                
+        return species
+        
+    def extract_experiment_types(self, experiments):
+        """Extract experiment types"""
+        experiment_types = {}
+        
+        for experiment in experiments:
+            exp_type = experiment.get("experimentType", "Unknown")
+            
+            if exp_type not in experiment_types:
+                experiment_types[exp_type] = 1
+            else:
+                experiment_types[exp_type] += 1
+        
+        return experiment_types

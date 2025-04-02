@@ -39,12 +39,21 @@ class DatasheetGenerator:
         subcrates_section = self.subcrates_generator.generate(base_dir=self.base_dir)
         distribution_section = self.distribution_generator.generate()
         
-        files, software, computations, schemas, other = self.processor.categorize_items()
+        # Updated to match the new categorize_items return values
+        files, software, instruments, samples, experiments, computations, schemas, other = self.processor.categorize_items()
         files_count = len(files)
         software_count = len(software)
+        instruments_count = len(instruments)
+        samples_count = len(samples)
+        experiments_count = len(experiments)
         computations_count = len(computations)
         schemas_count = len(schemas)
         other_count = len(other)
+        
+        # Extract additional information
+        cell_lines = self.processor.extract_cell_line_info(samples)
+        species = self.processor.extract_sample_species(samples)
+        experiment_types = self.processor.extract_experiment_types(experiments)
         
         subcrates = self.processor.find_subcrates()
         subcrate_count = len(subcrates)
@@ -58,9 +67,15 @@ class DatasheetGenerator:
             'distribution_section': distribution_section,
             'files_count': files_count,
             'software_count': software_count,
+            'instruments_count': instruments_count,
+            'samples_count': samples_count,
+            'experiments_count': experiments_count,
             'computations_count': computations_count,
             'schemas_count': schemas_count,
             'other_count': other_count,
+            'cell_lines': cell_lines,
+            'species': species,
+            'experiment_types': experiment_types,
             'subcrate_count': subcrate_count
         }
         
@@ -94,14 +109,11 @@ class DatasheetGenerator:
                 continue
                 
             try:
-                # Create a new generator for the subcrate
                 subcrate_generator = DatasheetGenerator(json_path=full_path)
                 
-                # Generate and save the subcrate datasheet
                 subcrate_dir = os.path.dirname(full_path)
                 output_path = os.path.join(subcrate_dir, "ro-crate-preview.html")
                 subcrate_generator.save_datasheet(output_path)
                 
             except Exception as e:
-                # Skip this subcrate if there's an error
                 print(f"Error processing subcrate {subcrate_info.get('name', '')}: {str(e)}")

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }} - RO-Crate Datasheet</title>
+    <title>SRA Genomic Data Example Release - 2025 - RO-Crate Datasheet</title>
     <style>
       body {
         font-family: "Helvetica", "Arial", sans-serif;
@@ -270,10 +270,7 @@
       .stat-label {
         font-weight: bold;
         color: #555;
-        min-width: 25px;
-        margin-right: 2px;
       }
-
       .stat-value {
         color: #333;
       }
@@ -364,17 +361,129 @@
   <body>
     <div class="container">
       <header>
-        <h1 id="project-title">{{ title }}</h1>
-        <div>Version: {{ version }}</div>
+        <h1 id="project-title">SRA Genomic Data Example Release - 2025</h1>
+        <div>Version: 1.0</div>
       </header>
 
-      {{ overview_section | safe }} {{ use_cases_section | safe }}
+      <div class="summary-section">
+  <h2>Release Overview</h2>
+  <div class="summary-row">
+    <div class="summary-label">ROCrate ID</div>
+    <div class="summary-value" id="accession">
+      <a href="https://fairscape.net/ark:59852/sra-example-release-2025">ark:59852/sra-example-release-2025</a>
+    </div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">DOI</div>
+    <div class="summary-value" id="doi">
+      <a href="https://doi.org/10.12345/example.2025" target="_blank">https://doi.org/10.12345/example.2025</a>
+    </div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Release Date</div>
+    <div class="summary-value" id="release-date">2025-04-01</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Size</div>
+    <div class="summary-value" id="content-size">2.45 GB</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Description</div>
+    <div class="summary-value" id="description">This dataset contains genomic data from Japanese flounder (PRJDB2884) and human RNA-seq data (PRJEB86838) prepared as AI-ready datasets in RO-Crate format.</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Authors</div>
+    <div class="summary-value" id="authors">Example Researcher</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Publisher</div>
+    <div class="summary-value" id="publisher">Example Data Repository</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Principal Investigator</div>
+    <div class="summary-value" id="principal-investigator">
+      Dr. Example PI
+    </div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Contact Email</div>
+    <div class="summary-value" id="contact-email">example@example.org</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">License</div>
+    <div class="summary-value" id="license">
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">https://creativecommons.org/licenses/by/4.0/</a>
+    </div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Confidentiality Level</div>
+    <div class="summary-value" id="confidentiality-level">
+      HL7 Unrestricted
+    </div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Keywords</div>
+    <div class="summary-value" id="keywords">
+ Genomics,
+      SRA,
+      RNA-seq     </div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Citation</div>
+    <div class="summary-value" id="citation"></div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Human Subject Data</div>
+    <div class="summary-value" id="human-subject"></div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Funding</div>
+    <div class="summary-value" id="funding">Example Funding Agency</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Completeness</div>
+    <div class="summary-value" id="completeness"></div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Related Publications</div>
+    <div class="summary-value" id="related-publications">
+ None     </div>
+  </div>
+</div> <div class="section-header">
+  <h2>Use Cases and Limitations</h2>
+</div>
+<div class="use-cases-section">
+   </div>
 
       <div class="section-header">
-        <h2>Composition (Sub-Crates {{ subcrate_count }})</h2>
+        <h2>Composition (Sub-Crates 0)</h2>
       </div>
 
-      {{ subcrates_section | safe }} {{ distribution_section | safe }}
+      <div class="subcrates-container">
+  <p>No subcrates found.</p>
+</div> <div class="section-header">
+  <h2>Distribution Information</h2>
+</div>
+<div class="distribution-section">
+  <div class="distribution-item">
+    <div class="distribution-label">Publisher:</div>
+    <div class="distribution-value">Example Data Repository</div>
+  </div>
+    <div class="distribution-item">
+    <div class="distribution-label">License:</div>
+    <div class="distribution-value">
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">https://creativecommons.org/licenses/by/4.0/</a>
+    </div>
+  </div>
+    <div class="distribution-item">
+    <div class="distribution-label">Release Date:</div>
+    <div class="distribution-value">2025-04-01</div>
+  </div>
+   <div class="distribution-item">
+    <div class="distribution-label">Version:</div>
+    <div class="distribution-value">1.0</div>
+  </div>
+</div>
     </div>
   </body>
 </html>

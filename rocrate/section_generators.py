@@ -165,11 +165,19 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate['license'] = subcrate_processor.root.get("license", self.processor.root.get("license", ""))
                 subcrate['confidentiality'] = subcrate_processor.root.get("confidentialityLevel", self.processor.root.get("confidentialityLevel", ""))
                 
-                files, software, computations, schemas, other = subcrate_processor.categorize_items()
+                # New categorization with added types
+                files, software, instruments, samples, experiments, computations, schemas, other = subcrate_processor.categorize_items()
+                
                 subcrate['files'] = files
                 subcrate['files_count'] = len(files)
                 subcrate['software'] = software
                 subcrate['software_count'] = len(software)
+                subcrate['instruments'] = instruments
+                subcrate['instruments_count'] = len(instruments)
+                subcrate['samples'] = samples
+                subcrate['samples_count'] = len(samples)
+                subcrate['experiments'] = experiments
+                subcrate['experiments_count'] = len(experiments)
                 subcrate['computations'] = computations
                 subcrate['computations_count'] = len(computations)
                 subcrate['schemas'] = schemas
@@ -177,11 +185,18 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate['other'] = other
                 subcrate['other_count'] = len(other)
                 
+                # Get format and access summaries
                 subcrate['file_formats'] = subcrate_processor.get_formats_summary(files)
                 subcrate['software_formats'] = subcrate_processor.get_formats_summary(software)
                 subcrate['file_access'] = subcrate_processor.get_access_summary(files)
                 subcrate['software_access'] = subcrate_processor.get_access_summary(software)
                 
+                # Extract additional information
+                subcrate['cell_lines'] = subcrate_processor.extract_cell_line_info(samples)
+                subcrate['species'] = subcrate_processor.extract_sample_species(samples)
+                subcrate['experiment_types'] = subcrate_processor.extract_experiment_types(experiments)
+                
+                # Get related publications
                 related_pubs = subcrate_processor.root.get("relatedPublications", [])
                 if not related_pubs:
                     associated_pub = subcrate_processor.root.get("associatedPublication", "")
