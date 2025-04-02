@@ -7,6 +7,7 @@ from .section_generators import (
     DistributionSectionGenerator,
     SubcratesSectionGenerator
 )
+from .preview_generator import ROCratePreviewGenerator
 
 
 class DatasheetGenerator:
@@ -109,11 +110,15 @@ class DatasheetGenerator:
                 continue
                 
             try:
-                subcrate_generator = DatasheetGenerator(json_path=full_path)
-                
+                # Use the ROCratePreviewGenerator for subcrates
                 subcrate_dir = os.path.dirname(full_path)
                 output_path = os.path.join(subcrate_dir, "ro-crate-preview.html")
-                subcrate_generator.save_datasheet(output_path)
                 
+                # Create and use the preview generator
+                preview_generator = ROCratePreviewGenerator(json_path=full_path)
+                preview_generator.save_preview_html(output_path)
+                
+                print(f"Generated preview for subcrate: {subcrate_info.get('name', '')}")
+                    
             except Exception as e:
                 print(f"Error processing subcrate {subcrate_info.get('name', '')}: {str(e)}")
