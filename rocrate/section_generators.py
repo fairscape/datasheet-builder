@@ -128,7 +128,6 @@ class SubcratesSectionGenerator(SectionGenerator):
         subcrate_processors = {}
         hasPart_mapping = {}
         
-        # Build mapping of subcrate IDs from hasPart relationships
         for subcrate_ref in self.processor.root.get("hasPart", []):
             if isinstance(subcrate_ref, dict) and "@id" in subcrate_ref:
                 subcrate_id = subcrate_ref["@id"]
@@ -147,11 +146,9 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate_processor = ROCrateProcessor(json_path=full_path)
                 subcrate_id = subcrate_processor.root.get("@id", subcrate_info.get("id", ""))
                 
-                # Store processor for this subcrate
                 subcrate_processors[subcrate_id] = subcrate_processor
                 subcrate_dir = os.path.dirname(full_path)
                 
-                # Get all categorized items at once
                 files, software, instruments, samples, experiments, computations, schemas, other = subcrate_processor.categorize_items()
                 
                 subcrate = {
@@ -163,7 +160,6 @@ class SubcratesSectionGenerator(SectionGenerator):
                     'metadata_path': metadata_path,
                 }
                 
-                # Get size from metadata or calculate it from the directory
                 size = subcrate_processor.root.get("contentSize", "")
                 if not size and os.path.exists(subcrate_dir):
                     try:
@@ -174,14 +170,12 @@ class SubcratesSectionGenerator(SectionGenerator):
                 
                 subcrate["size"] = size
                 
-                # Get fields with fallback to parent values if available
                 subcrate['doi'] = subcrate_processor.root.get("identifier", self.processor.root.get("identifier", ""))
                 subcrate['date'] = subcrate_processor.root.get("datePublished", self.processor.root.get("datePublished", ""))
                 subcrate['contact'] = subcrate_processor.root.get("contactEmail", self.processor.root.get("contactEmail", ""))
                 subcrate['license'] = subcrate_processor.root.get("license", self.processor.root.get("license", ""))
                 subcrate['confidentiality'] = subcrate_processor.root.get("confidentialityLevel", self.processor.root.get("confidentialityLevel", ""))
                 
-                # Store categorized items
                 subcrate['files'] = files
                 subcrate['files_count'] = len(files)
                 subcrate['software'] = software
@@ -199,21 +193,36 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate['other'] = other
                 subcrate['other_count'] = len(other)
                 
-                # Get format and access summaries
                 subcrate['file_formats'] = subcrate_processor.get_formats_summary(files)
                 subcrate['software_formats'] = subcrate_processor.get_formats_summary(software)
                 subcrate['file_access'] = subcrate_processor.get_access_summary(files)
                 subcrate['software_access'] = subcrate_processor.get_access_summary(software)
                 
-                subcrate['experiment_patterns'] = self.extract_experiment_patterns(subcrate_processor, experiments)
-                subcrate['computation_patterns'] = self.extract_computation_patterns(subcrate_processor, computations, subcrate_processors)
+                patterns, external_datasets = self.extract_computation_patterns(subcrate_processor, computations, subcrate_processors)
+                subcrate['computation_patterns'] = patterns
                 
-                # Extract additional information
+                external_datasets_by_format = {}
+                for dataset in external_datasets:
+                    fmt = dataset["format"]
+                    subcrate_name = dataset["subcrate"]
+                    
+                    if subcrate_name:
+                        key = f"{subcrate_name}, {fmt}"
+                        if key in external_datasets_by_format:
+                            external_datasets_by_format[key] += 1
+                        else:
+                            external_datasets_by_format[key] = 1
+                
+                subcrate['input_datasets'] = external_datasets_by_format
+                subcrate['input_datasets_count'] = len(external_datasets)
+                subcrate['inputs_count'] = subcrate['samples_count'] + subcrate['input_datasets_count']
+                
+                subcrate['experiment_patterns'] = self.extract_experiment_patterns(subcrate_processor, experiments)
+                
                 subcrate['cell_lines'] = subcrate_processor.extract_cell_line_info(samples)
                 subcrate['species'] = subcrate_processor.extract_sample_species(samples)
                 subcrate['experiment_types'] = subcrate_processor.extract_experiment_types(experiments)
                 
-                # Get related publications
                 related_pubs = subcrate_processor.root.get("relatedPublications", [])
                 if not related_pubs:
                     associated_pub = subcrate_processor.root.get("associatedPublication", "")
@@ -247,7 +256,6 @@ class SubcratesSectionGenerator(SectionGenerator):
         return self.template_engine.render('sections/subcrates.html', **context)
 
     def extract_experiment_patterns(self, processor, experiments):
-        """Extract experiment patterns directly"""
         patterns = {}
         
         for experiment in experiments:
@@ -259,13 +267,13 @@ class SubcratesSectionGenerator(SectionGenerator):
                 if isinstance(output_datasets, list):
                     for dataset in output_datasets:
                         if isinstance(dataset, dict) and "@id" in dataset:
-                            output_format = self.get_dataset_format_across_crates(processor, dataset["@id"])
-                            if output_format != "unknown" and output_format not in output_formats:
-                                output_formats.append(output_format)
+                            format_value = processor.get_dataset_format(dataset["@id"])
+                            if format_value != "unknown" and format_value not in output_formats:
+                                output_formats.append(format_value)
                         elif isinstance(dataset, str):
-                            output_format = self.get_dataset_format_across_crates(processor, dataset)
-                            if output_format != "unknown" and output_format not in output_formats:
-                                output_formats.append(output_format)
+                            format_value = processor.get_dataset_format(dataset)
+                            if format_value != "unknown" and format_value not in output_formats:
+                                output_formats.append(format_value)
             
             if output_formats:
                 output_str = ", ".join(sorted(output_formats))
@@ -279,56 +287,78 @@ class SubcratesSectionGenerator(SectionGenerator):
         return list(patterns.keys())
 
     def extract_computation_patterns(self, processor, computations, subcrate_processors=None):
-        """Extract computation patterns with cross-crate resolution"""
         patterns = {}
+        external_datasets = []
         
         for computation in computations:
             input_formats = []
             output_formats = []
             
-            # Get input formats
-            input_datasets = computation.get("usedDataset", [])
-            if input_datasets:
-                if isinstance(input_datasets, list):
-                    for dataset in input_datasets:
+            # Process inputs
+            input_datasets_raw = computation.get("usedDataset", [])
+            if input_datasets_raw:
+                if isinstance(input_datasets_raw, list):
+                    for dataset in input_datasets_raw:
                         if isinstance(dataset, dict) and "@id" in dataset:
-                            input_format = self.get_dataset_format_across_crates(processor, dataset["@id"], subcrate_processors)
-                            if input_format != "unknown" and input_format not in input_formats:
-                                input_formats.append(input_format)
+                            dataset_id = dataset["@id"]
                         elif isinstance(dataset, str):
-                            input_format = self.get_dataset_format_across_crates(processor, dataset, subcrate_processors)
-                            if input_format != "unknown" and input_format not in input_formats:
-                                input_formats.append(input_format)
-                elif isinstance(input_datasets, dict) and "@id" in input_datasets:
-                    input_format = self.get_dataset_format_across_crates(processor, input_datasets["@id"], subcrate_processors)
-                    if input_format != "unknown":
-                        input_formats.append(input_format)
-                elif isinstance(input_datasets, str):
-                    input_format = self.get_dataset_format_across_crates(processor, input_datasets, subcrate_processors)
-                    if input_format != "unknown":
-                        input_formats.append(input_format)
+                            dataset_id = dataset
+                        else:
+                            continue
+                            
+                        format_value = processor.get_dataset_format(dataset_id)
+                        if format_value != "unknown":
+                            if format_value not in input_formats:
+                                input_formats.append(format_value)
+                        elif subcrate_processors:
+                            for subcrate_id, subcrate_proc in subcrate_processors.items():
+                                if subcrate_proc:
+                                    format_value = subcrate_proc.get_dataset_format(dataset_id)
+                                    if format_value != "unknown":
+                                        subcrate_name = subcrate_proc.root.get("name", "Unknown")
+                                        
+                                        display_fmt = f"{subcrate_name} ({format_value})"
+                                        if display_fmt not in input_formats:
+                                            input_formats.append(display_fmt)
+                                        
+                                        external_datasets.append({
+                                            "id": dataset_id,
+                                            "format": format_value,
+                                            "subcrate": subcrate_name
+                                        })
+                                        break
+                elif isinstance(input_datasets_raw, dict) and "@id" in input_datasets_raw:
+                    dataset_id = input_datasets_raw["@id"]
+                    format_value = processor.get_dataset_format(dataset_id)
+                    if format_value != "unknown":
+                        input_formats.append(format_value)
+                    elif subcrate_processors:
+                        for subcrate_id, subcrate_proc in subcrate_processors.items():
+                            if subcrate_proc:
+                                format_value = subcrate_proc.get_dataset_format(dataset_id)
+                                if format_value != "unknown":
+                                    subcrate_name = subcrate_proc.root.get("name", "Unknown")
+                                    display_fmt = f"{subcrate_name} ({format_value})"
+                                    input_formats.append(display_fmt)
+                                    external_datasets.append({
+                                        "id": dataset_id,
+                                        "format": format_value,
+                                        "subcrate": subcrate_name
+                                    })
+                                    break
             
-            # Get output formats
             output_datasets = computation.get("generated", [])
             if output_datasets:
                 if isinstance(output_datasets, list):
                     for dataset in output_datasets:
                         if isinstance(dataset, dict) and "@id" in dataset:
-                            output_format = self.get_dataset_format_across_crates(processor, dataset["@id"], subcrate_processors)
-                            if output_format != "unknown" and output_format not in output_formats:
-                                output_formats.append(output_format)
-                        elif isinstance(dataset, str):
-                            output_format = self.get_dataset_format_across_crates(processor, dataset, subcrate_processors)
-                            if output_format != "unknown" and output_format not in output_formats:
-                                output_formats.append(output_format)
+                            format_value = processor.get_dataset_format(dataset["@id"])
+                            if format_value != "unknown" and format_value not in output_formats:
+                                output_formats.append(format_value)
                 elif isinstance(output_datasets, dict) and "@id" in output_datasets:
-                    output_format = self.get_dataset_format_across_crates(processor, output_datasets["@id"], subcrate_processors)
-                    if output_format != "unknown":
-                        output_formats.append(output_format)
-                elif isinstance(output_datasets, str):
-                    output_format = self.get_dataset_format_across_crates(processor, output_datasets, subcrate_processors)
-                    if output_format != "unknown":
-                        output_formats.append(output_format)
+                    format_value = processor.get_dataset_format(output_datasets["@id"])
+                    if format_value != "unknown":
+                        output_formats.append(format_value)
             
             # Create a pattern string
             if input_formats and output_formats:
@@ -341,20 +371,4 @@ class SubcratesSectionGenerator(SectionGenerator):
                 else:
                     patterns[pattern] = 1
         
-        return list(patterns.keys())
-        
-    def get_dataset_format_across_crates(self, processor, dataset_id, subcrate_processors=None):
-        """Get dataset format with resolution across subcrates"""
-        # First try in the current processor
-        format_value = processor.get_dataset_format(dataset_id)
-        if format_value != "unknown":
-            return format_value
-        
-        if subcrate_processors:
-            for subcrate_id, subcrate_processor in subcrate_processors.items():
-                if subcrate_processor:
-                    format_value = subcrate_processor.get_dataset_format(dataset_id)
-                    if format_value != "unknown":
-                        return format_value
-
-        return "notfound"
+        return list(patterns.keys()), external_datasets

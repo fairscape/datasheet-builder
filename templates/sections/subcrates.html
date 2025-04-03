@@ -126,35 +126,45 @@
         <div class="summary-card">
           <div class="card-header">
             <span class="card-icon">🧪</span>
-            <span class="card-title"
-              >Samples ({{ subcrate.samples_count }})</span
-            >
+            <span class="card-title">Inputs ({{ subcrate.inputs_count }})</span>
           </div>
-          {% if subcrate.cell_lines or subcrate.species %}
           <div class="card-content">
-            {% if subcrate.cell_lines %}
+            {% if subcrate.samples_count > 0 %}
             <div class="stat-row">
-              <span class="stat-label">Cell Lines: </span>
-              <span class="stat-value"
-                >{% for line, count in subcrate.cell_lines.items() %}{{ line }}
-                ({{ count }}){% if not loop.last %}, {% endif %}{% endfor
-                %}</span
-              >
+              <span class="stat-label">Samples: </span>
+              <span class="stat-value">{{ subcrate.samples_count }}</span>
+            </div>
+            {% if subcrate.cell_lines %}
+            <div class="stat-row indent">
+              <span class="stat-value small">
+                {% for line, count in subcrate.cell_lines.items() %}{{ line }}
+                ({{ count }}){% if not loop.last %}, {% endif %}{% endfor %}
+              </span>
             </div>
             {% endif %} {% if subcrate.species %}
+            <div class="stat-row indent">
+              <span class="stat-value small">
+                {% for species, count in subcrate.species.items() %}{{ species
+                }} ({{ count }}){% if not loop.last %}, {% endif %}{% endfor %}
+              </span>
+            </div>
+            {% endif %} {% endif %} {% if subcrate.input_datasets %}
             <div class="stat-row">
-              <span class="stat-label">Species: </span>
+              <span class="stat-label">External Datasets: </span>
               <span class="stat-value"
-                >{% for species, count in subcrate.species.items() %}{{ species
-                }} ({{ count }}){% if not loop.last %}, {% endif %}{% endfor
-                %}</span
+                >{{ subcrate.input_datasets_count }}</span
               >
+            </div>
+            <div class="stat-row indent">
+              <span class="stat-value">
+                {% for fmt, count in subcrate.input_datasets.items() %}{{ fmt }}
+                <span class="small">({{ count }})</span>{% if not loop.last %},
+                {% endif %}{% endfor %}
+              </span>
             </div>
             {% endif %}
           </div>
-          {% endif %}
         </div>
-
         <div class="summary-card">
           <div class="card-header">
             <span class="card-icon">⚙️</span>
@@ -207,7 +217,7 @@
     </div>
     <div class="view-full-link">
       <a href="{{ subcrate.metadata_path.split('/')[0] }}/ro-crate-preview.html"
-        >View Full Subcrate Details</a
+        >View Full Dataset Details</a
       >
     </div>
   </div>
