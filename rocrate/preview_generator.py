@@ -15,15 +15,15 @@ class PreviewGenerator:
 
     def _prepare_item_data(self, items):
         prepared_items = []
-        if not items: # Handle case where input list itself might be None or empty
+        if not items: 
             return []
         for item in items:
-            if not isinstance(item, dict): # Skip items that aren't dictionaries
+            if not isinstance(item, dict): 
                  continue
 
             name = item.get("name", item.get("@id", "Unnamed Item"))
-            description = item.get("description", "") # Default to empty string
-            if description is None: # Explicitly handle None case if .get defaults fail somehow
+            description = item.get("description", "")
+            if description is None: 
                  description = ""
 
             description_display = description
@@ -45,17 +45,14 @@ class PreviewGenerator:
             elif content_url:
                 link_target = content_url
                 if not link_target.startswith(('http:', 'https:', 'ftp:', '/')):
-                     # Ensure base_dir and link_target are valid before joining
                      if self.base_dir and link_target:
                          try:
-                            # Use normpath for cleaner paths
                             abs_link_path = os.path.normpath(os.path.join(self.base_dir, link_target))
-                            # Calculate relative path from base_dir
                             link_target = os.path.relpath(abs_link_path, self.base_dir)
-                         except ValueError: # Handle potential issues with relpath on different drives (Windows)
-                            link_target = content_url # Fallback to original URL
+                         except ValueError:
+                            link_target = content_url 
                      else:
-                        link_target = content_url # Fallback if base_dir or target is invalid
+                        link_target = content_url 
 
                 content_status = f"<a href='{link_target}'>Access / Download</a>"
 
@@ -80,7 +77,7 @@ class PreviewGenerator:
                 "name": name,
                 "description": description,
                 "description_display": description_display,
-                "date": date or "N/A", # Ensure date is not None/empty string
+                "date": date or "N/A", 
                 "content_status": content_status,
                 "id": item.get("@id", ""),
                 "type": item_type,

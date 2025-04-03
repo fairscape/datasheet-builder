@@ -1,6 +1,13 @@
 from collections import Counter
 import json
 import os
+from rocrate import prov
+
+
+from collections import Counter
+import json
+import os
+from rocrate import prov
 
 
 class ROCrateProcessor:
@@ -28,26 +35,21 @@ class ROCrateProcessor:
                 elif item["@type"] == "Dataset" or "ROCrate" in item["@type"]:
                     return item
         
-        # If no clear root found, use the first non-metadata item
         for item in self.graph:
             if "@id" in item and not item["@id"].endswith("metadata.json"):
                 return item
         
-        # Fallback
-        return self.graph[0] if self.graph else {}
+        return self.graph[1] if self.graph else {}
     
     def find_subcrates(self):
         """Find sub-crates referenced in the RO-Crate"""
         subcrates = []
         
-        # Extract sub-crate references from the graph
         for item in self.graph:
             if "@type" in item and item != self.root:
                 item_types = item["@type"] if isinstance(item["@type"], list) else [item["@type"]]
                 
-                # Check if this is a sub-crate (Dataset + ROCrate type)
                 if ("Dataset" in item_types and "https://w3id.org/EVI#ROCrate" in item_types) or "ROCrate" in item_types:
-                    # If it has a ro-crate-metadata path, it's a sub-crate
                     if "ro-crate-metadata" in item:
                         subcrates.append({
                             "id": item.get("@id", ""),
@@ -143,11 +145,10 @@ class ROCrateProcessor:
     
     def get_property_value(self, property_name, additional_properties=None):
         """Get a property value from root or from additionalProperty if present"""
-        # First, check if the property exists directly in the root object
+
         if property_name in self.root:
             return self.root[property_name]
         
-        # If additionalProperty is provided, check in there
         if additional_properties is None:
             additional_properties = self.root.get("additionalProperty", [])
             
@@ -167,7 +168,6 @@ class ROCrateProcessor:
             if cell_line_ref and isinstance(cell_line_ref, dict) and "@id" in cell_line_ref:
                 cell_line_id = cell_line_ref.get("@id", "")
                 if cell_line_id:
-                    # Find the cell line object in the graph
                     for item in self.graph:
                         if item.get("@id") == cell_line_id:
                             cell_line_name = item.get("name", "Unknown")
@@ -177,7 +177,6 @@ class ROCrateProcessor:
                                 cell_lines[cell_line_name] += 1
                             break
             
-            # Check additionalProperty for cell-line information
             additional_properties = sample.get("additionalProperty", [])
             for prop in additional_properties:
                 if prop.get("propertyID") == "cell-line" and prop.get("value") != "N. A.":
@@ -212,7 +211,6 @@ class ROCrateProcessor:
                                 scientific_name = org_name
                                 break
             
-            # Fallback to additionalProperty if no cell line reference found
             if scientific_name == "Unknown":
                 additional_properties = sample.get("additionalProperty", [])
                 for prop in additional_properties:
@@ -220,7 +218,6 @@ class ROCrateProcessor:
                         scientific_name = prop.get("value", "")
                         break
             
-            # Count the species
             if scientific_name not in species:
                 species[scientific_name] = 1
             else:
@@ -241,3 +238,11 @@ class ROCrateProcessor:
                 experiment_types[exp_type] += 1
         
         return experiment_types
+
+    def get_dataset_format(self, dataset_id):
+        """Get the format of a dataset by its ID"""
+        for item in self.graph:
+            if item.get("@id") == dataset_id:
+                return item.get("format", "unknown")
+        
+        return "unknown"

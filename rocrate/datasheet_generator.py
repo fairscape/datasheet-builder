@@ -15,19 +15,16 @@ class DatasheetGenerator:
     
     def __init__(self, json_data=None, json_path=None, template_dir=None):
         """Initialize with JSON data or a path to a JSON file"""
-        # Initialize the processor
+
         self.processor = ROCrateProcessor(json_data=json_data, json_path=json_path)
         
-        # Initialize the template engine
         self.template_engine = TemplateEngine(template_dir=template_dir)
         
-        # Initialize section generators
         self.overview_generator = OverviewSectionGenerator(self.template_engine, self.processor)
         self.use_cases_generator = UseCasesSectionGenerator(self.template_engine, self.processor)
         self.distribution_generator = DistributionSectionGenerator(self.template_engine, self.processor)
         self.subcrates_generator = SubcratesSectionGenerator(self.template_engine, self.processor)
         
-        # Get the base directory for file operations
         if json_path:
             self.base_dir = os.path.dirname(os.path.abspath(json_path))
         else:
@@ -40,7 +37,6 @@ class DatasheetGenerator:
         subcrates_section = self.subcrates_generator.generate(base_dir=self.base_dir)
         distribution_section = self.distribution_generator.generate()
         
-        # Updated to match the new categorize_items return values
         files, software, instruments, samples, experiments, computations, schemas, other = self.processor.categorize_items()
         files_count = len(files)
         software_count = len(software)
@@ -51,7 +47,6 @@ class DatasheetGenerator:
         schemas_count = len(schemas)
         other_count = len(other)
         
-        # Extract additional information
         cell_lines = self.processor.extract_cell_line_info(samples)
         species = self.processor.extract_sample_species(samples)
         experiment_types = self.processor.extract_experiment_types(experiments)
@@ -87,10 +82,7 @@ class DatasheetGenerator:
         if output_path is None:
             output_path = os.path.join(self.base_dir, "ro-crate-datasheet.html")
         
-        # Generate the datasheet
         datasheet_html = self.generate_datasheet()
-        
-        # Save it to the specified path
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(datasheet_html)
         
@@ -99,7 +91,6 @@ class DatasheetGenerator:
     def process_subcrates(self):
         """Process all subcrates and generate HTML preview files for each."""
         subcrates = self.processor.find_subcrates()
-        print(f"Found {len(subcrates)} potential subcrates to process.")
 
         processed_count = 0
         for subcrate_info in subcrates:
@@ -109,7 +100,6 @@ class DatasheetGenerator:
                 continue
 
             full_path = os.path.normpath(os.path.join(self.base_dir, metadata_path))
-            print(f"Attempting to process subcrate metadata: {full_path}")
 
             if not os.path.exists(full_path):
                 print(f"Warning: Subcrate metadata file not found at {full_path}. Skipping.")
@@ -127,11 +117,10 @@ class DatasheetGenerator:
                 )
                 saved_path = preview_gen.save_preview_html(output_path)
 
-                print(f"Generated preview for subcrate '{subcrate_info.get('name', '')}' at: {saved_path}")
                 processed_count += 1
             except Exception as e:
                 import traceback
                 print(f"Error processing subcrate {subcrate_info.get('name', '')} at {full_path}: {str(e)}")
-                #traceback.print_exc() # Uncomment for detailed debugging
+                #traceback.print_exc()
 
         print(f"Finished processing subcrates. Generated {processed_count} preview files.")

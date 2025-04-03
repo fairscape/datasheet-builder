@@ -173,11 +173,26 @@
                 endfor %}</span
               >
             </div>
+            {% endif %} {% if subcrate.experiment_patterns %}
+            <div class="stat-row indent">
+              <span class="stat-value small"
+                >{% for pattern in subcrate.experiment_patterns %}{{ pattern
+                }}{% if not loop.last %}, {% endif %}{% endfor %}</span
+              >
+            </div>
             {% endif %}
             <div class="stat-row">
               <span class="stat-label">Computations: </span>
               <span class="stat-value">{{ subcrate.computations_count }}</span>
             </div>
+            {% if subcrate.computation_patterns %}
+            <div class="stat-row indent">
+              <span class="stat-value small"
+                >{% for pattern in subcrate.computation_patterns %}{{ pattern
+                }}{% if not loop.last %}, {% endif %}{% endfor %}</span
+              >
+            </div>
+            {% endif %}
             <div class="stat-row">
               <span class="stat-label">Schemas: </span>
               <span class="stat-value">{{ subcrate.schemas_count }}</span>
@@ -190,7 +205,6 @@
         </div>
       </div>
     </div>
-
     <div class="view-full-link">
       <a href="{{ subcrate.metadata_path.split('/')[0] }}/ro-crate-preview.html"
         >View Full Subcrate Details</a
