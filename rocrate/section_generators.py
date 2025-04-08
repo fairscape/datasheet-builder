@@ -34,11 +34,20 @@ class OverviewSectionGenerator(SectionGenerator):
             'publisher': root.get("publisher", ""),
             'principal_investigator': root.get("principalInvestigator", ""),
             'contact_email': root.get("contactEmail", ""),
+            'copyright': root.get("copyrightNotice", ""),
+            'terms_of_use': root.get("conditionsOfAccess", ""),
             'confidentiality_level': root.get("confidentialityLevel", ""),
             'citation': root.get("citation", ""),
             'version': root.get("version", ""),
             'content_size': root.get("contentSize", ""),
             'human_subject': self.processor.get_property_value("Human Subject", additional_properties),
+            'human_subject_research': self.processor.get_property_value("Human Subject Research", additional_properties) or "No",
+            'human_subject_exemptions': self.processor.get_property_value("Human Subjects Exemptions", additional_properties) or "N/A",
+            'deidentified_samples': self.processor.get_property_value("De-identified Samples", additional_properties) or "Yes",
+            'fda_regulated': self.processor.get_property_value("FDA Regulated", additional_properties) or "No",
+            'irb': self.processor.get_property_value("IRB", additional_properties) or "N/A",
+            'irb_protocol_id': self.processor.get_property_value("IRB Protocol ID", additional_properties) or "N/A",
+            'data_governance': self.processor.get_property_value("Data Governance Committee", additional_properties) or "",
             'completeness': self.processor.get_property_value("Completeness", additional_properties),
             'funding': root.get("funder", ""),
             'keywords': root.get("keywords", [])
@@ -51,7 +60,6 @@ class OverviewSectionGenerator(SectionGenerator):
             context['related_publications'] = []
         
         return self.template_engine.render('sections/overview.html', **context)
-
 
 class UseCasesSectionGenerator(SectionGenerator):
     def generate(self, processor=None):
@@ -68,7 +76,8 @@ class UseCasesSectionGenerator(SectionGenerator):
             'intended_uses': self.processor.get_property_value("Intended Use", additional_properties),
             'limitations': self.processor.get_property_value("Limitations", additional_properties),
             'prohibited_uses': self.processor.get_property_value("Prohibited Uses", additional_properties),
-            'maintenance_plan': self.processor.get_property_value("Maintenance Plan", additional_properties)
+            'maintenance_plan': self.processor.get_property_value("Maintenance Plan", additional_properties),
+            'potential_bias': self.processor.get_property_value("Potential Sources of Bias", additional_properties)
         }
         
         return self.template_engine.render('sections/use_cases.html', **context)
@@ -150,12 +159,16 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate_dir = os.path.dirname(full_path)
                 
                 files, software, instruments, samples, experiments, computations, schemas, other = subcrate_processor.categorize_items()
+                if isinstance(subcrate_processor.root.get("author", ""), list):
+                    authors = ", ".join(subcrate_processor.root.get("author", ""))
+                else:
+                    authors = subcrate_processor.root.get("author", "")
                 
                 subcrate = {
                     'name': subcrate_processor.root.get("name", subcrate_info.get("name", "Unnamed Sub-Crate")),
                     'id': subcrate_id,
                     'description': subcrate_processor.root.get("description", subcrate_info.get("description", "")),
-                    'authors': subcrate_processor.root.get("author", ""),
+                    'authors': authors,
                     'keywords': subcrate_processor.root.get("keywords", []),
                     'metadata_path': metadata_path,
                 }
@@ -175,6 +188,7 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate['contact'] = subcrate_processor.root.get("contactEmail", self.processor.root.get("contactEmail", ""))
                 subcrate['license'] = subcrate_processor.root.get("license", self.processor.root.get("license", ""))
                 subcrate['confidentiality'] = subcrate_processor.root.get("confidentialityLevel", self.processor.root.get("confidentialityLevel", ""))
+                subcrate['funder'] = subcrate_processor.root.get("funder", self.processor.root.get("funder", ""))
                 
                 subcrate['files'] = files
                 subcrate['files_count'] = len(files)

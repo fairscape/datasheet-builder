@@ -37,12 +37,16 @@
   <div class="summary-row">
     <div class="summary-label">Principal Investigator</div>
     <div class="summary-value" id="principal-investigator">
-      {{ principal_investigator }}
+      {{ principal_investigator }}; {{ contact_email }}
     </div>
   </div>
   <div class="summary-row">
-    <div class="summary-label">Contact Email</div>
-    <div class="summary-value" id="contact-email">{{ contact_email }}</div>
+    <div class="summary-label">Data Governance Committee</div>
+    <div class="summary-value" id="data-governance">{{ data_governance }}</div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Copyright</div>
+    <div class="summary-value" id="copyright">{{ copyright }}</div>
   </div>
   <div class="summary-row">
     <div class="summary-label">License</div>
@@ -51,6 +55,10 @@
       <a href="{{ license_value }}" target="_blank">{{ license_value }}</a>
       {% else %} Not specified {% endif %}
     </div>
+  </div>
+  <div class="summary-row">
+    <div class="summary-label">Terms of Use</div>
+    <div class="summary-value" id="terms-of-use">{{ terms_of_use }}</div>
   </div>
   <div class="summary-row">
     <div class="summary-label">Confidentiality Level</div>
@@ -66,13 +74,10 @@
     </div>
   </div>
   <div class="summary-row">
-    <div class="summary-label">Citation</div>
+    <div class="summary-label">Cite As</div>
     <div class="summary-value" id="citation">{{ citation }}</div>
   </div>
-  <div class="summary-row">
-    <div class="summary-label">Human Subject Data</div>
-    <div class="summary-value" id="human-subject">{{ human_subject }}</div>
-  </div>
+
   <div class="summary-row">
     <div class="summary-label">Funding</div>
     <div class="summary-value" id="funding">{{ funding }}</div>
@@ -91,6 +96,39 @@
         {% endfor %}
       </ul>
       {% else %} None {% endif %}
+    </div>
+  </div>
+
+  <div class="summary-section-grid">
+    <div class="summary-grid-row">
+      <div class="summary-grid-item">
+        <div class="summary-grid-label">Human Subjects Research:</div>
+        <div class="summary-grid-value">{{ human_subject_research }}</div>
+      </div>
+      <div class="summary-grid-item">
+        <div class="summary-grid-label">Human Subjects Exemptions:</div>
+        <div class="summary-grid-value">{{ human_subject_exemptions }}</div>
+      </div>
+    </div>
+    <div class="summary-grid-row">
+      <div class="summary-grid-item">
+        <div class="summary-grid-label">De-identified Samples:</div>
+        <div class="summary-grid-value">{{ deidentified_samples }}</div>
+      </div>
+      <div class="summary-grid-item">
+        <div class="summary-grid-label">FDA Regulated:</div>
+        <div class="summary-grid-value">{{ fda_regulated }}</div>
+      </div>
+    </div>
+    <div class="summary-grid-row">
+      <div class="summary-grid-item">
+        <div class="summary-grid-label">IRB:</div>
+        <div class="summary-grid-value">{{ irb }}</div>
+      </div>
+      <div class="summary-grid-item">
+        <div class="summary-grid-label">IRB Protocol ID:</div>
+        <div class="summary-grid-value">{{ irb_protocol_id }}</div>
+      </div>
     </div>
   </div>
 </div>

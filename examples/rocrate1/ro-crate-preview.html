@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PBAT-mediated targeted methylome sequencing - RO-Crate Preview</title>
+    <style>
+      body {
+        font-family: "Helvetica", "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.5;
+        background-color: #f5f5f5; /* Match datasheet background */
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white; /* Match datasheet container */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Match datasheet shadow */
+      }
+      header {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 15px;
+        background-color: #f8f9fa; /* Match datasheet header bg */
+        padding: 20px; /* Match datasheet header padding */
+        border-radius: 5px; /* Match datasheet header radius */
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        color: #2c3e50;
+      }
+      .summary-section {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        page-break-inside: avoid;
+      }
+      .summary-row {
+        display: flex;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+      }
+      .summary-label {
+        width: 220px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+      .summary-value {
+        flex: 1;
+      }
+      .tabs {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+        flex-wrap: wrap; /* Allow tabs to wrap */
+      }
+      .tab {
+        padding: 10px 15px; /* Adjust padding slightly */
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        font-weight: bold;
+        color: #2c3e50;
+        white-space: nowrap; /* Prevent wrapping within a tab */
+      }
+      .tab.active {
+        border-bottom: 3px solid #2c3e50;
+      }
+      .tab .badge {
+        display: inline-block;
+        background-color: #2c3e50;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+      .tab-content {
+        margin-bottom: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        table-layout: fixed; /* Helps with long descriptions */
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #eaeaea;
+        word-wrap: break-word; /* Break long words */
+      }
+      th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        color: #2c3e50;
+        border-bottom: 2px solid #ddd;
+      }
+      tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+      tr:hover {
+        background-color: #f1f8fe;
+      }
+      td:nth-child(2) {
+        /* Target description column */
+        max-width: 400px; /* Limit description width */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      td:nth-child(2)[title] {
+        /* Style cells with tooltips */
+        cursor: help;
+      }
+      .publications-list {
+        margin: 5px 0 0 15px; /* Adjusted margin */
+        padding: 0;
+        list-style: disc; /* Use standard disc */
+      }
+      .publications-list li {
+        margin-bottom: 6px; /* Slightly reduced spacing */
+      }
+
+      @media print {
+        body {
+          font-size: 11pt;
+          background-color: white;
+        }
+        .container {
+          max-width: 100%;
+          padding: 10px;
+          box-shadow: none;
+        }
+        table {
+          border: 1px solid #ddd;
+          page-break-inside: auto; /* Allow table rows to break across pages */
+        }
+        tr {
+          page-break-inside: avoid; /* Try to keep rows together */
+        }
+        th,
+        td {
+          border: 1px solid #ddd;
+        }
+        .tab-content {
+          display: block !important; /* Show all content when printing */
+          page-break-before: always; /* Start each section on new page */
+        }
+        .tab-content:first-of-type {
+          page-break-before: avoid; /* Don't break before first table */
+        }
+        .tabs {
+          display: none;
+        }
+        .summary-section {
+          box-shadow: none;
+          border: 1px solid #eee;
+        }
+        header {
+          background-color: white;
+          box-shadow: none;
+        }
+        h1 {
+          font-size: 18pt;
+        }
+      }
+      @media (max-width: 768px) {
+        .summary-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .summary-label {
+          width: 100%;
+          margin-bottom: 3px;
+        }
+        .summary-value {
+          width: 100%;
+        }
+        td:nth-child(2) {
+          /* Allow description to wrap on mobile */
+          white-space: normal;
+        }
+        .tabs {
+          justify-content: center; /* Center tabs if they wrap */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>PBAT-mediated targeted methylome sequencing</h1>
+        <div>Version: 1.0</div>
+      </header>
+
+      <div class="summary-section">
+        <h2>RO-Crate Summary</h2>
+        <div class="summary-row">
+          <div class="summary-label">ROCrate ID</div>
+          <div class="summary-value" id="accession">ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-7Ja0mjadWJ/</div>
+        </div>
+         <div class="summary-row">
+          <div class="summary-label">Release Date</div>
+          <div class="summary-value" id="release-date">2025-04-03T16:03:43.407381</div>
+        </div>
+           <div class="summary-row">
+          <div class="summary-label">Description</div>
+          <div class="summary-value" id="description">To enhance the sensitivity of DNA methylome analysis of DNA enriched with hybridization capture technology, a strategy termed post-bisulfite adaptor tagging (PBAT) was applied. This enabled targeted methylome analysis from as little as 30 ng of starting DNA extracted from human and mouse.</div>
+        </div>
+         <div class="summary-row">
+          <div class="summary-label">Authors</div>
+          <div class="summary-value" id="authors">Justin, Max</div>
+        </div>
+         <div class="summary-row">
+          <div class="summary-label">Publisher</div>
+          <div class="summary-value" id="publisher">N/A</div>
+        </div>
+           <div class="summary-row">
+          <div class="summary-label">License</div>
+          <div class="summary-value" id="license">
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"
+              >https://creativecommons.org/publicdomain/zero/1.0/</a
+            >
+          </div>
+        </div>
+          <div class="summary-row">
+          <div class="summary-label">Keywords</div>
+          <div class="summary-value" id="keywords">
+bioproject, bioinformatics, Homo sapiens, RawSquncRads, EpignticMarkrs, Targeted Locus (Loci)          </div>
+        </div>
+        </div>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="datasets">
+          Datasets <span class="badge">8</span>
+        </div>
+           <div
+          class="tab "
+          data-tab="samples"
+        >
+          Samples <span class="badge">2</span>
+        </div>
+         <div
+          class="tab "
+          data-tab="experiments"
+        >
+          Experiments <span class="badge">8</span>
+        </div>
+         <div
+          class="tab "
+          data-tab="instruments"
+        >
+          Instruments <span class="badge">1</span>
+        </div>
+         <div
+          class="tab "
+          data-tab="other"
+        >
+          Other <span class="badge">1</span>
+        </div>
+      </div>
+
+       <div
+        id="datasets-content"
+        class="tab-content"
+        style="display: block;"
+      >
+        <table id="datasets-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Access</th>
+              <th>Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017270</td>
+              <td
+title="Sequencing run DRR019432 from experiment DRX017585"
+              >
+                Sequencing run DRR019432 from experiment DRX017585
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019432'>Access / Download</a></td>
+              <td>2014-10-17 12:18:50</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Sequencing run DRR019431 from experiment DRX017584"
+              >
+                Sequencing run DRR019431 from experiment DRX017584
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019431'>Access / Download</a></td>
+              <td>2014-10-17 12:18:38</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Sequencing run DRR019430 from experiment DRX017583"
+              >
+                Sequencing run DRR019430 from experiment DRX017583
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019430'>Access / Download</a></td>
+              <td>2014-10-17 12:18:30</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Sequencing run DRR019429 from experiment DRX017582"
+              >
+                Sequencing run DRR019429 from experiment DRX017582
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019429'>Access / Download</a></td>
+              <td>2014-10-17 12:18:23</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Sequencing run DRR019428 from experiment DRX017581"
+              >
+                Sequencing run DRR019428 from experiment DRX017581
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019428'>Access / Download</a></td>
+              <td>2014-10-17 12:18:14</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Sequencing run DRR019427 from experiment DRX017580"
+              >
+                Sequencing run DRR019427 from experiment DRX017580
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019427'>Access / Download</a></td>
+              <td>2014-10-17 12:18:06</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Sequencing run DRR019426 from experiment DRX017579"
+              >
+                Sequencing run DRR019426 from experiment DRX017579
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019426'>Access / Download</a></td>
+              <td>2014-10-17 12:17:58</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Sequencing run DRR019425 from experiment DRX017578"
+              >
+                Sequencing run DRR019425 from experiment DRX017578
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/DRR019425'>Access / Download</a></td>
+              <td>2014-10-17 12:17:50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="software-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <p>No software found in this RO-Crate.</p>
+      </div>
+       <div
+        id="computations-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <p>No computations found in this RO-Crate.</p>
+      </div>
+       <div
+        id="samples-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <table id="samples-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Identifier</th>
+              <th>Date Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Genomic DNA isolated from IMR-90</td>
+              <td
+title="Genomic DNA isolated from IMR-90"
+              >
+                Genomic DNA isolated from IMR-90
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/DRS016642'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td
+title="Sampple DRS016636"
+              >
+                Sampple DRS016636
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/DRS016636'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="experiments-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <table id="experiments-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Date Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017270</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017270 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017270 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Illumina HiSeq 2500 paired end sequencing of SAMD00017269</td>
+              <td
+title="Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500"
+              >
+                Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="instruments-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <table id="instruments-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Manufacturer</th>
+              <th>Date Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Illumina HiSeq 2500</td>
+              <td
+title="Illumina HiSeq 2500 used for sequencing"
+              >
+                Illumina HiSeq 2500 used for sequencing
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="other-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <table id="other-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>@id</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>IMR-90 Cell Line</td>
+              <td
+title=""
+              >
+                
+              </td>
+              <td>Not specified</td>
+              <td>BioChemEntity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab");
+        if (!tabs.length) return; // No tabs to manage
+
+        // Ensure at least one tab is active if logic failed initially
+        const activeTab = document.querySelector(".tab.active");
+        if (!activeTab) {
+          tabs[0].classList.add("active");
+          const firstTabId = tabs[0].getAttribute("data-tab");
+          const firstTabContent = document.getElementById(
+            `${firstTabId}-content`
+          );
+          if (firstTabContent) {
+            firstTabContent.style.display = "block";
+          }
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            tabs.forEach((t) => t.classList.remove("active"));
+            this.classList.add("active");
+
+            document.querySelectorAll(".tab-content").forEach((content) => {
+              content.style.display = "none";
+            });
+
+            const tabId = this.getAttribute("data-tab");
+            const targetContent = document.getElementById(`${tabId}-content`);
+            if (targetContent) {
+              targetContent.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

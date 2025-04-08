@@ -11,11 +11,11 @@
         "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
       },
       "about": {
-        "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-dat0XaF46D9/"
+        "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-7Ja0mjadWJ/"
       }
     },
     {
-      "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-dat0XaF46D9/",
+      "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-7Ja0mjadWJ/",
       "@type": [
         "Dataset",
         "https://w3id.org/EVI#ROCrate"
@@ -34,61 +34,61 @@
       "version": "1.0",
       "hasPart": [
         {
-          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-N2Ylr2MzjT"
+          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-B9FYQ3Uj3HL"
         },
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         },
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-DcuxtcbP0A"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-B9FYQ3Uj3p8"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULhPUO9zi0"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMNP"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxotTx8IOob"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-T4O3Iha10h"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gKf6o8Rt"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxoyuKiIOjy"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-cEhDSEquQDe"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-L5QFHOspnk0"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ioly1oRvSH7"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-YjwckM9EsK"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-8gH59glR7OT"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ks8Lbte5LP"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-xDPS4DgoBZ"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-pQAGVJ8kWo"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-Oyr1ZypJNGN"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-datTxwr4IP"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXcw"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Fpkwe75GaWj"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-6XbsUXPggX"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMic"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4tyTbtLOap"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzxSr"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-zYEiCYnc3kN"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzPR"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXFpn"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-JrCdiFIaguc"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-eVXAGVD6Ec"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4ty1ofCOYS"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6kwexsz4W"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-rvmazpoCEfJ"
         }
       ],
       "author": "Justin, Max",
@@ -96,11 +96,11 @@
       "associatedPublication": "",
       "conditionsOfAccess": "",
       "copyrightNotice": "",
-      "datePublished": "2025-04-02T14:50:21.212763",
+      "datePublished": "2025-04-03T16:03:43.407381",
       "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJDB2884"
     },
     {
-      "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-N2Ylr2MzjT",
+      "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-B9FYQ3Uj3HL",
       "name": "Genomic DNA isolated from IMR-90",
       "@type": "https://w3id.org/EVI#Sample",
       "author": "Justin, Max",
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "@id": "ark:59852/sample-qT1b8TB3pZ",
+      "@id": "ark:59852/sample-CmxtcklSg8D",
       "name": "",
       "@type": "https://w3id.org/EVI#Sample",
       "author": "Justin, Max",
@@ -358,7 +358,7 @@
       ]
     },
     {
-      "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs",
+      "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK",
       "name": "Illumina HiSeq 2500",
       "@type": "https://w3id.org/EVI#Instrument",
       "manufacturer": "ILLUMINA",
@@ -367,7 +367,7 @@
       "usedByExperiment": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-DcuxtcbP0A",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-B9FYQ3Uj3p8",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017270",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -383,7 +383,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-Oyr1ZypJNGN"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-datTxwr4IP"
         }
       ],
       "derivedFrom": [],
@@ -394,7 +394,7 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULhPUO9zi0",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMNP",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -410,7 +410,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXcw"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Fpkwe75GaWj"
         }
       ],
       "derivedFrom": [],
@@ -421,7 +421,7 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxotTx8IOob",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-T4O3Iha10h",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -437,7 +437,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-6XbsUXPggX"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMic"
         }
       ],
       "derivedFrom": [],
@@ -448,7 +448,7 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gKf6o8Rt",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxoyuKiIOjy",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -464,7 +464,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4tyTbtLOap"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzxSr"
         }
       ],
       "derivedFrom": [],
@@ -475,7 +475,7 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-cEhDSEquQDe",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-L5QFHOspnk0",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -491,7 +491,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-zYEiCYnc3kN"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzPR"
         }
       ],
       "derivedFrom": [],
@@ -502,7 +502,7 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ioly1oRvSH7",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-YjwckM9EsK",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -518,7 +518,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXFpn"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-JrCdiFIaguc"
         }
       ],
       "derivedFrom": [],
@@ -529,7 +529,7 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-8gH59glR7OT",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ks8Lbte5LP",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -545,7 +545,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-eVXAGVD6Ec"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4ty1ofCOYS"
         }
       ],
       "derivedFrom": [],
@@ -556,7 +556,7 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-xDPS4DgoBZ",
+      "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-pQAGVJ8kWo",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "metadataType": "https://w3id.org/EVI#Dataset",
       "additionalType": "Dataset",
@@ -572,7 +572,7 @@
       "format": "sra",
       "generatedBy": [
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6kwexsz4W"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-rvmazpoCEfJ"
         }
       ],
       "derivedFrom": [],
@@ -583,26 +583,28 @@
       "usedBy": []
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-Oyr1ZypJNGN",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-datTxwr4IP",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017270",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017270 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.944328",
+      "datePerformed": "2025-04-03T16:03:45.952242",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-N2Ylr2MzjT"
+          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-B9FYQ3Uj3HL"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-DcuxtcbP0A"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-B9FYQ3Uj3p8"
         }
       ],
       "additionalProperty": [
@@ -644,26 +646,28 @@
       ]
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXcw",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Fpkwe75GaWj",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.945417",
+      "datePerformed": "2025-04-03T16:03:45.952763",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULhPUO9zi0"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMNP"
         }
       ],
       "additionalProperty": [
@@ -705,26 +709,28 @@
       ]
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-6XbsUXPggX",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMic",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.945846",
+      "datePerformed": "2025-04-03T16:03:45.953168",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxotTx8IOob"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-T4O3Iha10h"
         }
       ],
       "additionalProperty": [
@@ -766,26 +772,28 @@
       ]
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4tyTbtLOap",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzxSr",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.946266",
+      "datePerformed": "2025-04-03T16:03:45.953557",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gKf6o8Rt"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxoyuKiIOjy"
         }
       ],
       "additionalProperty": [
@@ -827,26 +835,28 @@
       ]
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-zYEiCYnc3kN",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzPR",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.946683",
+      "datePerformed": "2025-04-03T16:03:45.953939",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-cEhDSEquQDe"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-L5QFHOspnk0"
         }
       ],
       "additionalProperty": [
@@ -888,26 +898,28 @@
       ]
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXFpn",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-JrCdiFIaguc",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.947111",
+      "datePerformed": "2025-04-03T16:03:45.954327",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ioly1oRvSH7"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-YjwckM9EsK"
         }
       ],
       "additionalProperty": [
@@ -949,26 +961,28 @@
       ]
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-eVXAGVD6Ec",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4ty1ofCOYS",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.947529",
+      "datePerformed": "2025-04-03T16:03:45.954716",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-8gH59glR7OT"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ks8Lbte5LP"
         }
       ],
       "additionalProperty": [
@@ -1010,26 +1024,28 @@
       ]
     },
     {
-      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6kwexsz4W",
+      "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-rvmazpoCEfJ",
       "name": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269",
       "@type": "https://w3id.org/EVI#Experiment",
       "experimentType": "Bisulfite-Seq",
       "runBy": "Justin, Max",
       "description": "Illumina HiSeq 2500 paired end sequencing of SAMD00017269 using Illumina HiSeq 2500",
-      "datePerformed": "2025-04-02T14:50:23.947946",
+      "datePerformed": "2025-04-03T16:03:45.955953",
       "usedInstrument": [
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         }
       ],
       "usedSample": [
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         }
       ],
+      "usedTreatment": [],
+      "usedStain": [],
       "generated": [
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-xDPS4DgoBZ"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-pQAGVJ8kWo"
         }
       ],
       "additionalProperty": [

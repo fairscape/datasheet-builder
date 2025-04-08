@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing - RO-Crate Preview</title>
+    <style>
+      body {
+        font-family: "Helvetica", "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.5;
+        background-color: #f5f5f5; /* Match datasheet background */
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white; /* Match datasheet container */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Match datasheet shadow */
+      }
+      header {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 15px;
+        background-color: #f8f9fa; /* Match datasheet header bg */
+        padding: 20px; /* Match datasheet header padding */
+        border-radius: 5px; /* Match datasheet header radius */
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        color: #2c3e50;
+      }
+      .summary-section {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        page-break-inside: avoid;
+      }
+      .summary-row {
+        display: flex;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+      }
+      .summary-label {
+        width: 220px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+      .summary-value {
+        flex: 1;
+      }
+      .tabs {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+        flex-wrap: wrap; /* Allow tabs to wrap */
+      }
+      .tab {
+        padding: 10px 15px; /* Adjust padding slightly */
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        font-weight: bold;
+        color: #2c3e50;
+        white-space: nowrap; /* Prevent wrapping within a tab */
+      }
+      .tab.active {
+        border-bottom: 3px solid #2c3e50;
+      }
+      .tab .badge {
+        display: inline-block;
+        background-color: #2c3e50;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+      .tab-content {
+        margin-bottom: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        table-layout: fixed; /* Helps with long descriptions */
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #eaeaea;
+        word-wrap: break-word; /* Break long words */
+      }
+      th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        color: #2c3e50;
+        border-bottom: 2px solid #ddd;
+      }
+      tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+      tr:hover {
+        background-color: #f1f8fe;
+      }
+      td:nth-child(2) {
+        /* Target description column */
+        max-width: 400px; /* Limit description width */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      td:nth-child(2)[title] {
+        /* Style cells with tooltips */
+        cursor: help;
+      }
+      .publications-list {
+        margin: 5px 0 0 15px; /* Adjusted margin */
+        padding: 0;
+        list-style: disc; /* Use standard disc */
+      }
+      .publications-list li {
+        margin-bottom: 6px; /* Slightly reduced spacing */
+      }
+
+      @media print {
+        body {
+          font-size: 11pt;
+          background-color: white;
+        }
+        .container {
+          max-width: 100%;
+          padding: 10px;
+          box-shadow: none;
+        }
+        table {
+          border: 1px solid #ddd;
+          page-break-inside: auto; /* Allow table rows to break across pages */
+        }
+        tr {
+          page-break-inside: avoid; /* Try to keep rows together */
+        }
+        th,
+        td {
+          border: 1px solid #ddd;
+        }
+        .tab-content {
+          display: block !important; /* Show all content when printing */
+          page-break-before: always; /* Start each section on new page */
+        }
+        .tab-content:first-of-type {
+          page-break-before: avoid; /* Don't break before first table */
+        }
+        .tabs {
+          display: none;
+        }
+        .summary-section {
+          box-shadow: none;
+          border: 1px solid #eee;
+        }
+        header {
+          background-color: white;
+          box-shadow: none;
+        }
+        h1 {
+          font-size: 18pt;
+        }
+      }
+      @media (max-width: 768px) {
+        .summary-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .summary-label {
+          width: 100%;
+          margin-bottom: 3px;
+        }
+        .summary-value {
+          width: 100%;
+        }
+        td:nth-child(2) {
+          /* Allow description to wrap on mobile */
+          white-space: normal;
+        }
+        .tabs {
+          justify-content: center; /* Center tabs if they wrap */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing</h1>
+        <div>Version: 1.0</div>
+      </header>
+
+      <div class="summary-section">
+        <h2>RO-Crate Summary</h2>
+        <div class="summary-row">
+          <div class="summary-label">ROCrate ID</div>
+          <div class="summary-value" id="accession">ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-2BjzpZLYMrc/</div>
+        </div>
+         <div class="summary-row">
+          <div class="summary-label">Release Date</div>
+          <div class="summary-value" id="release-date">2025-04-03T16:03:50.062242</div>
+        </div>
+           <div class="summary-row">
+          <div class="summary-label">Description</div>
+          <div class="summary-value" id="description">The effects of sample multiplexing on the detection sensitivity of antimicrobial resistance genes (ARGs) and pathogenic bacteria in metagenomic sequencing remain underexplored in newer sequencing technologies such as Oxford Nanopore Technologies (ONT), despite its critical importance for surveillance applications. Here, we evaluate how different multiplexing levels (four and eight samples per flowcell) on two ONT platforms, GridION and PromethION P2 Solo, influence the detection of ARGs, bacterial taxa and pathogens. While overall resistome and bacterial community profiles remained comparable across multiplexing levels, ARG detection was more comprehensive in the four-plex setting, however only with low-abundance genes. Similarly, pathogen detection was more sensitive in the four-plex, identifying a broader range of pathogens compared to the eight-plex, yet remains with low abundant taxa. However, triplicate sequencing revealed that these differences were primarily due to sequencing variability rather than multiplexing itself, as similar inconsistencies were observed across replicates. Given that eight-plex sequencing is more cost-effective while still capturing the overall resistome and bacterial community composition, it may be the preferred option for general surveillance. Conversely, lower multiplexing levels may be advantageous for applications requiring enhanced sensitivity, such as detailed pathogen surveillance. These findings highlight the trade-off between multiplexing efficiency, sequencing depth, and cost in metagenomic studies.</div>
+        </div>
+         <div class="summary-row">
+          <div class="summary-label">Authors</div>
+          <div class="summary-value" id="authors">Tim, Sadnan</div>
+        </div>
+         <div class="summary-row">
+          <div class="summary-label">Publisher</div>
+          <div class="summary-value" id="publisher">N/A</div>
+        </div>
+           <div class="summary-row">
+          <div class="summary-label">License</div>
+          <div class="summary-value" id="license">
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"
+              >https://creativecommons.org/publicdomain/zero/1.0/</a
+            >
+          </div>
+        </div>
+          <div class="summary-row">
+          <div class="summary-label">Keywords</div>
+          <div class="summary-value" id="keywords">
+bioproject, bioinformatics, Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing, Othr, Other          </div>
+        </div>
+        </div>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="datasets">
+          Datasets <span class="badge">64</span>
+        </div>
+           <div
+          class="tab "
+          data-tab="samples"
+        >
+          Samples <span class="badge">64</span>
+        </div>
+         <div
+          class="tab "
+          data-tab="experiments"
+        >
+          Experiments <span class="badge">64</span>
+        </div>
+         <div
+          class="tab "
+          data-tab="instruments"
+        >
+          Instruments <span class="badge">2</span>
+        </div>
+       </div>
+
+       <div
+        id="datasets-content"
+        class="tab-content"
+        style="display: block;"
+      >
+        <table id="datasets-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Access</th>
+              <th>Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_106_MG_P1_P2_four_rep1</td>
+              <td
+title="Sequencing run ERR14766138 from experiment ERX14170119"
+              >
+                Sequencing run ERR14766138 from experiment ERX14170119
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14766138'>Access / Download</a></td>
+              <td>2025-03-22 22:18:03</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_101_MG_G1_Grid_four_rep2</td>
+              <td
+title="Sequencing run ERR14766134 from experiment ERX14170115"
+              >
+                Sequencing run ERR14766134 from experiment ERX14170115
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14766134'>Access / Download</a></td>
+              <td>2025-03-22 22:30:16</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_110_MG_P1_P2_eight_rep2</td>
+              <td
+title="Sequencing run ERR14722488 from experiment ERX14123913"
+              >
+                Sequencing run ERR14722488 from experiment ERX14123913
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14722488'>Access / Download</a></td>
+              <td>2025-03-15 01:36:13</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_109_MG_P3_P2_eight_rep1</td>
+              <td
+title="Sequencing run ERR14722443 from experiment ERX14123868"
+              >
+                Sequencing run ERR14722443 from experiment ERX14123868
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14722443'>Access / Download</a></td>
+              <td>2025-03-15 01:19:39</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_104_MG_G1_Grid_eight_rep2</td>
+              <td
+title="Sequencing run ERR14721373 from experiment ERX14122798"
+              >
+                Sequencing run ERR14721373 from experiment ERX14122798
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721373'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_103_MG_G1_Grid_eight_rep1</td>
+              <td
+title="Sequencing run ERR14721367 from experiment ERX14122792"
+              >
+                Sequencing run ERR14721367 from experiment ERX14122792
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721367'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_102_MG_G3_Grid_four_rep3</td>
+              <td
+title="Sequencing run ERR14721248 from experiment ERX14122673"
+              >
+                Sequencing run ERR14721248 from experiment ERX14122673
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721248'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035780_100_MG_G1_eight_samples</td>
+              <td
+title="Sequencing run ERR14721198 from experiment ERX14122623"
+              >
+                Sequencing run ERR14721198 from experiment ERX14122623
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721198'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035775_100_MG_G1_one_sample</td>
+              <td
+title="Sequencing run ERR14721129 from experiment ERX14122554"
+              >
+                Sequencing run ERR14721129 from experiment ERX14122554
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721129'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035836_100_MG_P3_P2_eight_samples</td>
+              <td
+title="Sequencing run ERR14721094 from experiment ERX14122519"
+              >
+                Sequencing run ERR14721094 from experiment ERX14122519
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721094'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_110_MG_P2_P2_eight_rep2</td>
+              <td
+title="Sequencing run ERR14721731 from experiment ERX14123156"
+              >
+                Sequencing run ERR14721731 from experiment ERX14123156
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721731'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_105_MG_G1_Grid_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721380 from experiment ERX14122805"
+              >
+                Sequencing run ERR14721380 from experiment ERX14122805
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721380'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_105_MG_G3_Grid_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721385 from experiment ERX14122810"
+              >
+                Sequencing run ERR14721385 from experiment ERX14122810
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721385'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_100_MG_G4_Grid_four_rep1</td>
+              <td
+title="Sequencing run ERR14721229 from experiment ERX14122654"
+              >
+                Sequencing run ERR14721229 from experiment ERX14122654
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721229'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_108_MG_P1_P2_four_rep3</td>
+              <td
+title="Sequencing run ERR14721425 from experiment ERX14122850"
+              >
+                Sequencing run ERR14721425 from experiment ERX14122850
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721425'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_111_MG_P4_P2_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721813 from experiment ERX14123238"
+              >
+                Sequencing run ERR14721813 from experiment ERX14123238
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721813'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_100_MG_G1_Grid_four_rep1</td>
+              <td
+title="Sequencing run ERR14721216 from experiment ERX14122641"
+              >
+                Sequencing run ERR14721216 from experiment ERX14122641
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721216'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_108_MG_P3_P2_four_rep3</td>
+              <td
+title="Sequencing run ERR14721433 from experiment ERX14122858"
+              >
+                Sequencing run ERR14721433 from experiment ERX14122858
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721433'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_106_MG_P2_P2_four_rep1</td>
+              <td
+title="Sequencing run ERR14721392 from experiment ERX14122817"
+              >
+                Sequencing run ERR14721392 from experiment ERX14122817
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721392'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_101_MG_G4_Grid_four_rep2_SE</td>
+              <td
+title="Sequencing run ERR14721241 from experiment ERX14122666"
+              >
+                Sequencing run ERR14721241 from experiment ERX14122666
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721241'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_102_MG_G2_Grid_four_rep3_SE</td>
+              <td
+title="Sequencing run ERR14721246 from experiment ERX14122671"
+              >
+                Sequencing run ERR14721246 from experiment ERX14122671
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721246'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_103_MG_G3_Grid_eight_rep1</td>
+              <td
+title="Sequencing run ERR14721370 from experiment ERX14122795"
+              >
+                Sequencing run ERR14721370 from experiment ERX14122795
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721370'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_110_MG_P4_P2_eight_rep2</td>
+              <td
+title="Sequencing run ERR14721745 from experiment ERX14123170"
+              >
+                Sequencing run ERR14721745 from experiment ERX14123170
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721745'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035831_100_MG_P2_P2_four_samples</td>
+              <td
+title="Sequencing run ERR14720801 from experiment ERX14122226"
+              >
+                Sequencing run ERR14720801 from experiment ERX14122226
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14720801'>Access / Download</a></td>
+              <td>2025-03-13 22:43:24</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_106_MG_P3_P2_four_rep1</td>
+              <td
+title="Sequencing run ERR14721394 from experiment ERX14122819"
+              >
+                Sequencing run ERR14721394 from experiment ERX14122819
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721394'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_102_MG_G1_Grid_four_rep3</td>
+              <td
+title="Sequencing run ERR14721243 from experiment ERX14122668"
+              >
+                Sequencing run ERR14721243 from experiment ERX14122668
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721243'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035783_100_MG_G4_eight_samples</td>
+              <td
+title="Sequencing run ERR14721209 from experiment ERX14122634"
+              >
+                Sequencing run ERR14721209 from experiment ERX14122634
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721209'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_106_MG_P4_P2_four_rep1</td>
+              <td
+title="Sequencing run ERR14721398 from experiment ERX14122823"
+              >
+                Sequencing run ERR14721398 from experiment ERX14122823
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721398'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035776_100_MG_G1_four_samples</td>
+              <td
+title="Sequencing run ERR14721136 from experiment ERX14122561"
+              >
+                Sequencing run ERR14721136 from experiment ERX14122561
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721136'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_104_MG_G2_Grid_eight_rep2</td>
+              <td
+title="Sequencing run ERR14721375 from experiment ERX14122800"
+              >
+                Sequencing run ERR14721375 from experiment ERX14122800
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721375'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_108_MG_P4_P2_four_rep3</td>
+              <td
+title="Sequencing run ERR14721446 from experiment ERX14122871"
+              >
+                Sequencing run ERR14721446 from experiment ERX14122871
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721446'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035781_100_MG_G2_eight_samples</td>
+              <td
+title="Sequencing run ERR14721200 from experiment ERX14122625"
+              >
+                Sequencing run ERR14721200 from experiment ERX14122625
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721200'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_102_MG_G4_Grid_four_rep3</td>
+              <td
+title="Sequencing run ERR14721249 from experiment ERX14122674"
+              >
+                Sequencing run ERR14721249 from experiment ERX14122674
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721249'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_109_MG_P4_P2_eight_rep1</td>
+              <td
+title="Sequencing run ERR14722464 from experiment ERX14123889"
+              >
+                Sequencing run ERR14722464 from experiment ERX14123889
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14722464'>Access / Download</a></td>
+              <td>2025-03-13 22:43:29</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035834_100_MG_P1_P2_eight_samples</td>
+              <td
+title="Sequencing run ERR14721060 from experiment ERX14122485"
+              >
+                Sequencing run ERR14721060 from experiment ERX14122485
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721060'>Access / Download</a></td>
+              <td>2025-03-13 22:43:24</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_105_MG_G2_Grid_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721382 from experiment ERX14122807"
+              >
+                Sequencing run ERR14721382 from experiment ERX14122807
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721382'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_100_MG_G3_Grid_four_rep1</td>
+              <td
+title="Sequencing run ERR14721223 from experiment ERX14122648"
+              >
+                Sequencing run ERR14721223 from experiment ERX14122648
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721223'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_111_MG_P3_P2_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721811 from experiment ERX14123236"
+              >
+                Sequencing run ERR14721811 from experiment ERX14123236
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721811'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_107_MG_P2_P2_four_rep2</td>
+              <td
+title="Sequencing run ERR14721408 from experiment ERX14122833"
+              >
+                Sequencing run ERR14721408 from experiment ERX14122833
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721408'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035830_100_MG_P1_P2_four_samples</td>
+              <td
+title="Sequencing run ERR14720729 from experiment ERX14122154"
+              >
+                Sequencing run ERR14720729 from experiment ERX14122154
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14720729'>Access / Download</a></td>
+              <td>2025-03-13 22:43:24</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_104_MG_G3_Grid_eight_rep2</td>
+              <td
+title="Sequencing run ERR14721376 from experiment ERX14122801"
+              >
+                Sequencing run ERR14721376 from experiment ERX14122801
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721376'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_109_MG_P2_P2_eight_rep1</td>
+              <td
+title="Sequencing run ERR14721726 from experiment ERX14123151"
+              >
+                Sequencing run ERR14721726 from experiment ERX14123151
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721726'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_103_MG_G4_Grid_eight_rep1</td>
+              <td
+title="Sequencing run ERR14721371 from experiment ERX14122796"
+              >
+                Sequencing run ERR14721371 from experiment ERX14122796
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721371'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_103_MG_G2_Grid_eight_rep1</td>
+              <td
+title="Sequencing run ERR14721369 from experiment ERX14122794"
+              >
+                Sequencing run ERR14721369 from experiment ERX14122794
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721369'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_104_MG_G4_Grid_eight_rep2</td>
+              <td
+title="Sequencing run ERR14721378 from experiment ERX14122803"
+              >
+                Sequencing run ERR14721378 from experiment ERX14122803
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721378'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_100_MG_G2_Grid_four_rep1</td>
+              <td
+title="Sequencing run ERR14721220 from experiment ERX14122645"
+              >
+                Sequencing run ERR14721220 from experiment ERX14122645
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721220'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035833_100_MG_P4_P2_four_samples</td>
+              <td
+title="Sequencing run ERR14721045 from experiment ERX14122470"
+              >
+                Sequencing run ERR14721045 from experiment ERX14122470
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721045'>Access / Download</a></td>
+              <td>2025-03-13 22:43:24</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_107_MG_P1_P2_four_rep2</td>
+              <td
+title="Sequencing run ERR14721402 from experiment ERX14122827"
+              >
+                Sequencing run ERR14721402 from experiment ERX14122827
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721402'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_111_MG_P2_P2_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721808 from experiment ERX14123233"
+              >
+                Sequencing run ERR14721808 from experiment ERX14123233
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721808'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035779_100_MG_G4_four_samples</td>
+              <td
+title="Sequencing run ERR14721197 from experiment ERX14122622"
+              >
+                Sequencing run ERR14721197 from experiment ERX14122622
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721197'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_108_MG_P2_P2_four_rep3</td>
+              <td
+title="Sequencing run ERR14721428 from experiment ERX14122853"
+              >
+                Sequencing run ERR14721428 from experiment ERX14122853
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721428'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_107_MG_P4_P2_four_rep2</td>
+              <td
+title="Sequencing run ERR14721415 from experiment ERX14122840"
+              >
+                Sequencing run ERR14721415 from experiment ERX14122840
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721415'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_101_MG_G2_Grid_four_rep2</td>
+              <td
+title="Sequencing run ERR14721238 from experiment ERX14122663"
+              >
+                Sequencing run ERR14721238 from experiment ERX14122663
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721238'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_105_MG_G4_Grid_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721387 from experiment ERX14122812"
+              >
+                Sequencing run ERR14721387 from experiment ERX14122812
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721387'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_101_MG_G3_Grid_four_rep2</td>
+              <td
+title="Sequencing run ERR14721240 from experiment ERX14122665"
+              >
+                Sequencing run ERR14721240 from experiment ERX14122665
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721240'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_111_MG_P1_P2_eight_rep3</td>
+              <td
+title="Sequencing run ERR14721748 from experiment ERX14123173"
+              >
+                Sequencing run ERR14721748 from experiment ERX14123173
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721748'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_107_MG_P3_P2_four_rep2_SE</td>
+              <td
+title="Sequencing run ERR14721411 from experiment ERX14122836"
+              >
+                Sequencing run ERR14721411 from experiment ERX14122836
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721411'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035835_100_MG_P2_P2_eight_samples</td>
+              <td
+title="Sequencing run ERR14721075 from experiment ERX14122500"
+              >
+                Sequencing run ERR14721075 from experiment ERX14122500
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721075'>Access / Download</a></td>
+              <td>2025-03-13 22:43:24</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035832_100_MG_P3_P2_four_samples</td>
+              <td
+title="Sequencing run ERR14721020 from experiment ERX14122445"
+              >
+                Sequencing run ERR14721020 from experiment ERX14122445
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721020'>Access / Download</a></td>
+              <td>2025-03-13 22:43:24</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035837_100_MG_P4_P2_eight_samples</td>
+              <td
+title="Sequencing run ERR14721115 from experiment ERX14122540"
+              >
+                Sequencing run ERR14721115 from experiment ERX14122540
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721115'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035782_100_MG_G3_eight_samples</td>
+              <td
+title="Sequencing run ERR14721203 from experiment ERX14122628"
+              >
+                Sequencing run ERR14721203 from experiment ERX14122628
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721203'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035778_100_MG_G3_four_samples</td>
+              <td
+title="Sequencing run ERR14721148 from experiment ERX14122573"
+              >
+                Sequencing run ERR14721148 from experiment ERX14122573
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721148'>Access / Download</a></td>
+              <td>2025-03-13 22:43:25</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_110_MG_P3_P2_eight_rep2</td>
+              <td
+title="Sequencing run ERR14721736 from experiment ERX14123161"
+              >
+                Sequencing run ERR14721736 from experiment ERX14123161
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721736'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_109_MG_P1_P2_eight_rep1</td>
+              <td
+title="Sequencing run ERR14721724 from experiment ERX14123149"
+              >
+                Sequencing run ERR14721724 from experiment ERX14123149
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/sra/ERR14721724'>Access / Download</a></td>
+              <td>2025-03-13 22:43:26</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="software-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <p>No software found in this RO-Crate.</p>
+      </div>
+       <div
+        id="computations-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <p>No computations found in this RO-Crate.</p>
+      </div>
+       <div
+        id="samples-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <table id="samples-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Identifier</th>
+              <th>Date Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DTU_2024_1037151_106_MG_P1_P2_four_rep1</td>
+              <td
+title="DTU_2024_1037151_106_MG_P1_P2_four_rep1"
+              >
+                DTU_2024_1037151_106_MG_P1_P2_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791482'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_101_MG_G1_Grid_four_rep2</td>
+              <td
+title="DTU_2024_1037151_101_MG_G1_Grid_four_rep2"
+              >
+                DTU_2024_1037151_101_MG_G1_Grid_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791462'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_110_MG_P1_P2_eight_rep2</td>
+              <td
+title="DTU_2024_1037151_110_MG_P1_P2_eight_rep2"
+              >
+                DTU_2024_1037151_110_MG_P1_P2_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791498'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_109_MG_P3_P2_eight_rep1</td>
+              <td
+title="DTU_2024_1037153_109_MG_P3_P2_eight_rep1"
+              >
+                DTU_2024_1037153_109_MG_P3_P2_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791496'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_104_MG_G1_Grid_eight_rep2</td>
+              <td
+title="DTU_2024_1037151_104_MG_G1_Grid_eight_rep2"
+              >
+                DTU_2024_1037151_104_MG_G1_Grid_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791474'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_103_MG_G1_Grid_eight_rep1</td>
+              <td
+title="DTU_2024_1037151_103_MG_G1_Grid_eight_rep1"
+              >
+                DTU_2024_1037151_103_MG_G1_Grid_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791470'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_102_MG_G3_Grid_four_rep3</td>
+              <td
+title="DTU_2024_1037153_102_MG_G3_Grid_four_rep3"
+              >
+                DTU_2024_1037153_102_MG_G3_Grid_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791468'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035780_100_MG_G1_eight_samples</td>
+              <td
+title="DTU_2023_1035780_100_MG_G1_eight_samples"
+              >
+                DTU_2023_1035780_100_MG_G1_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791454'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035775_100_MG_G1_one_sample</td>
+              <td
+title="DTU_2023_1035775_100_MG_G1_one_sample"
+              >
+                DTU_2023_1035775_100_MG_G1_one_sample
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791449'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035836_100_MG_P3_P2_eight_samples</td>
+              <td
+title="DTU_2024_1035836_100_MG_P3_P2_eight_samples"
+              >
+                DTU_2024_1035836_100_MG_P3_P2_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791447'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_110_MG_P2_P2_eight_rep2</td>
+              <td
+title="DTU_2024_1037152_110_MG_P2_P2_eight_rep2"
+              >
+                DTU_2024_1037152_110_MG_P2_P2_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791499'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_105_MG_G1_Grid_eight_rep3</td>
+              <td
+title="DTU_2024_1037151_105_MG_G1_Grid_eight_rep3"
+              >
+                DTU_2024_1037151_105_MG_G1_Grid_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791478'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_105_MG_G3_Grid_eight_rep3</td>
+              <td
+title="DTU_2024_1037153_105_MG_G3_Grid_eight_rep3"
+              >
+                DTU_2024_1037153_105_MG_G3_Grid_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791480'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_100_MG_G4_Grid_four_rep1</td>
+              <td
+title="DTU_2024_1037154_100_MG_G4_Grid_four_rep1"
+              >
+                DTU_2024_1037154_100_MG_G4_Grid_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791461'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_108_MG_P1_P2_four_rep3</td>
+              <td
+title="DTU_2024_1037151_108_MG_P1_P2_four_rep3"
+              >
+                DTU_2024_1037151_108_MG_P1_P2_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791490'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_111_MG_P4_P2_eight_rep3</td>
+              <td
+title="DTU_2024_1037154_111_MG_P4_P2_eight_rep3"
+              >
+                DTU_2024_1037154_111_MG_P4_P2_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791505'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_100_MG_G1_Grid_four_rep1</td>
+              <td
+title="DTU_2024_1037151_100_MG_G1_Grid_four_rep1"
+              >
+                DTU_2024_1037151_100_MG_G1_Grid_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791458'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_108_MG_P3_P2_four_rep3</td>
+              <td
+title="DTU_2024_1037153_108_MG_P3_P2_four_rep3"
+              >
+                DTU_2024_1037153_108_MG_P3_P2_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791492'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_106_MG_P2_P2_four_rep1</td>
+              <td
+title="DTU_2024_1037152_106_MG_P2_P2_four_rep1"
+              >
+                DTU_2024_1037152_106_MG_P2_P2_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791483'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_101_MG_G4_Grid_four_rep2</td>
+              <td
+title="DTU_2024_1037154_101_MG_G4_Grid_four_rep2"
+              >
+                DTU_2024_1037154_101_MG_G4_Grid_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791465'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_102_MG_G2_Grid_four_rep3</td>
+              <td
+title="DTU_2024_1037152_102_MG_G2_Grid_four_rep3"
+              >
+                DTU_2024_1037152_102_MG_G2_Grid_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791467'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_103_MG_G3_Grid_eight_rep1</td>
+              <td
+title="DTU_2024_1037153_103_MG_G3_Grid_eight_rep1"
+              >
+                DTU_2024_1037153_103_MG_G3_Grid_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791472'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_110_MG_P4_P2_eight_rep2</td>
+              <td
+title="DTU_2024_1037154_110_MG_P4_P2_eight_rep2"
+              >
+                DTU_2024_1037154_110_MG_P4_P2_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791501'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035831_100_MG_P2_P2_four_samples</td>
+              <td
+title="DTU_2024_1035831_100_MG_P2_P2_four_samples"
+              >
+                DTU_2024_1035831_100_MG_P2_P2_four_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791442'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_106_MG_P3_P2_four_rep1</td>
+              <td
+title="DTU_2024_1037153_106_MG_P3_P2_four_rep1"
+              >
+                DTU_2024_1037153_106_MG_P3_P2_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791484'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_102_MG_G1_Grid_four_rep3</td>
+              <td
+title="DTU_2024_1037151_102_MG_G1_Grid_four_rep3"
+              >
+                DTU_2024_1037151_102_MG_G1_Grid_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791466'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035783_100_MG_G4_eight_samples</td>
+              <td
+title="DTU_2023_1035783_100_MG_G4_eight_samples"
+              >
+                DTU_2023_1035783_100_MG_G4_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791457'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_106_MG_P4_P2_four_rep1</td>
+              <td
+title="DTU_2024_1037154_106_MG_P4_P2_four_rep1"
+              >
+                DTU_2024_1037154_106_MG_P4_P2_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791485'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035776_100_MG_G1_four_samples</td>
+              <td
+title="DTU_2023_1035776_100_MG_G1_four_samples"
+              >
+                DTU_2023_1035776_100_MG_G1_four_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791450'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_104_MG_G2_Grid_eight_rep2</td>
+              <td
+title="DTU_2024_1037152_104_MG_G2_Grid_eight_rep2"
+              >
+                DTU_2024_1037152_104_MG_G2_Grid_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791475'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_108_MG_P4_P2_four_rep3</td>
+              <td
+title="DTU_2024_1037154_108_MG_P4_P2_four_rep3"
+              >
+                DTU_2024_1037154_108_MG_P4_P2_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791493'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035781_100_MG_G2_eight_samples</td>
+              <td
+title="DTU_2023_1035781_100_MG_G2_eight_samples"
+              >
+                DTU_2023_1035781_100_MG_G2_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791455'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_102_MG_G4_Grid_four_rep3</td>
+              <td
+title="DTU_2024_1037154_102_MG_G4_Grid_four_rep3"
+              >
+                DTU_2024_1037154_102_MG_G4_Grid_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791469'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_109_MG_P4_P2_eight_rep1</td>
+              <td
+title="DTU_2024_1037154_109_MG_P4_P2_eight_rep1"
+              >
+                DTU_2024_1037154_109_MG_P4_P2_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791497'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035834_100_MG_P1_P2_eight_samples</td>
+              <td
+title="DTU_2024_1035834_100_MG_P1_P2_eight_samples"
+              >
+                DTU_2024_1035834_100_MG_P1_P2_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791445'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_105_MG_G2_Grid_eight_rep3</td>
+              <td
+title="DTU_2024_1037152_105_MG_G2_Grid_eight_rep3"
+              >
+                DTU_2024_1037152_105_MG_G2_Grid_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791479'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_100_MG_G3_Grid_four_rep1</td>
+              <td
+title="DTU_2024_1037153_100_MG_G3_Grid_four_rep1"
+              >
+                DTU_2024_1037153_100_MG_G3_Grid_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791460'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_111_MG_P3_P2_eight_rep3</td>
+              <td
+title="DTU_2024_1037153_111_MG_P3_P2_eight_rep3"
+              >
+                DTU_2024_1037153_111_MG_P3_P2_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791504'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_107_MG_P2_P2_four_rep2</td>
+              <td
+title="DTU_2024_1037152_107_MG_P2_P2_four_rep2"
+              >
+                DTU_2024_1037152_107_MG_P2_P2_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791487'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035830_100_MG_P1_P2_four_samples</td>
+              <td
+title="DTU_2024_1035830_100_MG_P1_P2_four_samples"
+              >
+                DTU_2024_1035830_100_MG_P1_P2_four_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791441'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_104_MG_G3_Grid_eight_rep2</td>
+              <td
+title="DTU_2024_1037153_104_MG_G3_Grid_eight_rep2"
+              >
+                DTU_2024_1037153_104_MG_G3_Grid_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791476'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_109_MG_P2_P2_eight_rep1</td>
+              <td
+title="DTU_2024_1037152_109_MG_P2_P2_eight_rep1"
+              >
+                DTU_2024_1037152_109_MG_P2_P2_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791495'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_103_MG_G4_Grid_eight_rep1</td>
+              <td
+title="DTU_2024_1037154_103_MG_G4_Grid_eight_rep1"
+              >
+                DTU_2024_1037154_103_MG_G4_Grid_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791473'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_103_MG_G2_Grid_eight_rep1</td>
+              <td
+title="DTU_2024_1037152_103_MG_G2_Grid_eight_rep1"
+              >
+                DTU_2024_1037152_103_MG_G2_Grid_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791471'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_104_MG_G4_Grid_eight_rep2</td>
+              <td
+title="DTU_2024_1037154_104_MG_G4_Grid_eight_rep2"
+              >
+                DTU_2024_1037154_104_MG_G4_Grid_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791477'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_100_MG_G2_Grid_four_rep1</td>
+              <td
+title="DTU_2024_1037152_100_MG_G2_Grid_four_rep1"
+              >
+                DTU_2024_1037152_100_MG_G2_Grid_four_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791459'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035833_100_MG_P4_P2_four_samples</td>
+              <td
+title="DTU_2024_1035833_100_MG_P4_P2_four_samples"
+              >
+                DTU_2024_1035833_100_MG_P4_P2_four_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791444'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_107_MG_P1_P2_four_rep2</td>
+              <td
+title="DTU_2024_1037151_107_MG_P1_P2_four_rep2"
+              >
+                DTU_2024_1037151_107_MG_P1_P2_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791486'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_111_MG_P2_P2_eight_rep3</td>
+              <td
+title="DTU_2024_1037152_111_MG_P2_P2_eight_rep3"
+              >
+                DTU_2024_1037152_111_MG_P2_P2_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791503'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035779_100_MG_G4_four_samples</td>
+              <td
+title="DTU_2023_1035779_100_MG_G4_four_samples"
+              >
+                DTU_2023_1035779_100_MG_G4_four_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791453'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_108_MG_P2_P2_four_rep3</td>
+              <td
+title="DTU_2024_1037152_108_MG_P2_P2_four_rep3"
+              >
+                DTU_2024_1037152_108_MG_P2_P2_four_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791491'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_107_MG_P4_P2_four_rep2</td>
+              <td
+title="DTU_2024_1037154_107_MG_P4_P2_four_rep2"
+              >
+                DTU_2024_1037154_107_MG_P4_P2_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791489'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037152_101_MG_G2_Grid_four_rep2</td>
+              <td
+title="DTU_2024_1037152_101_MG_G2_Grid_four_rep2"
+              >
+                DTU_2024_1037152_101_MG_G2_Grid_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791463'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037154_105_MG_G4_Grid_eight_rep3</td>
+              <td
+title="DTU_2024_1037154_105_MG_G4_Grid_eight_rep3"
+              >
+                DTU_2024_1037154_105_MG_G4_Grid_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791481'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_101_MG_G3_Grid_four_rep2</td>
+              <td
+title="DTU_2024_1037153_101_MG_G3_Grid_four_rep2"
+              >
+                DTU_2024_1037153_101_MG_G3_Grid_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791464'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_111_MG_P1_P2_eight_rep3</td>
+              <td
+title="DTU_2024_1037151_111_MG_P1_P2_eight_rep3"
+              >
+                DTU_2024_1037151_111_MG_P1_P2_eight_rep3
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791502'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_107_MG_P3_P2_four_rep2</td>
+              <td
+title="DTU_2024_1037153_107_MG_P3_P2_four_rep2"
+              >
+                DTU_2024_1037153_107_MG_P3_P2_four_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791488'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035835_100_MG_P2_P2_eight_samples</td>
+              <td
+title="DTU_2024_1035835_100_MG_P2_P2_eight_samples"
+              >
+                DTU_2024_1035835_100_MG_P2_P2_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791446'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035832_100_MG_P3_P2_four_samples</td>
+              <td
+title="DTU_2024_1035832_100_MG_P3_P2_four_samples"
+              >
+                DTU_2024_1035832_100_MG_P3_P2_four_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791443'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1035837_100_MG_P4_P2_eight_samples</td>
+              <td
+title="DTU_2024_1035837_100_MG_P4_P2_eight_samples"
+              >
+                DTU_2024_1035837_100_MG_P4_P2_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791448'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035782_100_MG_G3_eight_samples</td>
+              <td
+title="DTU_2023_1035782_100_MG_G3_eight_samples"
+              >
+                DTU_2023_1035782_100_MG_G3_eight_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791456'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2023_1035778_100_MG_G3_four_samples</td>
+              <td
+title="DTU_2023_1035778_100_MG_G3_four_samples"
+              >
+                DTU_2023_1035778_100_MG_G3_four_samples
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791452'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037153_110_MG_P3_P2_eight_rep2</td>
+              <td
+title="DTU_2024_1037153_110_MG_P3_P2_eight_rep2"
+              >
+                DTU_2024_1037153_110_MG_P3_P2_eight_rep2
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791500'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>DTU_2024_1037151_109_MG_P1_P2_eight_rep1</td>
+              <td
+title="DTU_2024_1037151_109_MG_P1_P2_eight_rep1"
+              >
+                DTU_2024_1037151_109_MG_P1_P2_eight_rep1
+              </td>
+              <td><a href='https://www.ncbi.nlm.nih.gov/biosample/ERS23791494'>Access / Download</a></td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="experiments-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <table id="experiments-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Date Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_106_MG_P1_P2_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037151_106_MG_P1_P2_four_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037151_106_MG_P1_P2_four_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_101_MG_G1_Grid_four_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037151_101_MG_G1_Grid_four_rep2 using GridION"
+              >
+                Raw reads: DTU_2024_1037151_101_MG_G1_Grid_four_rep2 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_110_MG_P1_P2_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037151_110_MG_P1_P2_eight_rep2 using PromethION"
+              >
+                Raw reads: DTU_2024_1037151_110_MG_P1_P2_eight_rep2 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_109_MG_P3_P2_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037153_109_MG_P3_P2_eight_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037153_109_MG_P3_P2_eight_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_104_MG_G1_Grid_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037151_104_MG_G1_Grid_eight_rep2 using GridION"
+              >
+                Raw reads: DTU_2024_1037151_104_MG_G1_Grid_eight_rep2 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_103_MG_G1_Grid_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037151_103_MG_G1_Grid_eight_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037151_103_MG_G1_Grid_eight_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_102_MG_G3_Grid_four_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037153_102_MG_G3_Grid_four_rep3 using GridION"
+              >
+                Raw reads: DTU_2024_1037153_102_MG_G3_Grid_four_rep3 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035780_100_MG_G1_eight_samples</td>
+              <td
+title="Raw reads: DTU_2023_1035780_100_MG_G1_eight_samples using GridION"
+              >
+                Raw reads: DTU_2023_1035780_100_MG_G1_eight_samples using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035775_100_MG_G1_one_sample</td>
+              <td
+title="Raw reads: DTU_2023_1035775_100_MG_G1_one_sample using GridION"
+              >
+                Raw reads: DTU_2023_1035775_100_MG_G1_one_sample using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035836_100_MG_P3_P2_eight_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035836_100_MG_P3_P2_eight_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035836_100_MG_P3_P2_eight_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_110_MG_P2_P2_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037152_110_MG_P2_P2_eight_rep2 using PromethION"
+              >
+                Raw reads: DTU_2024_1037152_110_MG_P2_P2_eight_rep2 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_105_MG_G1_Grid_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037151_105_MG_G1_Grid_eight_rep3 using GridION"
+              >
+                Raw reads: DTU_2024_1037151_105_MG_G1_Grid_eight_rep3 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_105_MG_G3_Grid_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037153_105_MG_G3_Grid_eight_rep3 using GridION"
+              >
+                Raw reads: DTU_2024_1037153_105_MG_G3_Grid_eight_rep3 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_100_MG_G4_Grid_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037154_100_MG_G4_Grid_four_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037154_100_MG_G4_Grid_four_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_108_MG_P1_P2_four_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037151_108_MG_P1_P2_four_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037151_108_MG_P1_P2_four_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_111_MG_P4_P2_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037154_111_MG_P4_P2_eight_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037154_111_MG_P4_P2_eight_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_100_MG_G1_Grid_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037151_100_MG_G1_Grid_four_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037151_100_MG_G1_Grid_four_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_108_MG_P3_P2_four_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037153_108_MG_P3_P2_four_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037153_108_MG_P3_P2_four_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_106_MG_P2_P2_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037152_106_MG_P2_P2_four_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037152_106_MG_P2_P2_four_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_101_MG_G4_Grid_four_rep2_SE</td>
+              <td
+title="Raw reads: DTU_2024_1037154_101_MG_G4_Grid_four_rep2_SE using GridION"
+              >
+                Raw reads: DTU_2024_1037154_101_MG_G4_Grid_four_rep2_SE using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_102_MG_G2_Grid_four_rep3_SE</td>
+              <td
+title="Raw reads: DTU_2024_1037152_102_MG_G2_Grid_four_rep3_SE using GridION"
+              >
+                Raw reads: DTU_2024_1037152_102_MG_G2_Grid_four_rep3_SE using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_103_MG_G3_Grid_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037153_103_MG_G3_Grid_eight_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037153_103_MG_G3_Grid_eight_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_110_MG_P4_P2_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037154_110_MG_P4_P2_eight_rep2 using PromethION"
+              >
+                Raw reads: DTU_2024_1037154_110_MG_P4_P2_eight_rep2 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035831_100_MG_P2_P2_four_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035831_100_MG_P2_P2_four_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035831_100_MG_P2_P2_four_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_106_MG_P3_P2_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037153_106_MG_P3_P2_four_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037153_106_MG_P3_P2_four_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_102_MG_G1_Grid_four_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037151_102_MG_G1_Grid_four_rep3 using GridION"
+              >
+                Raw reads: DTU_2024_1037151_102_MG_G1_Grid_four_rep3 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035783_100_MG_G4_eight_samples</td>
+              <td
+title="Raw reads: DTU_2023_1035783_100_MG_G4_eight_samples using GridION"
+              >
+                Raw reads: DTU_2023_1035783_100_MG_G4_eight_samples using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_106_MG_P4_P2_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037154_106_MG_P4_P2_four_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037154_106_MG_P4_P2_four_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035776_100_MG_G1_four_samples</td>
+              <td
+title="Raw reads: DTU_2023_1035776_100_MG_G1_four_samples using GridION"
+              >
+                Raw reads: DTU_2023_1035776_100_MG_G1_four_samples using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_104_MG_G2_Grid_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037152_104_MG_G2_Grid_eight_rep2 using GridION"
+              >
+                Raw reads: DTU_2024_1037152_104_MG_G2_Grid_eight_rep2 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_108_MG_P4_P2_four_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037154_108_MG_P4_P2_four_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037154_108_MG_P4_P2_four_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035781_100_MG_G2_eight_samples</td>
+              <td
+title="Raw reads: DTU_2023_1035781_100_MG_G2_eight_samples using GridION"
+              >
+                Raw reads: DTU_2023_1035781_100_MG_G2_eight_samples using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_102_MG_G4_Grid_four_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037154_102_MG_G4_Grid_four_rep3 using GridION"
+              >
+                Raw reads: DTU_2024_1037154_102_MG_G4_Grid_four_rep3 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_109_MG_P4_P2_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037154_109_MG_P4_P2_eight_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037154_109_MG_P4_P2_eight_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035834_100_MG_P1_P2_eight_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035834_100_MG_P1_P2_eight_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035834_100_MG_P1_P2_eight_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_105_MG_G2_Grid_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037152_105_MG_G2_Grid_eight_rep3 using GridION"
+              >
+                Raw reads: DTU_2024_1037152_105_MG_G2_Grid_eight_rep3 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_100_MG_G3_Grid_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037153_100_MG_G3_Grid_four_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037153_100_MG_G3_Grid_four_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_111_MG_P3_P2_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037153_111_MG_P3_P2_eight_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037153_111_MG_P3_P2_eight_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_107_MG_P2_P2_four_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037152_107_MG_P2_P2_four_rep2 using PromethION"
+              >
+                Raw reads: DTU_2024_1037152_107_MG_P2_P2_four_rep2 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035830_100_MG_P1_P2_four_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035830_100_MG_P1_P2_four_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035830_100_MG_P1_P2_four_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_104_MG_G3_Grid_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037153_104_MG_G3_Grid_eight_rep2 using GridION"
+              >
+                Raw reads: DTU_2024_1037153_104_MG_G3_Grid_eight_rep2 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_109_MG_P2_P2_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037152_109_MG_P2_P2_eight_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037152_109_MG_P2_P2_eight_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_103_MG_G4_Grid_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037154_103_MG_G4_Grid_eight_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037154_103_MG_G4_Grid_eight_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_103_MG_G2_Grid_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037152_103_MG_G2_Grid_eight_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037152_103_MG_G2_Grid_eight_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_104_MG_G4_Grid_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037154_104_MG_G4_Grid_eight_rep2 using GridION"
+              >
+                Raw reads: DTU_2024_1037154_104_MG_G4_Grid_eight_rep2 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_100_MG_G2_Grid_four_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037152_100_MG_G2_Grid_four_rep1 using GridION"
+              >
+                Raw reads: DTU_2024_1037152_100_MG_G2_Grid_four_rep1 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035833_100_MG_P4_P2_four_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035833_100_MG_P4_P2_four_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035833_100_MG_P4_P2_four_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_107_MG_P1_P2_four_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037151_107_MG_P1_P2_four_rep2 using PromethION"
+              >
+                Raw reads: DTU_2024_1037151_107_MG_P1_P2_four_rep2 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_111_MG_P2_P2_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037152_111_MG_P2_P2_eight_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037152_111_MG_P2_P2_eight_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035779_100_MG_G4_four_samples</td>
+              <td
+title="Raw reads: DTU_2023_1035779_100_MG_G4_four_samples using GridION"
+              >
+                Raw reads: DTU_2023_1035779_100_MG_G4_four_samples using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_108_MG_P2_P2_four_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037152_108_MG_P2_P2_four_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037152_108_MG_P2_P2_four_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_107_MG_P4_P2_four_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037154_107_MG_P4_P2_four_rep2 using PromethION"
+              >
+                Raw reads: DTU_2024_1037154_107_MG_P4_P2_four_rep2 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037152_101_MG_G2_Grid_four_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037152_101_MG_G2_Grid_four_rep2 using GridION"
+              >
+                Raw reads: DTU_2024_1037152_101_MG_G2_Grid_four_rep2 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037154_105_MG_G4_Grid_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037154_105_MG_G4_Grid_eight_rep3 using GridION"
+              >
+                Raw reads: DTU_2024_1037154_105_MG_G4_Grid_eight_rep3 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_101_MG_G3_Grid_four_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037153_101_MG_G3_Grid_four_rep2 using GridION"
+              >
+                Raw reads: DTU_2024_1037153_101_MG_G3_Grid_four_rep2 using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_111_MG_P1_P2_eight_rep3</td>
+              <td
+title="Raw reads: DTU_2024_1037151_111_MG_P1_P2_eight_rep3 using PromethION"
+              >
+                Raw reads: DTU_2024_1037151_111_MG_P1_P2_eight_rep3 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_107_MG_P3_P2_four_rep2_SE</td>
+              <td
+title="Raw reads: DTU_2024_1037153_107_MG_P3_P2_four_rep2_SE using PromethION"
+              >
+                Raw reads: DTU_2024_1037153_107_MG_P3_P2_four_rep2_SE using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035835_100_MG_P2_P2_eight_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035835_100_MG_P2_P2_eight_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035835_100_MG_P2_P2_eight_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035832_100_MG_P3_P2_four_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035832_100_MG_P3_P2_four_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035832_100_MG_P3_P2_four_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1035837_100_MG_P4_P2_eight_samples</td>
+              <td
+title="Raw reads: DTU_2024_1035837_100_MG_P4_P2_eight_samples using PromethION"
+              >
+                Raw reads: DTU_2024_1035837_100_MG_P4_P2_eight_samples using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035782_100_MG_G3_eight_samples</td>
+              <td
+title="Raw reads: DTU_2023_1035782_100_MG_G3_eight_samples using GridION"
+              >
+                Raw reads: DTU_2023_1035782_100_MG_G3_eight_samples using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2023_1035778_100_MG_G3_four_samples</td>
+              <td
+title="Raw reads: DTU_2023_1035778_100_MG_G3_four_samples using GridION"
+              >
+                Raw reads: DTU_2023_1035778_100_MG_G3_four_samples using GridION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037153_110_MG_P3_P2_eight_rep2</td>
+              <td
+title="Raw reads: DTU_2024_1037153_110_MG_P3_P2_eight_rep2 using PromethION"
+              >
+                Raw reads: DTU_2024_1037153_110_MG_P3_P2_eight_rep2 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Raw reads: DTU_2024_1037151_109_MG_P1_P2_eight_rep1</td>
+              <td
+title="Raw reads: DTU_2024_1037151_109_MG_P1_P2_eight_rep1 using PromethION"
+              >
+                Raw reads: DTU_2024_1037151_109_MG_P1_P2_eight_rep1 using PromethION
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="instruments-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <table id="instruments-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Manufacturer</th>
+              <th>Date Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PromethION</td>
+              <td
+title="PromethION used for sequencing"
+              >
+                PromethION used for sequencing
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>GridION</td>
+              <td
+title="GridION used for sequencing"
+              >
+                GridION used for sequencing
+              </td>
+              <td>Not specified</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div
+        id="other-content"
+        class="tab-content"
+        style="display: none;"
+      >
+        <p>No other found in this RO-Crate.</p>
+      </div>
+
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab");
+        if (!tabs.length) return; // No tabs to manage
+
+        // Ensure at least one tab is active if logic failed initially
+        const activeTab = document.querySelector(".tab.active");
+        if (!activeTab) {
+          tabs[0].classList.add("active");
+          const firstTabId = tabs[0].getAttribute("data-tab");
+          const firstTabContent = document.getElementById(
+            `${firstTabId}-content`
+          );
+          if (firstTabContent) {
+            firstTabContent.style.display = "block";
+          }
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            tabs.forEach((t) => t.classList.remove("active"));
+            this.classList.add("active");
+
+            document.querySelectorAll(".tab-content").forEach((content) => {
+              content.style.display = "none";
+            });
+
+            const tabId = this.getAttribute("data-tab");
+            const targetContent = document.getElementById(`${tabId}-content`);
+            if (targetContent) {
+              targetContent.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

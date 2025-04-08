@@ -52,7 +52,10 @@
           %} {{ subcrate.keywords|join(', ') }} {% endif %}
         </span>
       </div>
-
+      <div class="metadata-item">
+        <span class="metadata-label">Funding:</span>
+        <span class="metadata-value">{{ subcrate.funder }}</span>
+      </div>
       {% if subcrate.related_publications %}
       <div class="metadata-item">
         <span class="metadata-label">Related Publications:</span>
@@ -134,14 +137,23 @@
               <span class="stat-label">Samples: </span>
               <span class="stat-value">{{ subcrate.samples_count }}</span>
             </div>
-            {% if subcrate.cell_lines %}
+            {% if subcrate.cell_lines and subcrate.species %}
+            <div class="stat-row indent">
+              <span class="stat-value small">
+                {% for line, count in subcrate.cell_lines.items() %} {% for
+                species, species_count in subcrate.species.items() %} {{ line
+                }}: {{ species }} ({{ count }}){% if not loop.last %}, {% endif
+                %} {% endfor %} {% endfor %}
+              </span>
+            </div>
+            {% elif subcrate.cell_lines %}
             <div class="stat-row indent">
               <span class="stat-value small">
                 {% for line, count in subcrate.cell_lines.items() %}{{ line }}
                 ({{ count }}){% if not loop.last %}, {% endif %}{% endfor %}
               </span>
             </div>
-            {% endif %} {% if subcrate.species %}
+            {% elif subcrate.species %}
             <div class="stat-row indent">
               <span class="stat-value small">
                 {% for species, count in subcrate.species.items() %}{{ species

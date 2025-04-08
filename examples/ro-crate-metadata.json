@@ -25,33 +25,42 @@
       "keywords": [
         "Genomics",
         "SRA",
-        "RNA-seq"
+        "RNA-seq",
+        "EpignticMarkrs",
+        "Homo sapiens",
+        "Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing",
+        "Other",
+        "Othr",
+        "RawSquncRads",
+        "Targeted Locus (Loci)",
+        "bioinformatics",
+        "bioproject"
       ],
       "isPartOf": [
         {
-          "@id": "ark:59852/organization-example-research-institute-wGUEDGDfrnp"
+          "@id": "ark:59852/organization-example-research-institute-xDPIh8uoNnp"
         },
         {
-          "@id": "ark:59852/project-genomic-data-analysis-project-Ewfcxwxh9zB"
+          "@id": "ark:59852/project-genomic-data-analysis-project-T4O3IBy1EDO"
         }
       ],
       "version": "1.0",
       "hasPart": [
         {
-          "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-dat0XaF46D9/"
+          "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-7Ja0mjadWJ/"
         },
         {
-          "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-7JaWVJKdaG/"
+          "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-2BjzpZLYMrc/"
         }
       ],
-      "author": "Unknown",
+      "author": "Justin, Max, Sadnan, Tim",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "associatedPublication": [
         "A Publication"
       ],
       "conditionsOfAccess": "",
       "copyrightNotice": "",
-      "datePublished": "2025-04-02T14:50:39.291178",
+      "datePublished": "2025-04-03T16:04:48.363112",
       "publisher": "University of Virginia Dataverse",
       "principalInvestigator": "Dr. Example PI",
       "contactEmail": "example@example.org",
@@ -64,7 +73,7 @@
         {
           "@type": "PropertyValue",
           "name": "Completeness",
-          "value": "These data are complet."
+          "value": "These data are complete."
         },
         {
           "@type": "PropertyValue",
@@ -94,7 +103,7 @@
       ]
     },
     {
-      "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-dat0XaF46D9/",
+      "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-7Ja0mjadWJ/",
       "@type": [
         "Dataset",
         "https://w3id.org/EVI#ROCrate"
@@ -113,61 +122,61 @@
       "version": "1.0",
       "hasPart": [
         {
-          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-N2Ylr2MzjT"
+          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-B9FYQ3Uj3HL"
         },
         {
-          "@id": "ark:59852/sample-qT1b8TB3pZ"
+          "@id": "ark:59852/sample-CmxtcklSg8D"
         },
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-zYEiCYncZLs"
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-7Ja0mjydGnK"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-DcuxtcbP0A"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-B9FYQ3Uj3p8"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULhPUO9zi0"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMNP"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxotTx8IOob"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-T4O3Iha10h"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gKf6o8Rt"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxoyuKiIOjy"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-cEhDSEquQDe"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-L5QFHOspnk0"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ioly1oRvSH7"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-YjwckM9EsK"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-8gH59glR7OT"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ks8Lbte5LP"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-xDPS4DgoBZ"
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-pQAGVJ8kWo"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-Oyr1ZypJNGN"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-datTxwr4IP"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXcw"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Fpkwe75GaWj"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-6XbsUXPggX"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-2BjzpZfYMic"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4tyTbtLOap"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzxSr"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-zYEiCYnc3kN"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-N2YiFHhzPR"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-VMnekMcXFpn"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-JrCdiFIaguc"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-eVXAGVD6Ec"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-4ty1ofCOYS"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6kwexsz4W"
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-rvmazpoCEfJ"
         }
       ],
       "author": "Justin, Max",
@@ -175,12 +184,12 @@
       "associatedPublication": "",
       "conditionsOfAccess": "",
       "copyrightNotice": "",
-      "datePublished": "2025-04-02T14:50:21.212763",
+      "datePublished": "2025-04-03T16:03:43.407381",
       "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJDB2884",
       "ro-crate-metadata": "rocrate1/ro-crate-metadata.json"
     },
     {
-      "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-7JaWVJKdaG/",
+      "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-2BjzpZLYMrc/",
       "@type": [
         "Dataset",
         "https://w3id.org/EVI#ROCrate"
@@ -198,586 +207,586 @@
       "version": "1.0",
       "hasPart": [
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_106_mg_p1_p2_four_rep1-Oyr1ZyAJ3q"
+          "@id": "ark:59852/sample-dtu_2024_1037151_106_mg_p1_p2_four_rep1-W7dnCYr0qH"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_101_mg_g1_grid_four_rep2-Z3WHQ3wMo1"
+          "@id": "ark:59852/sample-dtu_2024_1037151_101_mg_g1_grid_four_rep2-317Mr2yWmt"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-uhBPIh72kv"
+          "@id": "ark:59852/sample-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-RHVAWv3eOU"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-fULhPUr9MZ"
+          "@id": "ark:59852/sample-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-pQAGVJHkeKc"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-N2Ylr20zxws"
+          "@id": "ark:59852/sample-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-Ks8LbtX5FLR"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-1OJ3HOk7svK"
+          "@id": "ark:59852/sample-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-oPNvB8hlHG"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_102_mg_g3_grid_four_rep3-N2Ylr20zh5"
+          "@id": "ark:59852/sample-dtu_2024_1037153_102_mg_g3_grid_four_rep3-0d4qSECTSZ4"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035780_100_mg_g1_eight_samples-HZMRpZEVDPL"
+          "@id": "ark:59852/sample-dtu_2023_1035780_100_mg_g1_eight_samples-xDPIhsEoPO"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035775_100_mg_g1_one_sample-Dcuxtc3PgL"
+          "@id": "ark:59852/sample-dtu_2023_1035775_100_mg_g1_one_sample-6Xb8Tx0gp3"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035836_100_mg_p3_p2_eight_samples-zYEiCYTc3qs"
+          "@id": "ark:59852/sample-dtu_2024_1035836_100_mg_p3_p2_eight_samples-317Mr2yW7C"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-lNzvJNniKaC"
+          "@id": "ark:59852/sample-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-6Xb8Tx0ge4D"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-wGUEDGyfpK7"
+          "@id": "ark:59852/sample-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-miDSEAYxJ1g"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-Oyr1ZyAJNXk"
+          "@id": "ark:59852/sample-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-58RpZybQci"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_100_mg_g4_grid_four_rep1-izcmazqD7Xn"
+          "@id": "ark:59852/sample-dtu_2024_1037154_100_mg_g4_grid_four_rep1-fULB8Ts9zZ"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_108_mg_p1_p2_four_rep3-zYEiCYTc3Z9"
+          "@id": "ark:59852/sample-dtu_2024_1037151_108_mg_p1_p2_four_rep3-YjwckMpEQz"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-gbZ8LbYHfUz"
+          "@id": "ark:59852/sample-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-GkKf6deUX1"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_100_mg_g1_grid_four_rep1-jFGYiFtwu7M"
+          "@id": "ark:59852/sample-dtu_2024_1037151_100_mg_g1_grid_four_rep1-RHVAWv3erUF"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_108_mg_p3_p2_four_rep3-9LpBNLCFSX"
+          "@id": "ark:59852/sample-dtu_2024_1037153_108_mg_p3_p2_four_rep3-qT1Zyut3vj"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_106_mg_p2_p2_four_rep1-uhBPIh72raU"
+          "@id": "ark:59852/sample-dtu_2024_1037152_106_mg_p2_p2_four_rep1-CmxtckzSsE"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_101_mg_g4_grid_four_rep2-kAsGEAoKVKM"
+          "@id": "ark:59852/sample-dtu_2024_1037154_101_mg_g4_grid_four_rep2-58RpZybQRiv"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_102_mg_g2_grid_four_rep3-9LpBNLCFRLu"
+          "@id": "ark:59852/sample-dtu_2024_1037152_102_mg_g2_grid_four_rep3-1OJWvBI7sHo"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-rvmJWv6CtN0"
+          "@id": "ark:59852/sample-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-7Ja0mjvd4V"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-EwfcxwOh3m"
+          "@id": "ark:59852/sample-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-eVXs0mW6V3C"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035831_100_mg_p2_p2_four_samples-zYEiCYTcZb9"
+          "@id": "ark:59852/sample-dtu_2024_1035831_100_mg_p2_p2_four_samples-T4O3IhS1ROf"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_106_mg_p3_p2_four_rep1-lNzvJNniYBB"
+          "@id": "ark:59852/sample-dtu_2024_1037153_106_mg_p3_p2_four_rep1-W7dnCYr0EyI"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_102_mg_g1_grid_four_rep3-dat0Xa54Yt"
+          "@id": "ark:59852/sample-dtu_2024_1037151_102_mg_g1_grid_four_rep3-EwfuKnkh97v"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035783_100_mg_g4_eight_samples-MW0VAWfn4X"
+          "@id": "ark:59852/sample-dtu_2023_1035783_100_mg_g4_eight_samples-L5QFHOgp4I"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_106_mg_p4_p2_four_rep1-bq3g5qjZxk"
+          "@id": "ark:59852/sample-dtu_2024_1037154_106_mg_p4_p2_four_rep1-n0Tbtcaqajx"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035776_100_mg_g1_four_samples-7JaWVJKdGFM"
+          "@id": "ark:59852/sample-dtu_2023_1035776_100_mg_g1_four_samples-qT1Zyut3Ywb"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-4tyTbtQOpvH"
+          "@id": "ark:59852/sample-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-JrCdiFlaXo"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_108_mg_p4_p2_four_rep3-Z3WHQ3wMdcW"
+          "@id": "ark:59852/sample-dtu_2024_1037154_108_mg_p4_p2_four_rep3-58RpZybQRaU"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035781_100_mg_g2_eight_samples-yIvO3IerN6"
+          "@id": "ark:59852/sample-dtu_2023_1035781_100_mg_g2_eight_samples-1OJWvBI7JD"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_102_mg_g4_grid_four_rep3-Dcuxtc3P1mw"
+          "@id": "ark:59852/sample-dtu_2024_1037154_102_mg_g4_grid_four_rep3-hf925qKBy7"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-Xnq6KnBbHXQ"
+          "@id": "ark:59852/sample-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-Ks8LbtX5FyH"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035834_100_mg_p1_p2_eight_samples-fULhPUr9zmf"
+          "@id": "ark:59852/sample-dtu_2024_1035834_100_mg_p1_p2_eight_samples-EwfuKnkhBD"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-Pu2oyuWNzH"
+          "@id": "ark:59852/sample-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-uhBNLbU2rON"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_100_mg_g3_grid_four_rep1-317ZR1GWk3"
+          "@id": "ark:59852/sample-dtu_2024_1037153_100_mg_g3_grid_four_rep1-L5QFHOgpK9"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-n0TXs09qax9"
+          "@id": "ark:59852/sample-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-bq3HOP4ZYKd"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_107_mg_p2_p2_four_rep2-RHVQFHceruK"
+          "@id": "ark:59852/sample-dtu_2024_1037152_107_mg_p2_p2_four_rep2-2BjzpZLY6bv"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035830_100_mg_p1_p2_four_samples-9LpBNLCFugG"
+          "@id": "ark:59852/sample-dtu_2024_1035830_100_mg_p1_p2_four_samples-8gHQ3IqR7oF"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-gbZ8LbYHwk"
+          "@id": "ark:59852/sample-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-Oyr7l9oJNxw"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-yIvO3IerLv"
+          "@id": "ark:59852/sample-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-n0Tbtcaqa88"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-uhBPIh72Lg"
+          "@id": "ark:59852/sample-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-RHVAWv3eriX"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-N2Ylr20zxsF"
+          "@id": "ark:59852/sample-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-6Xb8Tx0gbFD"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-yIvO3IerPzG"
+          "@id": "ark:59852/sample-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-1OJWvBI79ER"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_100_mg_g2_grid_four_rep1-Xnq6KnBbVL"
+          "@id": "ark:59852/sample-dtu_2024_1037152_100_mg_g2_grid_four_rep1-eVXs0mW6VyB"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035833_100_mg_p4_p2_four_samples-GkKwckIUUi0"
+          "@id": "ark:59852/sample-dtu_2024_1035833_100_mg_p4_p2_four_samples-W7dnCYr0jo7"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_107_mg_p1_p2_four_rep2-B9F2l9aj3Lw"
+          "@id": "ark:59852/sample-dtu_2024_1037151_107_mg_p1_p2_four_rep2-hf925qKB8Kh"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-gbZ8LbYHfAN"
+          "@id": "ark:59852/sample-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-n0Tbtcaq3Er"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035779_100_mg_g4_four_samples-Xnq6KnBbHHS"
+          "@id": "ark:59852/sample-dtu_2023_1035779_100_mg_g4_four_samples-7Ja0mjvdGoF"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_108_mg_p2_p2_four_rep3-Dcuxtc3Pq9"
+          "@id": "ark:59852/sample-dtu_2024_1037152_108_mg_p2_p2_four_rep3-W7dnCYr0jbI"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_107_mg_p4_p2_four_rep2-izcmazqDzZ"
+          "@id": "ark:59852/sample-dtu_2024_1037154_107_mg_p4_p2_four_rep2-xDPIhsEoe70"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037152_101_mg_g2_grid_four_rep2-miDCdibxJs9"
+          "@id": "ark:59852/sample-dtu_2024_1037152_101_mg_g2_grid_four_rep2-B9FYQ35j3gm"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-Pu2oyuWNNaX"
+          "@id": "ark:59852/sample-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-wGUhs0AfFS"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_101_mg_g3_grid_four_rep2-UK5fuKvLgk"
+          "@id": "ark:59852/sample-dtu_2024_1037153_101_mg_g3_grid_four_rep2-kAsUXaVKMJD"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-VMnekMhX3Ck"
+          "@id": "ark:59852/sample-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-58RpZybQCk4"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_107_mg_p3_p2_four_rep2-izcmazqD7Ji"
+          "@id": "ark:59852/sample-dtu_2024_1037153_107_mg_p3_p2_four_rep2-UK59g46LgQx"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035835_100_mg_p2_p2_eight_samples-izcmazqDj9H"
+          "@id": "ark:59852/sample-dtu_2024_1035835_100_mg_p2_p2_eight_samples-2BjzpZLYMEo"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035832_100_mg_p3_p2_four_samples-pQAFYQxkOj"
+          "@id": "ark:59852/sample-dtu_2024_1035832_100_mg_p3_p2_four_samples-JrCdiFlapb"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1035837_100_mg_p4_p2_eight_samples-FpkjzpSGNc1"
+          "@id": "ark:59852/sample-dtu_2024_1035837_100_mg_p4_p2_eight_samples-MW0XazJnkY"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035782_100_mg_g3_eight_samples-Yjwzmj4Ek"
+          "@id": "ark:59852/sample-dtu_2023_1035782_100_mg_g3_eight_samples-B9FYQ35j3wj"
         },
         {
-          "@id": "ark:59852/sample-dtu_2023_1035778_100_mg_g3_four_samples-EwfcxwOhZTq"
+          "@id": "ark:59852/sample-dtu_2023_1035778_100_mg_g3_four_samples-vliCYQ2mosN"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-jFGYiFtwuZ6"
+          "@id": "ark:59852/sample-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-T4O3IhS1Rp"
         },
         {
-          "@id": "ark:59852/sample-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-cEhDSE1uih8"
+          "@id": "ark:59852/sample-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-W7dnCYr0i"
         },
         {
-          "@id": "ark:59852/instrument-promethion-HZMRpZEVrwK"
+          "@id": "ark:59852/instrument-promethion-L5QFHOgpir"
         },
         {
-          "@id": "ark:59852/instrument-gridion-pQAFYQxkRi"
+          "@id": "ark:59852/instrument-gridion-jFGEAWQwLTQ"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-L5Q925mpnVj"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-7Ja0mjvdGTO"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-W7dMe7U0ENx"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-GkKf6deUUiq"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-Dcuxtc3P1Si"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-T4O3IhS1R1F"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-7JaWVJKds9"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-4ty1ofxO61B"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-rvmJWv6CtQR"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-8gHQ3IqRfMG"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-B9F2l9ajJC"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-T4O3IhS1RR2"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-lNzvJNniWF"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-cEhPUXGuyr"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-cEhDSE1uiU2"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-Oyr7l9oJc2q"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-wGUEDGyfoT"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-jFGEAWQwLoM"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-317ZR1GWTzr"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-T4O3IhS1EAP"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-EwfcxwOhZbH"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-58RpZybQC3S"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-lNzvJNniXn"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-QRekMrZAIN0"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-yIvO3IerPsc"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-1OJWvBI79tT"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-2BjNvBdY6xV"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-QRekMrZAE"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-6XbsUX2gJ6"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-7Ja0mjvdGxz"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-4tyTbtAO60k"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-W7dnCYr0Edt"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-wGUEDGrfrXU"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-1OJWvBI79E6"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-EwfcxwJhOL"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-317Mr2yWcXD"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-s6gKf6z8ohE"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-cEhPUXGuf0"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-B9F2l9tj39Z"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-wGUhs0Afl4"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-s6gKf6z8GYY"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-2BjzpZLYM0X"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-8gH59gcRDh"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-2BjzpZLYBw"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-YjwzmjOEGka"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-tSIOPUDyFOO"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-xDPS4DMoJt"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-s6g5qSn8Gay"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-6XbsUXYgCP"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-SxoyuKcIcc"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-UK5fuKmLg0z"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-6Xb8Tx0gbtE"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-VMnekMBXHu"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-rvmazpNCEEF"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-dat0XaQ46LB"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-kAsUXaVKMH1"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-9LpBNLSFuQG"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-RHVAWv3erXy"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-9LpBNLSFRUs"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-CmxtckzSKh"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-Z3WHQ3fMRI"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-kAsUXaVKVbJ"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-eVXAGV26wqf"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-1OJWvBI73H"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-SxotTxVIO92"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-JrCdiFlaCt"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-GkKwckvUUdM"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-58RpZybQf2"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-EwfcxwJhZIj"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-wGUhs0AfvK"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-hf9uofaB5ah"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-UK59g46L6l"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-2BjNvB4YM87"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-317Mr2yWTQ8"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-317ZR1UWcW9"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-0d4qSECTbr"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-B9F2l9tj3VA"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-fULB8Ts9yq"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-W7dMe7L0Pn"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-GkKf6deUUZd"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-Xnq6KnjbH9A"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-Z3WVJNOM7Ie"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-gbZ8LbEHmNC"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-4ty1ofxOp1y"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-vlir7lbmohF"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-T4O3IhS1Epb"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-xDPS4DMon5"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-4ty1ofxO64H"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-W7dMe7L0Ru"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-qT1Zyut3FUK"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-wGUEDGrfTB"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-pQAGVJHkM3Y"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-eVXAGV26w3H"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-Z3WVJNOMo"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-jFGYiFywLT0"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-jFGEAWQwuLP"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-s6gKf6z8GGG"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-JrCdiFlafe"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-zYEiCY1cZcZ"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-CmxtckzSKh"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-0d4n6dpTmnX"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-4ty1ofxO6hZ"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-T4Oqg4k1RjG"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-B9FYQ35jj5"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-Ioly1oXvcXt"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-hf925qKBae"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-QRepjRPAcPn"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-T4O3IhS1Eif"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-GkKwckvUYtL"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-xDPIhsEodo"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-Xnq6KnjbTCX"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-4ty1ofxOjY"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-izcmaz3DiQ"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-kAsUXaVKV6c"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-EwfcxwJh9GI"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-qT1Zyut3te"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-cEhDSE7uo9"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-n0TbtcaqOS"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-6XbsUXYgen9"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-GkKf6deUU8S"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-RHVQFHuer7p"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-QRekMrZAuB"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-wGUEDGrfphM"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-Iolr25uvcKE"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-Pu2oyu0NNbG"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-1OJWvBI797D"
         },
         {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-miDCdiZxo"
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-7Ja0mjvdXVT"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-bq3g5qjZYNf"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-kAsUXaVKt5"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-9LpBNLCFu5m"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-7Ja0mjvd2k"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-T4Oqg4p1EAG"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-2BjzpZLY64I"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-2BjNvBdY6fE"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-jFGEAWQwLqN"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-lNzvJNniYVV"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-0d4qSECTSUL"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-hf9uofJB8UV"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-7Ja0mjvdGBk"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-eVXAGVu6mY"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-Iolr25uvS7U"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-4tyTbtQO6zu"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-7Ja0mjvdBG"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-W7dMe7U0ul"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-YjwckMpELb"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-317ZR1GWVY"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-EwfuKnkhb9"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-1OJ3HOk794t"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-2BjzpZLYMoD"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-2BjNvBdYa8"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-n0TbtcaqaHl"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-Pu2oyuWNNfz"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-1OJWvBI7sPl"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-fULhPUr9z7L"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-xDPIhsEoNjB"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-UK5fuKvLgJo"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-fULB8Ts9imu"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-N2Ylr20zEu"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-Fpkwe7RGaMN"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-jFGYiFtw2U"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-jFGEAWQwLtA"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-dat0Xa54nk"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-4ty1ofxOYK"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-6XbsUX2gdB"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-7Ja0mjvdB6"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-2BjNvBdYvm"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-YjwckMpEb9"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-VMnekMhXYF"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-MW0XazJn3H"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-UK5fuKvLiK"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-T4O3IhS1RAW"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-qT1b8TF3Yf3"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-8gHQ3IqRnG"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-aCSdnC8tJq"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-xDPIhsEoeer"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-T4Oqg4p1Ay"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-Iolr25uvccL"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-wGUEDGyfrbj"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-rvmazpNC7b"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-1OJ3HOk7Nn"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-L5QFHOgp6jw"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-7JaWVJKdGMP"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-W7dnCYr0jAf"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-1OJ3HOk79x9"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-CmxtckzSpet"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-qT1b8TF3zh"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-yIvJNLPryH"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-uhBPIh72DQ"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-YjwckMpEPh"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-L5Q925mpdV"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-wGUhs0Afw"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-pQAFYQxkexj"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-T4O3IhS1RrF"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-W7dMe7U0ESF"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-bq3HOP4ZYse"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-uhBPIh72sm"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-4ty1ofxOg2"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-dat0Xa54PE"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-jFGEAWQwuB5"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-wGUEDGyfpkB"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-4ty1ofxO6jI"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-Yjwzmj4EGZJ"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-aCS4DGitW3"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-kAsGEAoKfJ"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-MW0XazJnHRa"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-aCSdnC8tiw"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-oPNvB8hld3w"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-Dcuxtc3P160"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-bq3HOP4Z5EW"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-izcmazqDyw"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-2BjzpZLY6KA"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-Pu2oyuWN59"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-0d4qSECTN4"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-rvmJWv6C79"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-cEhPUXGuYi"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-UK5fuKvLys"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-317Mr2yWTf2"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-9LpBNLCF6A"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-L5QFHOgpntw"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-Pu2oyuWNN5o"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-Iolr25uvG5"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-aCSdnC8tSvE"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-Oyr7l9oJcSy"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-UK5fuKvL9tK"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-kAsUXaVKMJD"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-2BjNvBdYMYs"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-tSIOPUDyX9"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-RHVQFHcewQC"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-JrCdiFlagYW"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-izcmazqDjPw"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-317Mr2yWI3"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-qT1b8TF3F3i"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-GkKf6deUYUx"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-lNzvJNniHQ"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-0d4qSECTzF"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-N2Ylr20zTIZ"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-8gHQ3IqR7Li"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-Yjwzmj4EGls"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-miDSEAYx05"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-yIvO3IerPAw"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-eVXs0mW6wbK"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-cEhDSE1ujX"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-Fpkwe7RGN9q"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-RHVQFHcecx"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-4ty1ofxOpfP"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-jFGYiFtwLll"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-8gHQ3IqRffa"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-JrC7MrsakL"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-tSIOPUDyvsi"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-tSI4qSRyyo"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-SxoyuKcIOXQ"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-N2Ylr20z9A"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-bq3HOP4ZYlp"
         },
         {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-zYEiCYTc3KG"
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-0d4qSECTSX"
         }
       ],
       "author": "Tim, Sadnan",
@@ -785,7 +794,7 @@
       "associatedPublication": "",
       "conditionsOfAccess": "",
       "copyrightNotice": "",
-      "datePublished": "2025-04-02T14:50:28.684213",
+      "datePublished": "2025-04-03T16:03:50.062242",
       "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJEB86838",
       "ro-crate-metadata": "rocrate2/ro-crate-metadata.json"
     }
