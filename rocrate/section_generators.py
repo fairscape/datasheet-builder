@@ -175,8 +175,6 @@ class SubcratesSectionGenerator(SectionGenerator):
                     'metadata_path': metadata_path,
                 }
                 
-
-
                 
                 size = subcrate_processor.root.get("contentSize", "")
                 if not size and os.path.exists(subcrate_dir):
@@ -200,7 +198,8 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate['confidentiality'] = subcrate_processor.root.get("confidentialityLevel", self.processor.root.get("confidentialityLevel", ""))
                 subcrate['funder'] = subcrate_processor.root.get("funder", self.processor.root.get("funder", ""))
                 subcrate['md5'] = subcrate_processor.root.get("MD5", "Not specified")
-                
+                subcrate['evidence'] = subcrate_processor.root.get("hasEvidenceGraph", "")
+
                 subcrate['files'] = files
                 subcrate['files_count'] = len(files)
                 subcrate['software'] = software
@@ -249,8 +248,24 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate['species'] = subcrate_processor.extract_sample_species(samples)
                 subcrate['experiment_types'] = subcrate_processor.extract_experiment_types(experiments)
                 
-                subcrate['related_publications'] = subcrate_processor.root.get("associatedPublication", "")
+                related_pubs = subcrate_processor.root.get("relatedPublications", [])
+                if not related_pubs:
+                    associated_pub = subcrate_processor.root.get("associatedPublication", "")
+                    if associated_pub:
+                        if isinstance(associated_pub, str):
+                            related_pubs = [associated_pub]
+                        elif isinstance(associated_pub, list):
+                            related_pubs = associated_pub
+                    elif self.processor.root.get("relatedPublications", []):
+                        related_pubs = self.processor.root.get("relatedPublications", [])
+                    elif self.processor.root.get("associatedPublication", ""):
+                        associated_pub = self.processor.root.get("associatedPublication", "")
+                        if associated_pub and isinstance(associated_pub, str):
+                            related_pubs = [associated_pub]
+                        elif isinstance(associated_pub, list):
+                            related_pubs = associated_pub
                 
+                subcrate['related_publications'] = related_pubs
                 processed_subcrates.append(subcrate)
                 
             except Exception as e:
