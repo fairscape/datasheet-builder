@@ -163,28 +163,38 @@ class ROCrateProcessor:
         cell_lines = {}
         
         for sample in samples:
-            # Check if sample has a direct cell line reference
-            cell_line_ref = sample.get("cellLineReference", {})
-            if cell_line_ref and isinstance(cell_line_ref, dict) and "@id" in cell_line_ref:
-                cell_line_id = cell_line_ref.get("@id", "")
-                if cell_line_id:
-                    for item in self.graph:
-                        if item.get("@id") == cell_line_id:
-                            cell_line_name = item.get("name", "Unknown")
-                            if cell_line_name not in cell_lines:
-                                cell_lines[cell_line_name] = 1
-                            else:
-                                cell_lines[cell_line_name] += 1
-                            break
-            
-            additional_properties = sample.get("additionalProperty", [])
-            for prop in additional_properties:
-                if prop.get("propertyID") == "cell-line" and prop.get("value") != "N. A.":
-                    cell_line_name = prop.get("value", "Unknown")
-                    if cell_line_name not in cell_lines:
-                        cell_lines[cell_line_name] = 1
-                    else:
-                        cell_lines[cell_line_name] += 1
+            # Check if sample has a direct cell line reference or derivedFrom
+            ref_id = None
+            if "cellLineReference" in sample and isinstance(sample["cellLineReference"], dict) and "@id" in sample["cellLineReference"]:
+                ref_id = sample["cellLineReference"]["@id"]
+            elif "derivedFrom" in sample and isinstance(sample["derivedFrom"], dict) and "@id" in sample["derivedFrom"]:
+                ref_id = sample["derivedFrom"]["@id"]
+                
+            if ref_id:
+                # Find the entity in the graph
+                for item in self.graph:
+                    if item.get("@id") == ref_id:
+                        cell_info = {
+                            "name": item.get("name", "Unknown"),
+                            "identifier": "",
+                            "organism_name": "Unknown"
+                        }
+                        
+                        # Get CVCL identifier
+                        identifiers = item.get("identifier", [])
+                        if isinstance(identifiers, list):
+                            for id_obj in identifiers:
+                                if isinstance(id_obj, dict) and "@value" in id_obj and "CVCL" in id_obj["@value"]:
+                                    cell_info["identifier"] = id_obj["@value"].split(":")[-1]
+                                    break
+                        
+                        # Get organism name (if directly nested)
+                        organism = item.get("organism", {})
+                        if isinstance(organism, dict) and "name" in organism:
+                            cell_info["organism_name"] = organism["name"]
+                        
+                        cell_lines[ref_id] = cell_info
+                        break
         
         return cell_lines
         

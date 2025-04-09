@@ -164,6 +164,8 @@ class SubcratesSectionGenerator(SectionGenerator):
                 else:
                     authors = subcrate_processor.root.get("author", "")
                 
+                additional_properties = subcrate_processor.root.get("additionalProperty", [])
+                
                 subcrate = {
                     'name': subcrate_processor.root.get("name", subcrate_info.get("name", "Unnamed Sub-Crate")),
                     'id': subcrate_id,
@@ -172,6 +174,9 @@ class SubcratesSectionGenerator(SectionGenerator):
                     'keywords': subcrate_processor.root.get("keywords", []),
                     'metadata_path': metadata_path,
                 }
+                
+
+
                 
                 size = subcrate_processor.root.get("contentSize", "")
                 if not size and os.path.exists(subcrate_dir):
@@ -186,9 +191,15 @@ class SubcratesSectionGenerator(SectionGenerator):
                 subcrate['doi'] = subcrate_processor.root.get("identifier", self.processor.root.get("identifier", ""))
                 subcrate['date'] = subcrate_processor.root.get("datePublished", self.processor.root.get("datePublished", ""))
                 subcrate['contact'] = subcrate_processor.root.get("contactEmail", self.processor.root.get("contactEmail", ""))
-                subcrate['license'] = subcrate_processor.root.get("license", self.processor.root.get("license", ""))
+                
+                # Get copyright, license, and terms of use
+                subcrate['copyright'] = subcrate_processor.root.get("copyrightNotice", "Copyright (c) 2025 The Regents of the University of California")
+                subcrate['license'] = subcrate_processor.root.get("license", "https://creativecommons.org/licenses/by-nc-sa/4.0/")
+                subcrate['terms_of_use'] = subcrate_processor.root.get("conditionsOfAccess", "Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.")
+                
                 subcrate['confidentiality'] = subcrate_processor.root.get("confidentialityLevel", self.processor.root.get("confidentialityLevel", ""))
                 subcrate['funder'] = subcrate_processor.root.get("funder", self.processor.root.get("funder", ""))
+                subcrate['md5'] = subcrate_processor.root.get("MD5", "Not specified")
                 
                 subcrate['files'] = files
                 subcrate['files_count'] = len(files)
@@ -233,28 +244,12 @@ class SubcratesSectionGenerator(SectionGenerator):
                 
                 subcrate['experiment_patterns'] = self.extract_experiment_patterns(subcrate_processor, experiments)
                 
+                # Extract cell line information including CVCL identifier
                 subcrate['cell_lines'] = subcrate_processor.extract_cell_line_info(samples)
                 subcrate['species'] = subcrate_processor.extract_sample_species(samples)
                 subcrate['experiment_types'] = subcrate_processor.extract_experiment_types(experiments)
                 
-                related_pubs = subcrate_processor.root.get("relatedPublications", [])
-                if not related_pubs:
-                    associated_pub = subcrate_processor.root.get("associatedPublication", "")
-                    if associated_pub:
-                        if isinstance(associated_pub, str):
-                            related_pubs = [associated_pub]
-                        elif isinstance(associated_pub, list):
-                            related_pubs = associated_pub
-                    elif self.processor.root.get("relatedPublications", []):
-                        related_pubs = self.processor.root.get("relatedPublications", [])
-                    elif self.processor.root.get("associatedPublication", ""):
-                        associated_pub = self.processor.root.get("associatedPublication", "")
-                        if associated_pub and isinstance(associated_pub, str):
-                            related_pubs = [associated_pub]
-                        elif isinstance(associated_pub, list):
-                            related_pubs = associated_pub
-                
-                subcrate['related_publications'] = related_pubs
+                subcrate['related_publications'] = subcrate_processor.root.get("associatedPublication", "")
                 
                 processed_subcrates.append(subcrate)
                 
@@ -268,6 +263,7 @@ class SubcratesSectionGenerator(SectionGenerator):
         }
         
         return self.template_engine.render('sections/subcrates.html', **context)
+
 
     def extract_experiment_patterns(self, processor, experiments):
         patterns = {}

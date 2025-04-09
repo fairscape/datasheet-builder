@@ -42,8 +42,26 @@
         >
       </div>
       <div class="metadata-item">
+        <span class="metadata-label">MD5:</span>
+        <span class="metadata-value">{{ subcrate.md5 }}</span>
+      </div>
+      <div class="metadata-item">
+        <span class="metadata-label">Copyright:</span>
+        <span class="metadata-value">{{ subcrate.copyright }}</span>
+      </div>
+      <div class="metadata-item">
         <span class="metadata-label">License:</span>
-        <span class="metadata-value">{{ subcrate.license }}</span>
+        <span class="metadata-value">
+          {% if subcrate.license %}
+          <a href="{{ subcrate.license }}" target="_blank">{{ subcrate.license }}</a>
+          {% else %}
+          Not specified
+          {% endif %}
+        </span>
+      </div>
+      <div class="metadata-item">
+        <span class="metadata-label">Terms of Use:</span>
+        <span class="metadata-value">{{ subcrate.terms_of_use }}</span>
       </div>
       <div class="metadata-item">
         <span class="metadata-label">Keywords:</span>
@@ -134,33 +152,16 @@
           <div class="card-content">
             {% if subcrate.samples_count > 0 %}
             <div class="stat-row">
-              <span class="stat-label">Samples: </span>
-              <span class="stat-value">{{ subcrate.samples_count }}</span>
+              <span class="stat-label">Derived From: </span>
+              {% if subcrate.cell_lines %}
+              {% for line_id, cell_info in subcrate.cell_lines.items() %}
+              <span class="stat-value">{{ cell_info.name }}. {{ cell_info.organism_name }}. ({{ cell_info.identifier }})</span>
+              {% endfor %}
+              {% else %}
+              <span class="stat-value">Not specified</span>
+              {% endif %}
             </div>
-            {% if subcrate.cell_lines and subcrate.species %}
-            <div class="stat-row indent">
-              <span class="stat-value small">
-                {% for line, count in subcrate.cell_lines.items() %} {% for
-                species, species_count in subcrate.species.items() %} {{ line
-                }}: {{ species }} ({{ count }}){% if not loop.last %}, {% endif
-                %} {% endfor %} {% endfor %}
-              </span>
-            </div>
-            {% elif subcrate.cell_lines %}
-            <div class="stat-row indent">
-              <span class="stat-value small">
-                {% for line, count in subcrate.cell_lines.items() %}{{ line }}
-                ({{ count }}){% if not loop.last %}, {% endif %}{% endfor %}
-              </span>
-            </div>
-            {% elif subcrate.species %}
-            <div class="stat-row indent">
-              <span class="stat-value small">
-                {% for species, count in subcrate.species.items() %}{{ species
-                }} ({{ count }}){% if not loop.last %}, {% endif %}{% endfor %}
-              </span>
-            </div>
-            {% endif %} {% endif %} {% if subcrate.input_datasets %}
+            {% endif %} {% if subcrate.input_datasets %}
             <div class="stat-row">
               <span class="stat-label">Datasets: </span>
               <span class="stat-value"
