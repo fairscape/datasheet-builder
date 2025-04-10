@@ -1,0 +1,807 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "EVI": "https://w3id.org/EVI#"
+  },
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+      },
+      "about": {
+        "@id": "ark:59852/sra-example-release-2025"
+      }
+    },
+    {
+      "@id": "ark:59852/sra-example-release-2025",
+      "@type": [
+        "Dataset",
+        "https://w3id.org/EVI#ROCrate"
+      ],
+      "name": "SRA Genomic Data Example Release - 2025",
+      "description": "This dataset contains genomic data from Japanese flounder (PRJDB2884) and human RNA-seq data (PRJEB86838) prepared as AI-ready datasets in RO-Crate format.",
+      "keywords": [
+        "Genomics",
+        "SRA",
+        "RNA-seq",
+        "EpignticMarkrs",
+        "Homo sapiens",
+        "Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing",
+        "Other",
+        "Othr",
+        "RawSquncRads",
+        "Targeted Locus (Loci)",
+        "bioinformatics",
+        "bioproject"
+      ],
+      "isPartOf": [
+        {
+          "@id": "ark:59852/organization-example-research-institute-EwfYSQVh1U"
+        },
+        {
+          "@id": "ark:59852/project-genomic-data-analysis-project-B9Fhvsbj2P"
+        }
+      ],
+      "version": "1.0",
+      "hasPart": [
+        {
+          "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-izcldftD7yw/"
+        },
+        {
+          "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-XnqVUOebTtz/"
+        }
+      ],
+      "author": "Justin, Max, Sadnan, Tim",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "associatedPublication": [
+        "A Publication"
+      ],
+      "conditionsOfAccess": "Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived data products should cite the Related Publications below, as well as directly citing this data collection.",
+      "copyrightNotice": "Copyright (c) 2025 The Regents of the University of California except where otherwise noted. Spatial proteomics raw image data is copyright (c) 2025 The Board of Trustees of the Leland Stanford Junior University.",
+      "datePublished": "2025-04-10T08:02:23.322186",
+      "publisher": "University of Virginia Dataverse",
+      "principalInvestigator": "Dr. Example PI",
+      "contactEmail": "example@example.org",
+      "confidentialityLevel": "HL7 Unrestricted",
+      "citation": "Sample Citation",
+      "funder": "Example Agency",
+      "usageInfo": "This is an example.",
+      "contentSize": "2.45 GB",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Completeness",
+          "value": "These data are complete."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Maintenance Plan",
+          "value": "There is no maintenance plan."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Intended Use",
+          "value": "This is intended as an example."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Limitations",
+          "value": "It's an example."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Prohibited Uses",
+          "value": "None."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Potential Sources of Bias",
+          "value": "None."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Human Subject",
+          "value": "Yes"
+        }
+      ]
+    },
+    {
+      "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-izcldftD7yw/",
+      "@type": [
+        "Dataset",
+        "https://w3id.org/EVI#ROCrate"
+      ],
+      "name": "PBAT-mediated targeted methylome sequencing",
+      "description": "To enhance the sensitivity of DNA methylome analysis of DNA enriched with hybridization capture technology, a strategy termed post-bisulfite adaptor tagging (PBAT) was applied. This enabled targeted methylome analysis from as little as 30 ng of starting DNA extracted from human and mouse.",
+      "keywords": [
+        "bioproject",
+        "bioinformatics",
+        "Homo sapiens",
+        "RawSquncRads",
+        "EpignticMarkrs",
+        "Targeted Locus (Loci)"
+      ],
+      "isPartOf": [],
+      "version": "1.0",
+      "hasPart": [
+        {
+          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-lNzo7wriYEQ"
+        },
+        {
+          "@id": "ark:59852/sample-wGUjx8cfpdT"
+        },
+        {
+          "@id": "ark:59852/instrument-illumina-hiseq-2500-317qQCHWcY1"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-dat76on4FR"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-aCSJXP0tL0i"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-RHV8j0per4"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULwoRu9jl"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxoCq24IOzg"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6QEqGsAH"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-9Lpfle2FfW"
+        },
+        {
+          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Dcui49SP5c"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-VMnHG4AXFV2"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-9Lpfle2F0P"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-aCSJXP0tkp"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-IolS3YOvSYY"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-lNzo7wriYiU"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-GkKFDgEU8d"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-1OJTRmZ7sG4"
+        },
+        {
+          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gAh3U8omq"
+        }
+      ],
+      "author": "Justin, Max",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "associatedPublication": "",
+      "conditionsOfAccess": "",
+      "copyrightNotice": "",
+      "datePublished": "2025-04-10T08:01:49.236384",
+      "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJDB2884",
+      "ro-crate-metadata": "rocrate1/ro-crate-metadata.json"
+    },
+    {
+      "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-XnqVUOebTtz/",
+      "@type": [
+        "Dataset",
+        "https://w3id.org/EVI#ROCrate"
+      ],
+      "name": "Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing",
+      "description": "The effects of sample multiplexing on the detection sensitivity of antimicrobial resistance genes (ARGs) and pathogenic bacteria in metagenomic sequencing remain underexplored in newer sequencing technologies such as Oxford Nanopore Technologies (ONT), despite its critical importance for surveillance applications. Here, we evaluate how different multiplexing levels (four and eight samples per flowcell) on two ONT platforms, GridION and PromethION P2 Solo, influence the detection of ARGs, bacterial taxa and pathogens. While overall resistome and bacterial community profiles remained comparable across multiplexing levels, ARG detection was more comprehensive in the four-plex setting, however only with low-abundance genes. Similarly, pathogen detection was more sensitive in the four-plex, identifying a broader range of pathogens compared to the eight-plex, yet remains with low abundant taxa. However, triplicate sequencing revealed that these differences were primarily due to sequencing variability rather than multiplexing itself, as similar inconsistencies were observed across replicates. Given that eight-plex sequencing is more cost-effective while still capturing the overall resistome and bacterial community composition, it may be the preferred option for general surveillance. Conversely, lower multiplexing levels may be advantageous for applications requiring enhanced sensitivity, such as detailed pathogen surveillance. These findings highlight the trade-off between multiplexing efficiency, sequencing depth, and cost in metagenomic studies.",
+      "keywords": [
+        "bioproject",
+        "bioinformatics",
+        "Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing",
+        "Othr",
+        "Other"
+      ],
+      "isPartOf": [],
+      "version": "1.0",
+      "hasPart": [
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_106_mg_p1_p2_four_rep1-IolS3YtvSZA"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_101_mg_g1_grid_four_rep2-Yjw2CKNEC9q"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-8gHsBWKR7Ue"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-0d4WsIMTmUB"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-GkKFDgjUP0"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-s6gAh3k8GGG"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_102_mg_g3_grid_four_rep3-317qQCbWtq"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035780_100_mg_g1_eight_samples-9LpflehFcK"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035775_100_mg_g1_one_sample-eVXRwTQ6wci"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035836_100_mg_p3_p2_eight_samples-EwfYS5zhZBR"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-T4O08vn155"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-8gHsBWKR7Bz"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-VMnHG4RXFN9"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_100_mg_g4_grid_four_rep1-jFGBms2wqZ"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_108_mg_p1_p2_four_rep3-Oyr4HiTJUe"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-xDPmTBCoevK"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_100_mg_g1_grid_four_rep1-EwfYS5zhZPS"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_108_mg_p3_p2_four_rep3-0d4WsIMTpY"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_106_mg_p2_p2_four_rep1-zYENaUlc33E"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_101_mg_g4_grid_four_rep2-9LpflehFR3v"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_102_mg_g2_grid_four_rep3-s6gAh3k8tR"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-izcldfvDhJ"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-HZMgFd8VD4N"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035831_100_mg_p2_p2_four_samples-6Xbef1Ag9C"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_106_mg_p3_p2_four_rep1-2BjurkPYop"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_102_mg_g1_grid_four_rep3-izcldfvDpG"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035783_100_mg_g4_eight_samples-GkKFDgjUgy"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_106_mg_p4_p2_four_rep1-xDPmTBCoMi"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035776_100_mg_g1_four_samples-gbZ697sHyZ"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-dat76oW4QCu"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_108_mg_p4_p2_four_rep3-7Ja1ex3d0Z"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035781_100_mg_g2_eight_samples-Fpk9i6BGxM"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_102_mg_g4_grid_four_rep3-Fpk9i6BGNWk"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-W7d3ASZ0EAc"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035834_100_mg_p1_p2_eight_samples-cEhztLiuQ6c"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-bq3XLJ6ZUk"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_100_mg_g3_grid_four_rep1-oPNx1jSl3z"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-6Xbef1Agjf"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_107_mg_p2_p2_four_rep2-UK5GPHwLgYZ"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035830_100_mg_p1_p2_four_samples-Pu2DOFxN3P"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-6Xbef1Agbi7"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-xDPmTBCoe5d"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-Fpk9i6BGNSj"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-6Xbef1AgBi"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-1OJTRmq791I"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_100_mg_g2_grid_four_rep1-6Xbef1Agoh"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035833_100_mg_p4_p2_four_samples-7Ja1ex3dXIs"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_107_mg_p1_p2_four_rep2-T4O08vn1EjE"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-B9FhvAujLl"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035779_100_mg_g4_four_samples-hf9EIQcBgU"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_108_mg_p2_p2_four_rep3-UK5GPHwL94X"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_107_mg_p4_p2_four_rep2-s6gAh3k8GJ9"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037152_101_mg_g2_grid_four_rep2-bq3XLJ6ZOJ"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-wGUjx8YfEQ"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_101_mg_g3_grid_four_rep2-qT1n5rX3YXG"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-bq3XLJ6Z5Ti"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_107_mg_p3_p2_four_rep2-gbZ697sHVF"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035835_100_mg_p2_p2_eight_samples-eVXRwTQ6Va4"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035832_100_mg_p3_p2_four_samples-eVXRwTQ6Os"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1035837_100_mg_p4_p2_eight_samples-oPNx1jSl3z"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035782_100_mg_g3_eight_samples-s6gAh3k8hM"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2023_1035778_100_mg_g3_four_samples-vliIWEymSv"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-zYENaUlcVW"
+        },
+        {
+          "@id": "ark:59852/sample-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-XnqVUOebHnK"
+        },
+        {
+          "@id": "ark:59852/instrument-promethion-W7d3ASZ0le"
+        },
+        {
+          "@id": "ark:59852/instrument-gridion-7Ja1ex3dGXK"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-s6gAh3k8Gzz"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-miDv0hrxONJ"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-s6gAh3k8XW"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-XnqVUOebHpl"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-qT1n5rX3VE"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-QRe5YnLAI6M"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-n0TMKyVq3dO"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-eVXRwTQ6wRj"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-eVXRwTQ6wZt"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-RHV8j05eww2"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-RHV8j05eyE"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-QRe5YnLAjg"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-Dcui49mP3tA"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-xDPmTBCoPa"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-Pu2DOFxNHh"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-Pu2DOFxNnpG"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-1OJTRmq7ss3"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-eVXRwTQ6VJ5"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-dat76o04QXo"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-2BjurkNYkp"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-RHV8j0QeO1"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-Yjw2CKzErR"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-oPNx1jIldk"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-miDv0hCxkf"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-IolS3Yyvct5"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-s6gAh3K8CP"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-317qQCZWTll"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-vliIWErmoI5"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-SxoCq2tIOQn"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-xDPmTBSoNdM"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-gbZ6978HmrB"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-JrCOVD7ag8M"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-CmxrnuaS6m"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-dat76o04QC"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-izcldfmD7gn"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-s6gAh3K8RI"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-s6gAh3K8old"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-RHV8j0Qer27"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-SxoCq2tIOYX"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-9LpfleBFC"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-lNzo7wviYn8"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-HZMgFdRVrVq"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-MW0ZktVnbK"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-Fpk9i6jGNEU"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-7Ja1exWdp0"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-vliIWErmpp"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-qT1n5rb3F34"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-izcldfmDjTQ"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-dat76o04qR"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-hf9EIQuB5ob"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-dat76o046ZN"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-Oyr4Hi1Jn9"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-9LpfleBFC9"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-wGUjx8EfeW"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-s6gAh3K8GUF"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-lNzo7wvirQ"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-s6gAh3K8G1c"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-lNzo7wviKkt"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-vliIWErmxx"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-2BjurkNY6nA"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-4tydglTO6LK"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-W7d3ASM0Fi"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-xDPmTBSoew2"
+        },
+        {
+          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-0d4WsInTfX"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-fULwoRE9JS"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-miDv0hrxOlW"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-gbZ697sHpL"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-oPNx1jSlE7"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-n0TMKyVqazY"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-izcldfvDbR"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-RHV8j05erTH"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-xDPmTBCo0x"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-Oyr4HiTJNtm"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-zYENaUlc39p"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-9LpflehFUy"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-gbZ697sHm7I"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-9LpflehFdA"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-VMnHG4RX3Zd"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-bq3XLJ6Zm7"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-Pu2DOFxNNUh"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-XnqVUOebXm"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-izcldfvDj7y"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-hf9EIQcB8Ns"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-T4O08vn1RSA"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-dat76oW4Qqv"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-HZMgFd8VrL4"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-QRe5YnLAcnx"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-izcldfvD7v6"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-EwfYS5zhZ1M"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-Yjw2CKNEC08"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-gbZ697sHmU4"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-W7d3ASZ0jD2"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-zYENaUlc3g5"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-uhBcypD2xK"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-58RK2MUQCFO"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-fULwoRE98o"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-Dcui49mP3ca"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-zYENaUlcxV"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-wGUjx8YfFa"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-xDPmTBCorg"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-HZMgFd8VMh"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-Yjw2CKNECMQ"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-B9FhvAujLxK"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-gbZ697sHo9"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-0d4WsIMTSQC"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-eVXRwTQ6w6t"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-T4O08vn1YY"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-9LpflehFRk7"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-Oyr4HiTJS4"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-N2YPJGozTu0"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-HZMgFd8VgK"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-oPNx1jSldZc"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-bq3XLJ6Z55E"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-MW0ZktHnoKi"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-Fpk9i6BGNL4"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-W7d3ASZ0qC"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-N2YPJGoz3u"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-8gHsBWKRfKP"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-EwfYS5zhZXJ"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-VMnHG4RXFQs"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-cEhztLiugj"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-Dcui49mP332"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-Z3WbpagMwu"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-N2YPJGozxfu"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-6Xbef1AgbEl"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-bq3XLJ6Z5v2"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-4tydgl0OgJ"
+        },
+        {
+          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-6Xbef1Ageph"
+        }
+      ],
+      "author": "Tim, Sadnan",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "associatedPublication": "",
+      "conditionsOfAccess": "",
+      "copyrightNotice": "",
+      "datePublished": "2025-04-10T08:01:55.558829",
+      "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJEB86838",
+      "ro-crate-metadata": "rocrate2/ro-crate-metadata.json"
+    }
+  ]
+}
