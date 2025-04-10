@@ -11,797 +11,2105 @@
         "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
       },
       "about": {
-        "@id": "ark:59852/sra-example-release-2025"
+        "@id": "ark:59852/cm4ai-march-2025-release"
       }
     },
     {
-      "@id": "ark:59852/sra-example-release-2025",
-      "@type": [
-        "Dataset",
-        "https://w3id.org/EVI#ROCrate"
-      ],
-      "name": "SRA Genomic Data Example Release - 2025",
-      "description": "This dataset contains genomic data from Japanese flounder (PRJDB2884) and human RNA-seq data (PRJEB86838) prepared as AI-ready datasets in RO-Crate format.",
+      "@id": "ark:59852/cm4ai-march-2025-release",
+      "@type": ["Dataset", "https://w3id.org/EVI#ROCrate"],
+      "name": "Cell Maps for Artificial Intelligence - March 2025 Data Release (Beta)",
+      "description": "This dataset is the March 2025 Data Release of Cell Maps for Artificial Intelligence (CM4AI; CM4AI.org), the Functional Genomics Grand Challenge in the NIH Bridge2AI program. This Beta release includes perturb-seq data in undifferentiated KOLF2.1J iPSCs; SEC-MS data in undifferentiated KOLF2.1J iPSCs and iPSC-derived NPCs, neurons, and cardiomyocytes; and IF images in MDA-MB-468 breast cancer cells in the presence and absence of chemotherapy (vorinostat and paclitaxel). CM4AI output data are packaged with provenance graphs and rich metadata as AI-ready datasets in RO-Crate format using the FAIRSCAPE framework. Data presented here will be augmented regularly through the end of the project. CM4AI is a collaboration of UCSD, UCSF, Stanford, UVA, Yale, UA Birmingham, Simon Fraser University, and the Hastings Center.",
       "keywords": [
-        "Genomics",
-        "SRA",
-        "RNA-seq",
-        "EpignticMarkrs",
-        "Homo sapiens",
-        "Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing",
-        "Other",
-        "Othr",
-        "RawSquncRads",
-        "Targeted Locus (Loci)",
-        "bioinformatics",
-        "bioproject"
+        "AI",
+        "affinity purification",
+        "AP-MS",
+        "artificial intelligence",
+        "breast cancer",
+        "Bridge2AI",
+        "cardiomyocyte",
+        "CM4AI",
+        "CRISPR/Cas9",
+        "induced pluripotent stem cell",
+        "iPSC",
+        "KOLF2.1J",
+        "machine learning",
+        "mass spectroscopy",
+        "MDA-MB-468",
+        "neural progenitor cell",
+        "NPC",
+        "neuron",
+        "paclitaxel",
+        "perturb-seq",
+        "perturbation sequencing",
+        "protein-protein interaction",
+        "protein localization",
+        "single-cell RNA sequencing",
+        "scRNAseq",
+        "SEC-MS",
+        "size exclusion chromatography",
+        "subcellular imaging",
+        "vorinostat"
       ],
       "isPartOf": [
         {
-          "@id": "ark:59852/organization-example-research-institute-EwfYSQVh1U"
+          "@id": "ark:59852/organization-university-of-california-san-diego-pQA9LP0kxY"
         },
         {
-          "@id": "ark:59852/project-genomic-data-analysis-project-B9Fhvsbj2P"
+          "@id": "ark:59852/project-cell-maps-for-artificial-intelligence-uhBDcaR21Cf"
         }
       ],
-      "version": "1.0",
+      "version": "1.4",
       "hasPart": [
         {
-          "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-izcldftD7yw/"
+          "@id": "ark:59852/rocrate-paclitaxel-if-data-release"
         },
         {
-          "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-XnqVUOebTtz/"
+          "@id": "ark:59852/rocrate-a-perturbation-cell-atlas-of-human-induced-pluripotent-stem-cells-Cmx85JJSgWm/"
+        },
+        {
+          "@id": "ark:59852/rocrate-data-from-undifferentiated-human-ipsc-generated-by-sec-ms/"
+        },
+        {
+          "@id": "ark:59852/rocrate-sra-data-for-perturbation-cell-atlas-58RmCGMQBj/"
+        },
+        {
+          "@id": "ark:59852/rocrate-untreated-if-data-release"
+        },
+        {
+          "@id": "ark:59852/rocrate-vorinostat-if-data-release"
         }
       ],
-      "author": "Justin, Max, Sadnan, Tim",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "author": "Clark T; Parker J; Al Manir S; Axelsson U; Ballllosero Navarro F; Chinn B; Churas CP; Dailamy A; Doctor Y; Fall J; Forget A; Gao J; Hansen JN; Hu M; Johannesson A; Khaliq H; Lee YH; Lenkiewicz J; Levinson MA; Marquez C; Metallo C; Muralidharan M; Nourreddine S; Niestroy J; Obernier K; Pan E; Polacco B; Pratt D; Qian G; Schaffer L; Sigaeva A; Thaker S; Zhang Y; Bélisle-Pipon JC; Brandt C; Chen JY; Ding Y; Fodeh S; Krogan N; Lundberg E; Mali P; Payne-Foster P; Ratcliffe S; Ravitsky V; Sali A; Schulz W; Ideker T",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "associatedPublication": [
-        "A Publication"
+        "Clark T, Parker J, Al Manir S, et al. (2024) \"Cell Maps for Artificial Intelligence: AI-Ready Maps of Human Cell Architecture from Disease-Relevant Cell Lines\" bioRxiv 2024.05.21.589311; doi: https://doi.org/10.1101/2024.05.21.589311",
+        "Nourreddine S, et al. (2024) \"A Perturbation Cell Atlas of Human Induced Pluripotent Stem Cells.\" bioRxiv 2024.05.21.589311; doi: https://doi.org/10.1101/2024.11.03.621734",
+        "Qin, Y., Huttlin, E.L., Winsnes, C.F. et al. A multi-scale map of cell structure fusing protein images and interactions. Nature 600, 536–542 (2021). https://doi.org/10.1038/s41586-021-04115-9",
+        "Schaffer LV, Hu M, Qian G, et al. \"Multimodal cell maps as a foundation for structural and functional genomics.\" Nature [Internet]. 2025 Apr 9; Available from: https://www.nature.com/articles/s41586-025-08878-3"
       ],
       "conditionsOfAccess": "Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived data products should cite the Related Publications below, as well as directly citing this data collection.",
       "copyrightNotice": "Copyright (c) 2025 The Regents of the University of California except where otherwise noted. Spatial proteomics raw image data is copyright (c) 2025 The Board of Trustees of the Leland Stanford Junior University.",
-      "datePublished": "2025-04-10T08:02:23.322186",
+      "datePublished": "2025-03-03",
+      "identifier": "https://doi.org/10.18130/V3/B35XWX",
       "publisher": "University of Virginia Dataverse",
-      "principalInvestigator": "Dr. Example PI",
-      "contactEmail": "example@example.org",
-      "confidentialityLevel": "HL7 Unrestricted",
-      "citation": "Sample Citation",
-      "funder": "Example Agency",
-      "usageInfo": "This is an example.",
-      "contentSize": "2.45 GB",
+      "principalInvestigator": "Trey Ideker",
+      "contactEmail": "tideker@health.ucsd.edu",
+      "confidentialityLevel": "Unrestricted",
+      "citation": "Clark T; Parker J; Al Manir S; Axelsson U; Ballllosero Navarro F; Chinn B; Churas CP; Dailamy A; Doctor Y; Fall J; Forget A; Gao J; Hansen JN; Hu M; Johannesson A; Khaliq H; Lee YH; Lenkiewicz J; Levinson MA; Marquez C; Metallo C; Muralidharan M; Nourreddine S; Niestroy J; Obernier K; Pan E; Polacco B; Pratt D; Qian G; Schaffer L; Sigaeva A; Thaker S; Zhang Y; Bélisle-Pipon JC; Brandt C; Chen JY; Ding Y; Fodeh S; Krogan N; Lundberg E; Mali P; Payne-Foster P; Ratcliffe S; Ravitsky V; Sali A; Schulz W; Ideker T, 2025, \"Cell Maps for Artificial Intelligence - March 2025 Data Release (Beta)\", https://doi.org/10.18130/V3/B35XWX , University of Virginia Dataverse, V1",
+      "funder": "National Institutes of Health: 1OT2OD032742-01, R01HG012351, R01NS131560, U54CA274502, #S10 OD026929. Department of Defense: W81XWH-22-1-0401. CIRM training: EDUC4-12804. Dutch Research Council: NWO, 019.231EN.013. National Cancer Institute: P30CA023100",
+      "usageInfo": "These laboratory data are not to be used in clinical decision-making or in any context involving patient care without appropriate regulatory oversight and approval.",
+      "contentSize": "12.53 GB",
       "additionalProperty": [
         {
           "@type": "PropertyValue",
           "name": "Completeness",
-          "value": "These data are complete."
+          "value": "These data are not yet in completed final form, and some datasets are under temporary pre-publication embargo. Protein-protein interaction (SEC-MS), protein localization (IF imaging), and CRISPRi perturbSeq data interrogate sets of proteins which incompletely overlap. Computed cell maps not included in this release."
         },
         {
           "@type": "PropertyValue",
           "name": "Maintenance Plan",
-          "value": "There is no maintenance plan."
+          "value": "Dataset will be regularly updated and augmented through the end of the project in November 2026, on a quarterly basis. Long term preservation in the University of Virginia Dataverse, supported by committed institutional funds."
         },
         {
           "@type": "PropertyValue",
           "name": "Intended Use",
-          "value": "This is intended as an example."
+          "value": "AI-ready datasets to support research in functional genomics, AI model training, cellular process analysis, cell architectural changes, and interactions in presence of specific disease processes, treatment conditions, or genetic perturbations. A major goal is to enable visible machine learning applications, as proposed in Ma et al. (2018) Nature Methods."
         },
         {
           "@type": "PropertyValue",
           "name": "Limitations",
-          "value": "It's an example."
+          "value": "This is an interim release. It does not contain predicted cell maps, which will be added in future releases. The current release is most suitable for bioinformatics analysis of the individual datasets. Requires domain expertise for meaningful analysis."
         },
         {
           "@type": "PropertyValue",
           "name": "Prohibited Uses",
-          "value": "None."
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Potential Sources of Bias",
-          "value": "None."
+          "value": "These laboratory data are not to be used in clinical decision-making or in any context involving patient care without appropriate regulatory oversight and approval."
         },
         {
           "@type": "PropertyValue",
           "name": "Human Subject",
+          "value": "No"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "De-identified Samples",
           "value": "Yes"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "FDA Regulated",
+          "value": "No"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Data Governance Committee",
+          "value": "Jillian Parker; jillianparker@health.ucsd.edu"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Potential Sources of Bias",
+          "value": "Data in this release was derived from commercially available de-identified human cell lines, and does not represent all biological variants which may be seen in the population at large. "
         }
       ]
     },
     {
-      "@id": "ark:59852/rocrate-pbat-mediated-targeted-methylome-sequencing-izcldftD7yw/",
-      "@type": [
-        "Dataset",
-        "https://w3id.org/EVI#ROCrate"
-      ],
-      "name": "PBAT-mediated targeted methylome sequencing",
-      "description": "To enhance the sensitivity of DNA methylome analysis of DNA enriched with hybridization capture technology, a strategy termed post-bisulfite adaptor tagging (PBAT) was applied. This enabled targeted methylome analysis from as little as 30 ng of starting DNA extracted from human and mouse.",
+      "@id": "ark:59852/rocrate-sra-data-for-perturbation-cell-atlas-58RmCGMQBj/",
+      "@type": ["Dataset", "https://w3id.org/EVI#ROCrate"],
+      "name": "Perturbation Cell Atlas of Human Induced Pluripotent Stem Cells - Raw Sequence Data",
+      "description": "This dataset represents raw sequence data from an expressed genome-scale CRISPRi Perturbation Cell Atlas in KOLF2.1J human induced pluripotent stem cells (hiPSCs) mapping transcriptional and fitness phenotypes associated with 11,739 targeted genes, as part of the Cell Maps for Artificial Intelligence (CM4AI; CM4AI.org) Functional Genomics Grand Challenge, a component of the U.S. National Institute of Health's (NIH) Bridge2AI program. This data is Copyright (c) 2025 The Regents of the University of California. It is licensed for reuse under Creative Commons Attribution Share-Alike Noncommercial 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.",
       "keywords": [
-        "bioproject",
-        "bioinformatics",
-        "Homo sapiens",
-        "RawSquncRads",
-        "EpignticMarkrs",
-        "Targeted Locus (Loci)"
+        "AI",
+        "Artificial intelligence",
+        "Cell maps",
+        "CM4AI",
+        "CRISPR perturbation",
+        "IPSC",
+        "KOLF2.1J",
+        "Machine learning",
+        "Perturb-seq",
+        "scRNAseq",
+        "single-cell RNA sequencing"
       ],
-      "isPartOf": [],
+      "isPartOf": [
+        {
+          "@id": "ark:59852/organization-university-of-california-san-diego"
+        },
+        {
+          "@id": "ark:59852/project-cm4ai"
+        }
+      ],
+      "version": "0.6",
+      "hasPart": [
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-1-9LpadE6Fu1Q"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-10-hf97WzABoZ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-11-n0TB2HCq3BA"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-12-s6glvp08on5"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-13-IoleAaBvTu"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-14-fULJ7Yg9zSj"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-15-eVXPo546wX3"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-16-SxoRQJBIMJZ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-2-Fpkt4hbGZo"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-3-Ewf13NRhma"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-4-qT1jYVx3Xh"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-5-317wEXoWsV"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-6-Xnq2NRSboB"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-7-RHVDxKJewhW"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-8-kAsIy9TK1p"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-1-channel-9-HZMcDsCVD1C"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-1-Ks8vrF75FZi"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-10-yIvAkdwrDj"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-11-58RmCG4QqJ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-12-bq3YzexZkP"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-13-kAsIy9dKM0k"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-14-n0TB2HDqaSh"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-15-Ae6oILtsgeD"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-16-n0TB2HPql1"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-2-317wEXcWka"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-3-Ewf13NZhZlZ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-4-yIvAkdUrWcr"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-5-rvmsK4LCEUe"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-6-xDPHRrsoehx"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-7-oPNVeC8ljl"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-8-DcuZHvgP3h2"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-crispr-chip-2-channel-9-2Bj0nDMY6xx"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-1-W7dfhbh0Z6"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-10-kAsIy9yKM3x"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-11-oPNVeC6lddz"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-12-Ae6oILmsXM"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-13-bq3YzeuZYp5"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-14-6XbNlQPgbSc"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-15-8gHimkiRzv"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-16-L5QCawSp6bM"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-2-L5QCawSpn9y"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-3-OyrkG05JNBG"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-4-SxoRQJ6IqT"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-5-0d49BZUTSMk"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-6-vli6stVml8"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-7-tSIQp7RyFwG"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-8-datL93Q4vd"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-1-channel-9-vli6stbmo5J"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-1-jFG4Turwugd"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-10-0d49BZkTmVX"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-11-1OJGwnQ79xQ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-12-MW0hugGno1v"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-13-8gHimkYR6z"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-14-QRexSUcAae"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-15-lNzX6STinR"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-16-1OJGwns7e9"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-2-miDg8yWxJiP"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-3-6XbNlQwgbw7"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-4-qT1jYV53FOE"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-5-xDPHRrToNth"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-6-eVXPo5f6wDB"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-7-n0TB2H5qa4Y"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-8-IoleAa0vdN"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-alpha-gex-chip-2-channel-9-GkKyOBNUVB"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-1-uhBWMiS21VX"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-10-uhBWMiS2E4"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-11-Ae6oILwsgS2"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-12-VMnuP8kX1H"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-13-n0TB2H8q3ug"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-14-qT1jYVe3YdE"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-15-L5QCawEpnPi"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-16-HZMcDs5VrkH"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-2-gbZziAKHE2"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-3-GkKyOBEUU5X"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-4-SxoRQJ4IOzM"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-5-Z3WEc6eMS3"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-6-58RmCGFQdy"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-7-T4OFjMM1R3G"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-8-0d49BZZTLZ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-1-channel-9-YjwTqPNElb"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-1-B9Fd0cuj3PC"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-10-W7dfhbM0j9n"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-11-8gHimk5Ra6"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-12-uhBWMiN23t"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-13-7JaUfq0dXKd"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-14-2Bj0nDcY6HE"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-15-n0TB2HZqa3a"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-16-MW0hugZnHe7"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-2-rvmsK4yCtOZ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-3-jFG4TujwxB"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-4-tSIQp7tyEb"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-5-UK5rJwpLcF"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-6-Xnq2NeZbOH"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-7-JrCKU1yadN"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-8-tSIQpdCy3F"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-crispr-chip-2-channel-9-Xnq2NenbHf5"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-1-qT1jYXT3YCB"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-10-MW0huH0na2"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-11-oPNVeSzlXxj"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-12-kAsIyF8KMBi"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-13-OyrkGTSJbi"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-14-DcuZHmYP3HI"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-15-DcuZHmEP16W"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-16-yIvAk4orW7y"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-2-N2YnXojzUY"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-3-JrCKU1mag2a"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-4-N2YnXowzjF"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-5-Ae6oIpZsba"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-6-Cmx85JNSpoJ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-7-bq3Yz64Z58q"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-8-L5QCafgpbT"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-1-channel-9-kAsIyFXKMzc"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-1-hf97Wc5B8iZ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-10-izcbgvfD6v"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-11-Xnq2NeObHGr"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-12-vli6syhmF5"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-13-Xnq2NeJbHY"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-14-Xnq2Neab27"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-15-bq3Yz6tZYWp"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-16-Pu2MVxLNnj0"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-2-pQASt9Mkc4"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-3-vli6sywmfw"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-4-hf97WcRB5oC"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-5-miDg8r9xuw"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-6-7JaUf3PdGKs"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-7-datL9Wz46lv"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-8-T4OFjnP1zz"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-beta-gex-chip-2-channel-9-HZMcD8rVDxU"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-1-L5QCafWpneF"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-10-Xnq2NeIbH7I"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-11-Ae6oIpOsgPa"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-12-uhBWMDe21QL"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-13-8gHimKtRrw"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-14-datL9WY4QMX"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-15-MW0huHinor2"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-16-jFG4T2MwLvy"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-2-xDPHRC5o59"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-3-Pu2MVxRNNJD"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-4-58RmCUaQRCb"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-5-VMnuPRoXFRZ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-6-SxoRQakIO9w"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-7-4typF0wO6Tm"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-8-Cmx85JkSpAG"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-1-channel-9-6XbNlAxgeg0"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-1-eVXPoQx6wpp"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-10-bq3Yz6NZYkT"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-11-eVXPoQo6Nc"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-12-gbZzisiHDN"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-13-tSIQpdkyvMD"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-14-lNzX6IgiYK1"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-15-N2YnXoZzxeC"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-16-Ae6oIpmszBW"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-2-1OJGwqF79ng"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-3-8gHimKlRin"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-4-Xnq2Ne2bHJI"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-5-fULJ7EJ9in5"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-6-Ks8vrGm5YYI"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-7-W7dfhZ90Eka"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-8-SxoRQa6IMTB"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-crispr-chip-2-channel-9-fULJ7Et9i3n"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-1-4typF05OZ0"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-10-izcbgvnDjOe"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-11-hf97WcJB5ki"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-12-GkKyOjIUYWV"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-13-qT1jYXG3xb"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-14-VMnuPRBX33P"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-15-2Bj0nPOYBl"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-16-IoleAtbv2h"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-2-Ewf13zthwo"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-3-B9Fd0urj37V"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-4-7JaUf3sdGiS"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-5-VMnuPR9X37C"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-6-Ks8vrGz5mu"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-7-s6glvkE8GPu"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-8-Ewf13zChZDN"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-1-channel-9-IoleAt3vcPo"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-1-Fpkt4BiGNmx"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-10-58RmCUYQR4d"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-11-IoleAt0vcUQ"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-12-hf97WcxB8RK"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-13-8gHimKfR7HO"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-14-7JaUf3VdXEY"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-15-qT1jYX83Yy0"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-16-Ae6oIpfszX0"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-2-L5QCafEp6nf"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-3-W7dfhZg0jau"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-4-2Bj0nPoYtc"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-5-bq3Yz68ZYJv"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-6-RHVDx5pewIc"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-7-W7dfhZX0Xt"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-8-W7dfhZb0EM0"
+        },
+        {
+          "@id": "ark:59852/dataset-sra-data-kolf2-gamma-gex-chip-2-channel-9-W7dfhZb0jh3"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-1-n0TBY3nq3q9"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-10-JrCKLyta5m"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-11-wGUO7F9fQe"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-12-T4OFwdd1Yq"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-13-lNzXgPPiYPH"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-14-yIvAKSIrot"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-15-Cmx8QvmS0Q"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-16-0d49j74TSQI"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-2-7JaU9OadGcl"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-3-2Bj0qhwYMjs"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-4-lNzXgPciYoj"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-5-Ks8vCAe5AD"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-6-Pu2MXcENNBt"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-7-miDgRlzxfS"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-8-GkKyJpAUUBT"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-1-channel-9-1OJGf4r79MY"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-1-7JaU9OCdXMC"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-10-IolesxzvcWU"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-11-wGUO7F5fpIQ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-12-SxoRAmzI7F"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-13-tSIQkCiyNW"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-14-uhBWnEU2gp"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-15-MW0h23JnHdI"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-16-317whTrWTJ1"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-2-gbZzDX1HfqQ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-3-IolesxYvSHu"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-4-datLFJo4Qgy"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-5-IolesxEvS3s"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-6-aCS5prNtLoU"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-7-oPNV6Dflden"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-8-Ewf1WjAhR"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-crispr-chip-2-channel-9-hf970w8BlO"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-1-9Lpa4UHFoo"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-10-9Lpa4UVFh9"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-11-9Lpa4UVFRxK"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-12-L5QCtKnpIf"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-13-W7dfB1o0EaV"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-14-Z3WEuqIM4r"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-15-Ks8vCA05sg"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-16-2Bj0qhRYaw"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-2-Ks8vCA15so"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-3-JrCKLyEagSp"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-4-hf970wVBRc"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-5-n0TBYWlq3Ru"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-6-2Bj0qhgY64e"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-7-QRexI8OAcwA"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-8-cEh3MY6uNw"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-1-channel-9-Ewf1WjXhgz"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-1-N2YnbuezT8A"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-10-datLFJh46tP"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-11-jFG419qwLCE"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-12-HZMcPbxVu8"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-13-fULJdG09Ln"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-14-6XbNiVmgu1"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-15-6XbNiVxgbK0"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-16-6XbNiVxgbca"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-2-s6glmeI83K"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-3-MW0h23cnBC"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-4-GkKyJpOUUaN"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-5-yIvAKSkrWML"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-6-jFG4191wLb7"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-7-OyrkUtUJNIn"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-8-1OJGf497sqU"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-alpha-gex-chip-2-channel-9-B9FdTf1jFJ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-1-FpktOLaGahQ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-10-datLFJU4Q1n"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-11-7JaU9OUdXxv"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-12-317whTwWTd0"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-13-W7dfB190jBz"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-14-bq3YcnEZYAV"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-15-L5QCtKIpnBn"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-16-UK5rakSL1l"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-2-OyrkUtQJNSs"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-3-hf970wOB5Ve"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-4-gbZzDXYHDi"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-5-fULJdGr9Sm"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-6-1OJGf4K79BZ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-7-W7dfB1L0jcd"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-8-eVXPlHY6w5M"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-1-channel-9-8gHix6uRfEf"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-1-JrCKLyeaZD"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-10-Z3WEuqFM7Cb"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-11-gbZzDXjHfFe"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-12-HZMcPbwVpw"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-13-uhBWnEa2vK"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-14-2Bj0qhtYMAZ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-15-hf970wSB8d7"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-16-vli68o3mNrm"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-2-7JaU9OedTH"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-3-kAsIrQcKV4H"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-4-oPNV6D7lXve"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-5-oPNV6D7lXf8"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-6-bq3YcnkZRI"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-7-lNzXgP4iYh6"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-8-B9FdTfoj3bP"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-crispr-chip-2-channel-9-RHVDog9ep4"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-1-0d49j76Tye"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-10-UK5rakuLgQZ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-11-bq3YcnQZYt5"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-12-Ae6ovRfsgfR"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-13-uhBWnEm2st"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-14-xDPHeiaoNNQ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-15-JrCKLy3agDH"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-16-1OJGf4Z7sK9"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-2-eVXPlHk6VJF"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-3-izcbHNSDjbS"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-4-gbZzDXQHzi"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-5-zYEqZ2oc2o"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-6-Iolesxavcn0"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-7-zYEqZ2lc3PO"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-8-tSIQkCdyvr8"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-1-channel-9-s6glmeK8oDB"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-1-0d49j7nTZZ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-10-JrCKLydagap"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-11-bq3YcnHZ5IL"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-12-Z3WEuqXM7H8"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-13-2Bj0qhcYMmc"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-14-eVXPlHR6w8G"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-15-HZMcPbgVOu"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-16-7JaU9O7dCJ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-2-4typGa4Optp"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-3-DcuZVcNP3Mf"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-4-wGUO7G9fpal"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-5-7JaU9JOdGYg"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-6-fULJdUU96g"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-7-317wh11WTsJ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-8-QRexIReAOt"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-beta-gex-chip-2-channel-9-rvms5vmCEAJ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-1-rvms5vxCtJN"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-10-RHVDoHberBp"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-11-IolesoDvcue"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-12-IolesoPvSR6"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-13-Ks8vCsg5JG"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-14-DcuZVchP1qA"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-15-vli68lcmAJ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-16-GkKyJk8UYD7"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-2-jFG41F5wuXE"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-3-OyrkUyoJcY"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-4-UK5raK6LgCr"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-5-DcuZVcfP3zS"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-6-4typGtoOpst"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-7-2Bj0qBkYpQ"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-8-OyrkUyDJNzC"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-1-channel-9-qT1jETC3k6"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-1-9Lpa4LgFyN"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-10-DcuZVcUP3hD"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-11-MW0h2WCnobo"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-12-pQASyQnkDw"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-13-wGUO7GHfTS"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-14-Ks8vCsW5FUS"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-15-wGUO7GVfp4u"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-16-0d49jdiTSEo"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-2-YjwT3jeEpm"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-3-N2Ynb2QzTtc"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-4-fULJdUZ9i9u"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-5-0d49jdNTSOW"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-6-HZMcPZSVrCN"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-7-OyrkUyhJcbc"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-8-QRexIRJAcEH"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-crispr-chip-2-channel-9-RHVDoHrej6"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-1-Ewf1Wwbh9KV"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-10-jFG41FnwFj"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-11-qT1jETz3Fk"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-12-fULJdU098J"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-13-pQASyQOkTd"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-14-s6glm6S8Gbb"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-15-bq3YcqPZYQs"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-16-58RmS8rQLp"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-2-Ewf1WwqhZpe"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-3-qT1jETY3FFu"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-4-hf970f0B5r"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-5-JrCKLrLaa1"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-6-1OJGfO979ay"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-7-pQASyQrkeP5"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-8-2Bj0qBWY6fR"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-1-channel-9-DcuZVcbP1y7"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-1-0d49jd9TSfW"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-10-GkKyJkrU34"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-11-yIvAKIsr9w"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-12-58RmS8oQCWw"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-13-2Bj0qB1Ya2"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-14-Ewf1Ww4h9bA"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-15-Ae6ovePsAO"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-16-1OJGfOk790e"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-2-Xnq2znjbHcN"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-3-RHVDoHueml"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-4-IolesobvSCw"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-5-JrCKLreaek"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-6-jFG41FSwLPL"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-7-B9FdT9Cj2Y"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-8-n0TBY0pq35t"
+        },
+        {
+          "@id": "ark:59852/computation-sra-experiment-kolf2-gamma-gex-chip-2-channel-9-hf970fSB5it"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-1"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-2"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-3"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-4"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-5"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-6"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-7"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-8"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-9"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-10"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-11"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-12"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-13"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-14"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-15"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-1-channel-16"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-1"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-2"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-4"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-5"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-6"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-7"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-8"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-9"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-10"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-11"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-12"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-13"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-15"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-alpha-chip-2-channel-16"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-2"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-3"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-4"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-5"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-6"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-7"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-8"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-9"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-10"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-11"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-12"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-13"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-14"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-15"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-1-channel-16"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-1"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-2"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-3"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-4"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-5"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-6"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-7"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-8"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-9"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-10"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-11"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-12"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-13"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-14"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-15"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-beta-chip-2-channel-16"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-1"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-2"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-3"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-4"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-5"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-6"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-7"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-8"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-9"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-10"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-11"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-12"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-13"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-14"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-15"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-1-channel-16"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-1"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-2"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-3"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-4"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-5"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-6"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-9"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-10"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-11"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-12"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-13"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-15"
+        },
+        {
+          "@id": "ark:59852/dataset-molecule-data-gamma-chip-2-channel-16"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-1"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-2"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-3"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-4"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-5"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-6"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-7"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-8"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-9"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-10"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-11"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-12"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-13"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-14"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-15"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-1-channel-16"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-1"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-2"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-4"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-5"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-6"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-7"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-8"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-9"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-10"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-11"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-12"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-13"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-15"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-alpha-chip-2-channel-16"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-2"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-3"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-4"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-5"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-6"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-7"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-8"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-9"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-10"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-11"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-12"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-13"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-14"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-15"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-1-channel-16"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-1"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-2"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-3"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-4"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-5"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-6"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-7"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-8"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-9"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-10"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-11"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-12"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-13"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-14"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-15"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-beta-chip-2-channel-16"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-1"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-2"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-3"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-4"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-5"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-6"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-7"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-8"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-9"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-10"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-11"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-12"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-13"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-14"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-15"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-1-channel-16"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-1"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-2"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-3"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-4"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-5"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-6"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-9"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-10"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-11"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-12"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-13"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-15"
+        },
+        {
+          "@id": "ark:59852/computation-cellranger-count-gamma-chip-2-channel-16"
+        }
+      ],
+      "author": "Doctor Y; Dailamy A; Forget A; Lee YH; Chinn B; Khaliq H; Polacco B; Muralidharan, M; Pan E; Zhang Y; Sigaeva A; Hansen JN; Gao J; Parker JA; Obernier K; Clark T; Chen JY; Metallo C; Lundberg E; Idkeker T; Krogan N; Mali P",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+      "associatedPublication": "Nourreddine S, Doctor Y, Dailamy A, et al. (2024) \"A Perturbation Cell Atlas of Human Induced Pluripotent Stem Cells\" bioRxiv 2024.11.03.621734; doi: https://doi.org/10.1101/2024.11.03.621734",
+      "conditionsOfAccess": "This dataset was created by investigators and staff of the Cell Maps for Artificial Intelligence project (CM4AI - https://cm4ai.org), a Data Generation Project of the NIH Bridge2AI program, and is copyright (c) 2024 by The Regents of the University of California and, for cellular imaging data, by The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0) license, whose terms are summarized here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en.  Proper attribution credit as required by the license includes citation of the copyright holders and of the attribution parties, which includes citation of the following article: Clark T, Schaffer L, Obernier K, Al Manir S, Churas CP, Dailamy A, Doctor Y, Forget A, Hansen JN, Hu M, Lenkiewicz J, Levinson MA, Marquez C, Mohan J, Nourreddine S, Niestroy J, Pratt D, Qian G, Thaker S, Belisle-Pipon J-C, Brandt C, Chen J, Ding Y, Fodeh S, Krogan N, Lundberg E, Mali P, Payne-Foster P, Ratcliffe S, Ravitsky V, Sali A, Schulz W, Ideker T. Cell Maps for Artificial Intelligence: AI-Ready Maps of Human Cell Architecture from Disease-Relevant Cell Lines. BioRXiv 2024.",
+      "copyrightNotice": "Copyright (c) 2024 by The Regents of the University of California",
+      "ro-crate-metadata": "subcrate_sra/ro-crate-metadata.json",
+      "contactEmail": "pmali@ucsd.edu",
+      "funder": "National Institutes of Health: 1OT2OD032742-01, R01HG012351, R01NS131560, U54CA274502, #S10 OD026929. Department of Defense: W81XWH-22-1-0401. CIRM training: EDUC4-12804. Dutch Research Council: NWO, 019.231EN.013. National Cancer Institute: P30CA023100"
+    },
+
+    {
+      "@id": "ark:59852/rocrate-a-perturbation-cell-atlas-of-human-induced-pluripotent-stem-cells-Cmx85JJSgWm/",
+      "@type": ["Dataset", "https://w3id.org/EVI#ROCrate"],
+      "name": "Perturbation Cell Atlas of Human Induced Pluripotent Stem Cells - Perturb Seq",
+      "description": "This dataset represents an expressed genome-scale CRISPRi Perturbation Cell Atlas in KOLF2.1J human induced pluripotent stem cells (hiPSCs) mapping transcriptional and fitness phenotypes associated with 11,739 targeted genes, as part of the Cell Maps for Artificial Intelligence (CM4AI) Functional Genomics Grand Challenge, a component of the U.S. National Institute of Health's (NIH) Bridge2AI program. We validated these findings via phenotypic, protein-interaction, and metabolic tracing assays. This data is Copyright (c) 2025 The Regents of the University of California. It is licensed for reuse under Creative Commons Attribution Share-Alike Non-Commercial 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.",
+      "keywords": [
+        "AI",
+        "Artificial intelligence",
+        "Cell maps",
+        "CM4AI",
+        "CRISPR perturbation",
+        "IPSC",
+        "KOLF2.1J",
+        "Machine learning",
+        "Perturb-seq",
+        "scRNAseq",
+        "single-cell RNA sequencing"
+      ],
+      "isPartOf": [
+        {
+          "@id": "ark:59852/organization-university-of-california-san-diego"
+        },
+        {
+          "@id": "ark:59852/project-cm4ai"
+        }
+      ],
       "version": "1.0",
       "hasPart": [
         {
-          "@id": "ark:59852/sample-genomic-dna-isolated-from-imr-90-lNzo7wriYEQ"
+          "@id": "ark:59852/dataset-kolf-pan-genome-aggregated-data-B9Fd0uujkz"
         },
         {
-          "@id": "ark:59852/sample-wGUjx8cfpdT"
+          "@id": "ark:59852/dataset-protospacer-calls-per-cell-B9Fd0u2jQx"
         },
         {
-          "@id": "ark:59852/instrument-illumina-hiseq-2500-317qQCHWcY1"
+          "@id": "ark:59852/dataset-aggregation-data-fULJ7Eh9Al"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-dat76on4FR"
+          "@id": "ark:59852/computation-perturbation-cell-atlas-data-processing-Cmx85JtSguG"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-aCSJXP0tL0i"
+          "@id": "ark:59852/rocrate-data-analysis-pipeline-qT1jYXZ3sf/"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-RHV8j0per4"
+          "@id": "ark:59852/software-perturb-seq-heuristic-pipeline-uhBWMDz215T"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-fULwoRu9jl"
+          "@id": "ark:59852/software-pan-genome-heatmap-analysis-317wEbnWTKW"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-SxoCq24IOzg"
+          "@id": "ark:59852/software-pan-genome-umap-analysis-YjwTqN2ECNl"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Ae6QEqGsAH"
+          "@id": "ark:59852/software-pan-genome-analysis-qT1jYXq3vb"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-9Lpfle2FfW"
+          "@id": "ark:59852/software-pan-genome-ml-analysis-wGUO1YwfpBP"
         },
         {
-          "@id": "ark:59852/dataset-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-Dcui49SP5c"
+          "@id": "ark:59852/software-pan-genome-mde-coloring-QRexSpsAccG"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017270-VMnHG4AXFV2"
+          "@id": "ark:59852/dataset-analysis-pipeline-documentation-Pu2MVozN9K"
         },
         {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-9Lpfle2F0P"
-        },
-        {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-aCSJXP0tkp"
-        },
-        {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-IolS3YOvSYY"
-        },
-        {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-lNzo7wriYiU"
-        },
-        {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-GkKFDgEU8d"
-        },
-        {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-1OJTRmZ7sG4"
-        },
-        {
-          "@id": "ark:59852/experiment-illumina-hiseq-2500-paired-end-sequencing-of-samd00017269-s6gAh3U8omq"
+          "@id": "ark:59852/dataset-analysis-pipeline-demo-fULJ7hG9ii6"
         }
       ],
-      "author": "Justin, Max",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "associatedPublication": "",
-      "conditionsOfAccess": "",
-      "copyrightNotice": "",
-      "datePublished": "2025-04-10T08:01:49.236384",
-      "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJDB2884",
-      "ro-crate-metadata": "rocrate1/ro-crate-metadata.json"
+      "author": "Doctor Y; Dailamy A; Forget A; Lee YH; Chinn B; Khaliq H; Polacco B; Muralidharan, M; Pan E; Zhang Y; Sigaeva A; Hansen JN; Gao J; Parker JA; Obernier K; Clark T; Chen JY; Metallo C; Lundberg E; Idkeker T; Krogan N; Mali P",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+      "associatedPublication": "Nourreddine S, Doctor Y, Dailamy A, et al. (2024) \"A Perturbation Cell Atlas of Human Induced Pluripotent Stem Cells\" bioRxiv 2024.11.03.621734; doi: https://doi.org/10.1101/2024.11.03.621734",
+      "conditionsOfAccess": "This dataset was created by investigators and staff of the Cell Maps for Artificial Intelligence project (CM4AI - https://cm4ai.org), a Data Generation Project of the NIH Bridge2AI program, and is copyright (c) 2024 by The Regents of the University of California and, for cellular imaging data, by The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0) license, whose terms are summarized here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en.  Proper attribution credit as required by the license includes citation of the copyright holders and of the attribution parties, which includes citation of the following article: Clark T, Schaffer L, Obernier K, Al Manir S, Churas CP, Dailamy A, Doctor Y, Forget A, Hansen JN, Hu M, Lenkiewicz J, Levinson MA, Marquez C, Mohan J, Nourreddine S, Niestroy J, Pratt D, Qian G, Thaker S, Belisle-Pipon J-C, Brandt C, Chen J, Ding Y, Fodeh S, Krogan N, Lundberg E, Mali P, Payne-Foster P, Ratcliffe S, Ravitsky V, Sali A, Schulz W, Ideker T. Cell Maps for Artificial Intelligence: AI-Ready Maps of Human Cell Architecture from Disease-Relevant Cell Lines. BioRXiv 2024.",
+      "copyrightNotice": "Copyright (c) 2024 by The Regents of the University of California",
+      "ro-crate-metadata": "subcrate_real/ro-crate-metadata.json",
+      "contentSize": "195.97 GB",
+      "contactEmail": "pmali@ucsd.edu",
+      "funder": "National Institutes of Health: 1OT2OD032742-01, R01HG012351, R01NS131560, U54CA274502, #S10 OD026929. Department of Defense: W81XWH-22-1-0401. CIRM training: EDUC4-12804. Dutch Research Council: NWO, 019.231EN.013. National Cancer Institute: P30CA023100"
     },
     {
-      "@id": "ark:59852/rocrate-impact-of-sample-multiplexing-on-detection-of-bacteria-and-antimicrobial-resistance-genes-in-pig-microbiomes-using-long-read-sequencing-XnqVUOebTtz/",
-      "@type": [
-        "Dataset",
-        "https://w3id.org/EVI#ROCrate"
-      ],
-      "name": "Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing",
-      "description": "The effects of sample multiplexing on the detection sensitivity of antimicrobial resistance genes (ARGs) and pathogenic bacteria in metagenomic sequencing remain underexplored in newer sequencing technologies such as Oxford Nanopore Technologies (ONT), despite its critical importance for surveillance applications. Here, we evaluate how different multiplexing levels (four and eight samples per flowcell) on two ONT platforms, GridION and PromethION P2 Solo, influence the detection of ARGs, bacterial taxa and pathogens. While overall resistome and bacterial community profiles remained comparable across multiplexing levels, ARG detection was more comprehensive in the four-plex setting, however only with low-abundance genes. Similarly, pathogen detection was more sensitive in the four-plex, identifying a broader range of pathogens compared to the eight-plex, yet remains with low abundant taxa. However, triplicate sequencing revealed that these differences were primarily due to sequencing variability rather than multiplexing itself, as similar inconsistencies were observed across replicates. Given that eight-plex sequencing is more cost-effective while still capturing the overall resistome and bacterial community composition, it may be the preferred option for general surveillance. Conversely, lower multiplexing levels may be advantageous for applications requiring enhanced sensitivity, such as detailed pathogen surveillance. These findings highlight the trade-off between multiplexing efficiency, sequencing depth, and cost in metagenomic studies.",
+      "@id": "ark:59852/rocrate-paclitaxel-if-data-release",
+      "@type": ["Dataset", "https://w3id.org/EVI#ROCrate"],
+      "name": "Paclitaxel IF Images",
+      "description": "This data set displays the spatial localization of 464 proteins of interest in cells of the breast cancer cell line MDA-MB-468 treated with paclitaxel as imaged by immunofluorescence-based staining (ICC-IF) and confocal microscopy in the Lundberg Lab at Stanford University, as part of the Cell Maps for Artificial Intelligence (CM4AI; CM4AI.org) project. Nuclei were stained with DAPI (blue channel); endoplasmic reticulum with a calreticulin antibody (yellow channel); microtubules with tubulin antibody (red channel); and antibody against protein of interest (green channel). \n\nThis data is Copyright (c) 2025 The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under Creative Commons Attribution ShareAlike NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.\n",
       "keywords": [
-        "bioproject",
-        "bioinformatics",
-        "Impact of sample multiplexing on detection of bacteria and antimicrobial resistance genes in pig microbiomes using long-read sequencing",
-        "Othr",
-        "Other"
+        "AI",
+        "artificial intelligence",
+        "breast cancer",
+        "cell maps",
+        "CM4AI",
+        "machine learning",
+        "MDA-MB-468",
+        "paclitaxel",
+        "protein localization",
+        "protein localization"
       ],
       "isPartOf": [],
-      "version": "1.0",
-      "hasPart": [
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_106_mg_p1_p2_four_rep1-IolS3YtvSZA"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_101_mg_g1_grid_four_rep2-Yjw2CKNEC9q"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-8gHsBWKR7Ue"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-0d4WsIMTmUB"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-GkKFDgjUP0"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-s6gAh3k8GGG"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_102_mg_g3_grid_four_rep3-317qQCbWtq"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035780_100_mg_g1_eight_samples-9LpflehFcK"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035775_100_mg_g1_one_sample-eVXRwTQ6wci"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035836_100_mg_p3_p2_eight_samples-EwfYS5zhZBR"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-T4O08vn155"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-8gHsBWKR7Bz"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-VMnHG4RXFN9"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_100_mg_g4_grid_four_rep1-jFGBms2wqZ"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_108_mg_p1_p2_four_rep3-Oyr4HiTJUe"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-xDPmTBCoevK"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_100_mg_g1_grid_four_rep1-EwfYS5zhZPS"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_108_mg_p3_p2_four_rep3-0d4WsIMTpY"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_106_mg_p2_p2_four_rep1-zYENaUlc33E"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_101_mg_g4_grid_four_rep2-9LpflehFR3v"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_102_mg_g2_grid_four_rep3-s6gAh3k8tR"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-izcldfvDhJ"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-HZMgFd8VD4N"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035831_100_mg_p2_p2_four_samples-6Xbef1Ag9C"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_106_mg_p3_p2_four_rep1-2BjurkPYop"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_102_mg_g1_grid_four_rep3-izcldfvDpG"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035783_100_mg_g4_eight_samples-GkKFDgjUgy"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_106_mg_p4_p2_four_rep1-xDPmTBCoMi"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035776_100_mg_g1_four_samples-gbZ697sHyZ"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-dat76oW4QCu"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_108_mg_p4_p2_four_rep3-7Ja1ex3d0Z"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035781_100_mg_g2_eight_samples-Fpk9i6BGxM"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_102_mg_g4_grid_four_rep3-Fpk9i6BGNWk"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-W7d3ASZ0EAc"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035834_100_mg_p1_p2_eight_samples-cEhztLiuQ6c"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-bq3XLJ6ZUk"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_100_mg_g3_grid_four_rep1-oPNx1jSl3z"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-6Xbef1Agjf"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_107_mg_p2_p2_four_rep2-UK5GPHwLgYZ"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035830_100_mg_p1_p2_four_samples-Pu2DOFxN3P"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-6Xbef1Agbi7"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-xDPmTBCoe5d"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-Fpk9i6BGNSj"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-6Xbef1AgBi"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-1OJTRmq791I"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_100_mg_g2_grid_four_rep1-6Xbef1Agoh"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035833_100_mg_p4_p2_four_samples-7Ja1ex3dXIs"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_107_mg_p1_p2_four_rep2-T4O08vn1EjE"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-B9FhvAujLl"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035779_100_mg_g4_four_samples-hf9EIQcBgU"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_108_mg_p2_p2_four_rep3-UK5GPHwL94X"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_107_mg_p4_p2_four_rep2-s6gAh3k8GJ9"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037152_101_mg_g2_grid_four_rep2-bq3XLJ6ZOJ"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-wGUjx8YfEQ"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_101_mg_g3_grid_four_rep2-qT1n5rX3YXG"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-bq3XLJ6Z5Ti"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_107_mg_p3_p2_four_rep2-gbZ697sHVF"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035835_100_mg_p2_p2_eight_samples-eVXRwTQ6Va4"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035832_100_mg_p3_p2_four_samples-eVXRwTQ6Os"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1035837_100_mg_p4_p2_eight_samples-oPNx1jSl3z"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035782_100_mg_g3_eight_samples-s6gAh3k8hM"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2023_1035778_100_mg_g3_four_samples-vliIWEymSv"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-zYENaUlcVW"
-        },
-        {
-          "@id": "ark:59852/sample-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-XnqVUOebHnK"
-        },
-        {
-          "@id": "ark:59852/instrument-promethion-W7d3ASZ0le"
-        },
-        {
-          "@id": "ark:59852/instrument-gridion-7Ja1ex3dGXK"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-s6gAh3k8Gzz"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-miDv0hrxONJ"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-s6gAh3k8XW"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-XnqVUOebHpl"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-qT1n5rX3VE"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-QRe5YnLAI6M"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-n0TMKyVq3dO"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-eVXRwTQ6wRj"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-eVXRwTQ6wZt"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-RHV8j05eww2"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-RHV8j05eyE"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-QRe5YnLAjg"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-Dcui49mP3tA"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-xDPmTBCoPa"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-Pu2DOFxNHh"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-Pu2DOFxNnpG"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-1OJTRmq7ss3"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-eVXRwTQ6VJ5"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-dat76o04QXo"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-2BjurkNYkp"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-RHV8j0QeO1"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-Yjw2CKzErR"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-oPNx1jIldk"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-miDv0hCxkf"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-IolS3Yyvct5"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-s6gAh3K8CP"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-317qQCZWTll"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-vliIWErmoI5"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-SxoCq2tIOQn"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-xDPmTBSoNdM"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-gbZ6978HmrB"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-JrCOVD7ag8M"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-CmxrnuaS6m"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-dat76o04QC"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-izcldfmD7gn"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-s6gAh3K8RI"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-s6gAh3K8old"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-RHV8j0Qer27"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-SxoCq2tIOYX"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-9LpfleBFC"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-lNzo7wviYn8"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-HZMgFdRVrVq"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-MW0ZktVnbK"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-Fpk9i6jGNEU"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-7Ja1exWdp0"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-vliIWErmpp"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-qT1n5rb3F34"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-izcldfmDjTQ"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-dat76o04qR"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-hf9EIQuB5ob"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-dat76o046ZN"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-Oyr4Hi1Jn9"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-9LpfleBFC9"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-wGUjx8EfeW"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-s6gAh3K8GUF"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-lNzo7wvirQ"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-s6gAh3K8G1c"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-lNzo7wviKkt"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-vliIWErmxx"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-2BjurkNY6nA"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-4tydglTO6LK"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-W7d3ASM0Fi"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-xDPmTBSoew2"
-        },
-        {
-          "@id": "ark:59852/dataset-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-0d4WsInTfX"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_106_mg_p1_p2_four_rep1-fULwoRE9JS"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_101_mg_g1_grid_four_rep2-miDv0hrxOlW"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_110_mg_p1_p2_eight_rep2-gbZ697sHpL"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_109_mg_p3_p2_eight_rep1-oPNx1jSlE7"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_104_mg_g1_grid_eight_rep2-n0TMKyVqazY"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_103_mg_g1_grid_eight_rep1-izcldfvDbR"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_102_mg_g3_grid_four_rep3-RHV8j05erTH"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035780_100_mg_g1_eight_samples-xDPmTBCo0x"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035775_100_mg_g1_one_sample-Oyr4HiTJNtm"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035836_100_mg_p3_p2_eight_samples-zYENaUlc39p"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_110_mg_p2_p2_eight_rep2-9LpflehFUy"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_105_mg_g1_grid_eight_rep3-gbZ697sHm7I"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_105_mg_g3_grid_eight_rep3-9LpflehFdA"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_100_mg_g4_grid_four_rep1-VMnHG4RX3Zd"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_108_mg_p1_p2_four_rep3-bq3XLJ6Zm7"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_111_mg_p4_p2_eight_rep3-Pu2DOFxNNUh"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_100_mg_g1_grid_four_rep1-XnqVUOebXm"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_108_mg_p3_p2_four_rep3-izcldfvDj7y"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_106_mg_p2_p2_four_rep1-hf9EIQcB8Ns"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_101_mg_g4_grid_four_rep2_se-T4O08vn1RSA"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_102_mg_g2_grid_four_rep3_se-dat76oW4Qqv"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_103_mg_g3_grid_eight_rep1-HZMgFd8VrL4"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_110_mg_p4_p2_eight_rep2-QRe5YnLAcnx"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035831_100_mg_p2_p2_four_samples-izcldfvD7v6"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_106_mg_p3_p2_four_rep1-EwfYS5zhZ1M"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_102_mg_g1_grid_four_rep3-Yjw2CKNEC08"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035783_100_mg_g4_eight_samples-gbZ697sHmU4"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_106_mg_p4_p2_four_rep1-W7d3ASZ0jD2"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035776_100_mg_g1_four_samples-zYENaUlc3g5"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_104_mg_g2_grid_eight_rep2-uhBcypD2xK"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_108_mg_p4_p2_four_rep3-58RK2MUQCFO"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035781_100_mg_g2_eight_samples-fULwoRE98o"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_102_mg_g4_grid_four_rep3-Dcui49mP3ca"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_109_mg_p4_p2_eight_rep1-zYENaUlcxV"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035834_100_mg_p1_p2_eight_samples-wGUjx8YfFa"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_105_mg_g2_grid_eight_rep3-xDPmTBCorg"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_100_mg_g3_grid_four_rep1-HZMgFd8VMh"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_111_mg_p3_p2_eight_rep3-Yjw2CKNECMQ"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_107_mg_p2_p2_four_rep2-B9FhvAujLxK"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035830_100_mg_p1_p2_four_samples-gbZ697sHo9"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_104_mg_g3_grid_eight_rep2-0d4WsIMTSQC"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_109_mg_p2_p2_eight_rep1-eVXRwTQ6w6t"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_103_mg_g4_grid_eight_rep1-T4O08vn1YY"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_103_mg_g2_grid_eight_rep1-9LpflehFRk7"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_104_mg_g4_grid_eight_rep2-Oyr4HiTJS4"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_100_mg_g2_grid_four_rep1-N2YPJGozTu0"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035833_100_mg_p4_p2_four_samples-HZMgFd8VgK"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_107_mg_p1_p2_four_rep2-oPNx1jSldZc"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_111_mg_p2_p2_eight_rep3-bq3XLJ6Z55E"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035779_100_mg_g4_four_samples-MW0ZktHnoKi"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_108_mg_p2_p2_four_rep3-Fpk9i6BGNL4"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_107_mg_p4_p2_four_rep2-W7d3ASZ0qC"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037152_101_mg_g2_grid_four_rep2-N2YPJGoz3u"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037154_105_mg_g4_grid_eight_rep3-8gHsBWKRfKP"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_101_mg_g3_grid_four_rep2-EwfYS5zhZXJ"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_111_mg_p1_p2_eight_rep3-VMnHG4RXFQs"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_107_mg_p3_p2_four_rep2_se-cEhztLiugj"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035835_100_mg_p2_p2_eight_samples-Dcui49mP332"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035832_100_mg_p3_p2_four_samples-Z3WbpagMwu"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1035837_100_mg_p4_p2_eight_samples-N2YPJGozxfu"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035782_100_mg_g3_eight_samples-6Xbef1AgbEl"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2023_1035778_100_mg_g3_four_samples-bq3XLJ6Z5v2"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037153_110_mg_p3_p2_eight_rep2-4tydgl0OgJ"
-        },
-        {
-          "@id": "ark:59852/experiment-raw-reads:-dtu_2024_1037151_109_mg_p1_p2_eight_rep1-6Xbef1Ageph"
+      "version": "0.1.0",
+      "hasPart": [],
+      "author": [
+        "Hansen JN",
+        "Axelsson U",
+        "Johannesson A",
+        "Fall J",
+        "Ballllosera Navarro F",
+        "Lundberg E"
+      ],
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+      "associatedPublication": "",
+      "conditionsOfAccess": "This dataset was created by investigators and staff of the Cell Maps for Artificial Intelligence project (CM4AI - https://cm4ai.org), a Data Generation Project of the NIH Bridge2AI program for cellular imaging data by The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0) license, whose terms are summarized here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en.  Proper attribution credit as required by the license includes citation of the copyright holders and of the attribution parties, which includes citation of the following article: Clark T, Schaffer L, Obernier K, Al Manir S, Churas CP, Dailamy A, Doctor Y, Forget A, Hansen JN, Hu M, Lenkiewicz J, Levinson MA, Marquez C, Mohan J, Nourreddine S, Niestroy J, Pratt D, Qian G, Thaker S, Belisle-Pipon J-C, Brandt C, Chen J, Ding Y, Fodeh S, Krogan N, Lundberg E, Mali P, Payne-Foster P, Ratcliffe S, Ravitsky V, Sali A, Schulz W, Ideker T. Cell Maps for Artificial Intelligence: AI-Ready Maps of Human Cell Architecture from Disease-Relevant Cell Lines. BioRXiv 2024.”",
+      "copyrightNotice": "Copyright (c) 2025 by The Board of Trustees of the Leland Stanford Junior University",
+      "datePublished": "02/28/2025",
+      "ro-crate-metadata": "paclitaxel/ro-crate-metadata.json",
+      "contentSize": "2.6 GB",
+      "contactEmail": "emmalu@stanford.edu",
+      "funder": "National Institutes of Health: 1OT2OD032742-01"
+    },
+
+    {
+      "@id": "ark:59852/rocrate-untreated-if-data-release",
+      "@type": ["Dataset", "https://w3id.org/EVI#ROCrate"],
+      "name": "Untreated IF Image ROCrate",
+      "description": "This data set displays the spatial localization of 464 proteins of interest in untreated cells of the breast cancer cell line MDA-MB-468 as imaged by immunofluorescence-based staining (ICC-IF) and confocal microscopy in the Lundberg Lab at Stanford University, as part of the Cell Maps for Artificial Intelligence (CM4AI; CM4AI.org) project. Nuclei were stained with DAPI (blue channel); endoplasmic reticulum with a calreticulin antibody (yellow channel); microtubules with tubulin antibody (red channel); and antibody against protein of interest (green channel). \n\nThis data is Copyright (c) 2025 The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under Creative Commons Attribution Share Alike Noncommercial 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.\n",
+      "keywords": [
+        "artificial intelligence",
+        "breast cancer",
+        "cell maps",
+        "CM4AI",
+        "machine learning",
+        "MDA-MB-468",
+        "protein localization"
+      ],
+      "isPartOf": [],
+      "version": "0.1.0",
+      "hasPart": [],
+      "author": [
+        "Hansen JN",
+        "Axelsson U",
+        "Johannesson A",
+        "Fall J",
+        "Ballllosera Navarro F",
+        "Lundberg E"
+      ],
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+      "associatedPublication": "",
+      "conditionsOfAccess": "This dataset was created by investigators and staff of the Cell Maps for Artificial Intelligence project (CM4AI - https://cm4ai.org), a Data Generation Project of the NIH Bridge2AI program for cellular imaging data by The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0) license, whose terms are summarized here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en.  Proper attribution credit as required by the license includes citation of the copyright holders and of the attribution parties, which includes citation of the following article: Clark T, Schaffer L, Obernier K, Al Manir S, Churas CP, Dailamy A, Doctor Y, Forget A, Hansen JN, Hu M, Lenkiewicz J, Levinson MA, Marquez C, Mohan J, Nourreddine S, Niestroy J, Pratt D, Qian G, Thaker S, Belisle-Pipon J-C, Brandt C, Chen J, Ding Y, Fodeh S, Krogan N, Lundberg E, Mali P, Payne-Foster P, Ratcliffe S, Ravitsky V, Sali A, Schulz W, Ideker T. Cell Maps for Artificial Intelligence: AI-Ready Maps of Human Cell Architecture from Disease-Relevant Cell Lines. BioRXiv 2024.”",
+      "copyrightNotice": "Copyright (c) 2025 by The Board of Trustees of the Leland Stanford Junior University",
+      "datePublished": "02/28/2025",
+      "ro-crate-metadata": "untreated/ro-crate-metadata.json",
+      "contentSize": "3.2 GB",
+      "contactEmail": "emmalu@stanford.edu",
+      "funder": "National Institutes of Health: 1OT2OD032742-01"
+    },
+    {
+      "@id": "ark:59852/rocrate-vorinostat-if-data-release",
+      "@type": ["Dataset", "https://w3id.org/EVI#ROCrate"],
+      "name": "Vorinostat IF Image ROCrate",
+      "description": "This data set displays the spatial localization of 464 proteins of interest in cells of the breast cancer cell line MDA-MB-468 treated with vorinostat as imaged by immunofluorescence-based staining (ICC-IF) and confocal microscopy in the Lundberg Lab at Stanford University, as part of the Cell Maps for Artificial Intelligence (CM4AI; CM4AI.org) project. Nuclei were stained with DAPI (blue channel); endoplasmic reticulum with a calreticulin antibody (yellow channel); microtubules with tubulin antibody (red channel); and antibody against protein of interest (green channel). \n\nThis data is Copyright (c) 2025 The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under Creative Commons Attribution Share Alike Noncommercial 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.\n",
+      "keywords": [
+        "AI",
+        "artificial intelligence",
+        "breast cancer",
+        "cell maps",
+        "CM4AI",
+        "machine learning",
+        "MDA-MB-468",
+        "protein localization",
+        "protein localization",
+        "vorinostat"
+      ],
+      "isPartOf": [],
+      "version": "0.1.0",
+      "hasPart": [],
+      "author": [
+        "Hansen JN",
+        "Axelsson U",
+        "Johannesson A",
+        "Fall J",
+        "Ballllosera Navarro F",
+        "Lundberg E"
+      ],
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+      "associatedPublication": "",
+      "conditionsOfAccess": "This dataset was created by investigators and staff of the Cell Maps for Artificial Intelligence project (CM4AI - https://cm4ai.org), a Data Generation Project of the NIH Bridge2AI program for cellular imaging data by The Board of Trustees of the Leland Stanford Junior University. It is licensed for reuse under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0) license, whose terms are summarized here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en.  Proper attribution credit as required by the license includes citation of the copyright holders and of the attribution parties, which includes citation of the following article: Clark T, Schaffer L, Obernier K, Al Manir S, Churas CP, Dailamy A, Doctor Y, Forget A, Hansen JN, Hu M, Lenkiewicz J, Levinson MA, Marquez C, Mohan J, Nourreddine S, Niestroy J, Pratt D, Qian G, Thaker S, Belisle-Pipon J-C, Brandt C, Chen J, Ding Y, Fodeh S, Krogan N, Lundberg E, Mali P, Payne-Foster P, Ratcliffe S, Ravitsky V, Sali A, Schulz W, Ideker T. Cell Maps for Artificial Intelligence: AI-Ready Maps of Human Cell Architecture from Disease-Relevant Cell Lines. BioRXiv 2024.”",
+      "copyrightNotice": "Copyright (c) 2025 by The Board of Trustees of the Leland Stanford Junior University",
+      "datePublished": "02/28/2025",
+      "ro-crate-metadata": "vorinostat/ro-crate-metadata.json",
+      "contentSize": "2.8 GB",
+      "contactEmail": "emmalu@stanford.edu",
+      "funder": "National Institutes of Health: 1OT2OD032742-01"
+    },
+    {
+      "@id": "ark:59852/rocrate-data-from-undifferentiated-human-ipsc-generated-by-sec-ms/",
+      "@type": ["Dataset", "https://w3id.org/EVI#ROCrate"],
+      "name": "Data from Undifferentiated Human iPSCs Generated by SizeExclusion Chromatography Coupled Mass Spectroscopy - SEC-MS",
+      "description": "This dataset was generated by size exclusion chromatography-mass spectroscopy (SEC-MS) on undifferentiated KOLF2.1J human induced pluripotent stem cells (hiPSCs), in the Nevan Krogan laboratory at the University of California San Francisco, as part of the Cell Maps for Artificial Intelligence (CM4AI; CM4AI.org) Functional Genomics Grand Challenge, a component of the U.S. National Institute of Health's (NIH) Bridge2AI program. The data will be uploaded to Pride when available. This data is Copyright (c) 2025 The Regents of the University of California. It is licensed for reuse under Creative Commons Attribution Share-Alike Non-Commercial 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.",
+      "keywords": [
+        "AI",
+        "Artificial intelligence",
+        "Breast cancer",
+        "Cell maps",
+        "CM4AI",
+        "IPSC",
+        "KOLF2.1J",
+        "Machine learning",
+        "Mass spectroscopy",
+        "Protein-protein interaction",
+        "SEC-MS"
+      ],
+      "isPartOf": [
+        {
+          "@id": "ark:59852/organization-university-of-california-san-diego"
+        },
+        {
+          "@id": "ark:59852/project-cm4ai"
         }
       ],
-      "author": "Tim, Sadnan",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "associatedPublication": "",
-      "conditionsOfAccess": "",
-      "copyrightNotice": "",
-      "datePublished": "2025-04-10T08:01:55.558829",
-      "sameAs": "https://www.ncbi.nlm.nih.gov/bioproject/PRJEB86838",
-      "ro-crate-metadata": "rocrate2/ro-crate-metadata.json"
+      "version": "0.6",
+      "hasPart": [],
+      "author": "Forget A, Obernier K, Krogan N",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+      "associatedPublication": "http://doi.org/10.1101/2024.05.21.589311",
+      "conditionsOfAccess": "This data is Copyright (c) 2025 The Regents of the University of California. It is licensed for reuse under Creative Commons Attribution Share-Alike Non-Commercial 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/). Attribution is required to the copyright holders and the authors. Any publications referencing this data or derived products should cite the related article as well as directly citing this data collection.",
+      "copyrightNotice": "Copyright (c) 2025 by The Regents of the University of California",
+      "contentUrl": "Embargoed",
+      "ro-crate-metadata": "mass-spec/ro-crate-metadata.json",
+      "contactEmail": "nevan.krogan@ucsf.edu",
+      "funder": "National Institutes of Health: 1OT2OD032742-01"
     }
   ]
 }
