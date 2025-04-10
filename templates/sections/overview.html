@@ -40,10 +40,12 @@
       {{ principal_investigator }}; {{ contact_email }}
     </div>
   </div>
+  {% if data_governance %}
   <div class="summary-row">
     <div class="summary-label">Data Governance Committee</div>
     <div class="summary-value" id="data-governance">{{ data_governance }}</div>
   </div>
+  {% endif %}
   <div class="summary-row">
     <div class="summary-label">Copyright</div>
     <div class="summary-value" id="copyright">{{ copyright }}</div>
@@ -61,7 +63,7 @@
     <div class="summary-value" id="terms-of-use">{{ terms_of_use }}</div>
   </div>
   <div class="summary-row">
-    <div class="summary-label">Confidentiality Level</div>
+    <div class="summary-label">HL7 Confidentiality Level</div>
     <div class="summary-value" id="confidentiality-level">
       {{ confidentiality_level }}
     </div>

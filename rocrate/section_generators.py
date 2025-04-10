@@ -197,7 +197,7 @@ class SubcratesSectionGenerator(SectionGenerator):
                 
                 subcrate['confidentiality'] = subcrate_processor.root.get("confidentialityLevel", self.processor.root.get("confidentialityLevel", ""))
                 subcrate['funder'] = subcrate_processor.root.get("funder", self.processor.root.get("funder", ""))
-                subcrate['md5'] = subcrate_processor.root.get("MD5", "Not specified")
+                subcrate['md5'] = subcrate_processor.root.get("MD5", "")
                 subcrate['evidence'] = subcrate_processor.root.get("hasEvidenceGraph", "")
 
                 subcrate['files'] = files
