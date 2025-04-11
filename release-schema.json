@@ -1,0 +1,362 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CM4AI Release RO-Crate Schema",
+  "description": "JSON Schema for validating CM4AI Release RO-Crate metadata with nested RO-Crates",
+  "type": "object",
+  "required": ["@context", "@graph"],
+  "properties": {
+    "@context": {
+      "oneOf": [{ "type": "string" }, { "type": "object" }]
+    },
+    "@graph": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/definitions/RoCrateMetadataFile" },
+          { "$ref": "#/definitions/RoCrateMetadata" },
+          { "$ref": "#/definitions/Dataset" },
+          { "$ref": "#/definitions/Software" },
+          { "$ref": "#/definitions/Computation" }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "RoCrateMetadataFile": {
+      "type": "object",
+      "required": ["@id", "@type", "conformsTo", "about"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "const": "ro-crate-metadata.json"
+        },
+        "@type": {
+          "type": "string",
+          "const": "CreativeWork"
+        },
+        "conformsTo": {
+          "type": "object",
+          "required": ["@id"],
+          "properties": {
+            "@id": {
+              "type": "string"
+            }
+          }
+        },
+        "about": {
+          "type": "object",
+          "required": ["@id"],
+          "properties": {
+            "@id": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "RoCrateMetadata": {
+      "type": "object",
+      "required": [
+        "@id",
+        "@type",
+        "name",
+        "description",
+        "keywords",
+        "isPartOf",
+        "version",
+        "hasPart",
+        "author",
+        "license"
+      ],
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string",
+              "const": "Dataset"
+            },
+            {
+              "type": "string",
+              "const": "https://w3id.org/EVI#ROCrate"
+            }
+          ],
+          "additionalItems": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isPartOf": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "version": {
+          "type": "string"
+        },
+        "hasPart": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "author": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "license": {
+          "type": "string",
+          "format": "uri"
+        },
+        "associatedPublication": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "conditionsOfAccess": {
+          "type": "string"
+        },
+        "copyrightNotice": {
+          "type": "string"
+        },
+        "datePublished": {
+          "type": "string",
+          "format": "date"
+        },
+        "identifier": {
+          "type": "string",
+          "format": "uri"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "principalInvestigator": {
+          "type": "string"
+        },
+        "contactEmail": {
+          "type": "string",
+          "format": "email"
+        },
+        "confidentialityLevel": {
+          "type": "string"
+        },
+        "citation": {
+          "type": "string"
+        },
+        "funder": {
+          "type": "string"
+        },
+        "usageInfo": {
+          "type": "string"
+        },
+        "contentSize": {
+          "type": "string"
+        },
+        "additionalProperty": {
+          "type": "array",
+          "description": "Extension mechanism for properties that don't have schema.org equivalents, including use case information, limitations, bias sources, etc.",
+          "items": {
+            "type": "object",
+            "required": ["@type", "name", "value"],
+            "properties": {
+              "@type": {
+                "type": "string",
+                "const": "PropertyValue"
+              },
+              "name": {
+                "type": "string",
+                "description": "Property name, examples include: 'Completeness', 'Maintenance Plan', 'Intended Use', 'Limitations', 'Prohibited Uses', 'Potential Sources of Bias', 'Human Subject', 'De-identified Samples', 'FDA Regulated', 'Data Governance Committee'"
+              },
+              "value": {
+                "type": "string",
+                "description": "Property value containing the actual content"
+              }
+            }
+          }
+        },
+        "ro-crate-metadata": {
+          "type": "string"
+        }
+      }
+    },
+    "Dataset": {
+      "type": "object",
+      "required": ["@id", "@type", "name", "description"],
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "const": "EVI:Dataset"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "usedBy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "generatedBy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Software": {
+      "type": "object",
+      "required": ["@id", "@type", "name", "description"],
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "const": "Software"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "usedByComputation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Computation": {
+      "type": "object",
+      "required": ["@id", "@type", "name", "description"],
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "const": "Computation"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "usedDataset": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "generated": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "usedSoftware": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+              "@id": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
